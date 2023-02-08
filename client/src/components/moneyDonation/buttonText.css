@@ -1,0 +1,17 @@
+.btnText
+{
+    font-size: 1px;
+}
+
+.dGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.tGrid{
+    grid-column-start: 1;
+}
+
+.mGrid{
+    grid-column-start: 2;
+}
