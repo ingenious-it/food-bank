@@ -11,7 +11,7 @@ const ImageComp = () => {
         className="bg-image"
         style={{
           backgroundImage: `url(${img})`,
-          height: "75vh",
+          // height: "75vh",
         }}
       >
         <div className="mask gradient-custom h-100">

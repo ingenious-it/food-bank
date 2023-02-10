@@ -1,16 +1,19 @@
 import React from "react";
 import './hovers.css';
+import { Link } from "react-router-dom";
+
 
 const Nav = () => {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg  p-2">
-        <div className="container-fluid">
+      
+      <nav className="navbar navbar-expand-lg  p-2 ">
+        <div className="container-fluid mt-4">
           <div>
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <Link class="navbar-brand" to={'/'}>
                 logo
-                              </a>
+                              </Link>
             </div>
             <button
               className="navbar-toggler"
@@ -47,9 +50,9 @@ const Nav = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={'/contactus'}>
                       Contact Us{" "}
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
@@ -65,9 +68,9 @@ const Nav = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white raise" href="#">
-                  Project
-                </a>
+                <Link className="nav-link text-white raise" to={'/projects'}>
+                  Projects
+                </Link>
               </li>
               <li className="nav-item ">
                 <a className="nav-link text-white raise" href="#">
@@ -106,6 +109,8 @@ const Nav = () => {
           </div>
         </div>
       </nav>
+ 
+     
     </React.Fragment>
   );
 };
