@@ -29,7 +29,7 @@ const BodyIntro = () => {
         </div>
       </div>
       <div
-        className="btn-group d-flex justify-content-evenly m-3 p-2 rounded-bottom"
+        className="btn-group d-flex justify-content-evenly m-2  p-2  rounded-bottom "
         role="group"
         ariaLabel="Basic outlined example"
       >

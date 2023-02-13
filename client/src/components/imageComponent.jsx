@@ -30,7 +30,7 @@ const ImageComp = () => {
                   Help us build a better tomorrow today.
                 </p>
               </b>
-              <button className="btn text-white btncolor raise w-75 ">
+              <button className="btn text-white btncolor raise w-75 mb-2">
                 Donate  
               </button>
             </div>
