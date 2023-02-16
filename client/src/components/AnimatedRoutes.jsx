@@ -4,6 +4,12 @@ import ContactUs from './ContactUs';
 import Home from './Home';
 import Projects from './Projects';
 import {AnimatePresence} from 'framer-motion';
+import Mission from './Mission';
+import Why from './whyFoodBank';
+import Propose from './Propose';
+import Login from './Login';
+import SignUp from './signup';
+import Donate from './Donate';
 
 const AnimatedRoutes = () => {
     const location=useLocation();
@@ -15,6 +21,12 @@ const AnimatedRoutes = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/projects' element={<Projects/>}/>
             <Route path='/contactus' element={<ContactUs/>}/>
+            <Route path='/mission' element={<Mission/>}/>
+            <Route path='/whyFoodBank' element={<Why/>}/>
+            <Route path='/propose' element={<Propose/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/signup' element={<SignUp/>}/>
+            <Route path='/donate' element={<Donate/>}/>
             </Routes>
         </AnimatePresence>
         </React.Fragment>

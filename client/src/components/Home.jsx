@@ -3,6 +3,7 @@ import ImageComp from './imageComponent';
 import BodyIntro from './introbody';
 import './Home.css';
 import {motion} from 'framer-motion';
+import DonatePrompt from './moneyDonation/box';
 
 
 const Home = () => {
@@ -134,7 +135,7 @@ const Home = () => {
     <section >
         <h2 className='text-center fw-bold mb-3'>Frequently Asked Questions</h2>
         <div className='d-flex justify-content-center'>
-        <div class="accordion w-50 mb-3 " id="accordionPanelsStayOpenExample">
+        <div class="accordion  mb-3 " id="accordionPanelsStayOpenExample">
   <div class="accordion-item mb-1 ">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
       <button class="accordion-button bg-dark text-white icon-white " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -174,6 +175,7 @@ const Home = () => {
 </div>
 </div>
         </section>
+       
 
         </React.Fragment>
      );

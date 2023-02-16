@@ -4,12 +4,12 @@ const DonatePrompt = () => {
   return (
     <React.Fragment>
 
-        <section className="vh-100 d-flex justify-content-around dGrid">
+        <section className="vh-100 d-flex justify-content-around  dGrid">
         <div className="tGrid">
         How much would you like to donate? As a contributor to
                         Sight For All we make sure your donation goes directly
                         to supporting our cause. Thank you for your generosity!
-        </div>
+        </div> 
           {/* <div className="py-1 h-100 mGrid"> */}
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div>

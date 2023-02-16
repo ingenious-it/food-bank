@@ -1,10 +1,17 @@
 import React from "react";
 import './hovers.css';
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 
 const Nav = () => {
+
+  const navigate=useNavigate();
+  const gotoNext= () => {
+    navigate('/donate');
+      
+  }
   return (
+  
     <React.Fragment>
       
       <nav className="navbar navbar-expand-lg  p-2 ">
@@ -45,9 +52,9 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={'/mission'}>
                       Our Mission
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={'/contactus'}>
@@ -55,17 +62,17 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" href="#">
                       {" "}
                       Our Team{" "}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white raise" href="#">
+                <Link className="nav-link text-white raise" to={'/whyFoodBank'}>
                   Why Food Bank?
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link text-white raise" to={'/projects'}>
@@ -73,9 +80,9 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="nav-item ">
-                <a className="nav-link text-white raise" href="#">
+                <Link className="nav-link text-white raise" to={'/propose'}>
                   Propose
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -89,19 +96,19 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={'/login'}>
                       Login
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={'/signup'}>
                       Sign up{" "}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <button className="btn btn-outline-warning nav-link text-white btncolor raise">
+                <button className="btn btn-outline-warning nav-link text-white btncolor raise" onClick={gotoNext}>
                   Donate
                 </button>
               </li>

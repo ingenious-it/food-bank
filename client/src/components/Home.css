@@ -41,6 +41,10 @@
     width:75%
 }
 
+.accordion{
+    width: 50%;
+}
+
 @media(max-width:768px){
  .h1{
     font-size: 95%;
@@ -50,5 +54,10 @@
  }
  .img11,.img12{
     height: 50vh;
+ }
+ .accordion{
+    width: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
  }
 }
