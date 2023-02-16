@@ -12,7 +12,7 @@ const Home = () => {
             <motion.div
              initial={{width:0}}
              animate={{width:"100vw"}}
-             exit={{x:window.innerWidth, transition:{duration:0.2}}}
+             exit={{x:window.innerWidth, transition:{duration:0.1}}}
         >
         
 
