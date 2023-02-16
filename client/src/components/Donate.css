@@ -27,4 +27,21 @@
     padding: 0;
     width: 100%;
   }
+
+  .modal-dialog{
+   flex-direction: column;
+  }
+}
+
+.container {
+  text-align: center;
+  font-family: 'Francois One';
+  font-style: normal;
+  font-weight: bolder;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+.bg-color{
+  background-color: #f0900f ;
 }

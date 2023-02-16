@@ -2,8 +2,12 @@ import React from 'react';
 import Nav from './navBar';
 import {motion} from 'framer-motion';
 import './Donate.css'
+import { useState } from 'react';
+import FoodModal1 from './FoodModal1';
 
 const Donate = () => {
+ const [openFoodModal,setOpenFoodModal]=useState(false);
+
     return ( 
         <React.Fragment>
                     <motion.div
@@ -50,14 +54,18 @@ const Donate = () => {
 
                     </div>
 
-                    <div className='btgroup d-flex justify-content-between mt-4'>
+                    <div className='btgroup d-flex justify-content-between mt-4 mb-5'>
                     <button className="btn text-white btncolor mb-2 ps-5 pe-5">
                     Donate Once </button>
                     <button className="btn text-white btncolor mb-2 ps-5 pe-5">
                     Donate Monthly </button>
-                    <button className="btn text-white btncolor mb-2 ps-5 pe-5">
+                    <button className="btn text-white btncolor mb-2 ps-5 pe-5" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>{
+                        setOpenFoodModal(true);
+                    }}>
                     Donate Food </button>
                     </div>
+
+                    {openFoodModal && <FoodModal1/>}
 
             </div>
          </div>
