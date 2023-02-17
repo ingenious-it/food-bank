@@ -31,8 +31,13 @@
   .modal-dialog{
    flex-direction: column;
   }
+  .form-check{
+    width: 100%;
+  }
 }
-
+.form-check{
+  width: 50%;
+}
 .container {
   text-align: center;
   font-family: 'Francois One';
