@@ -2,8 +2,10 @@ import React from 'react';
 import ImageComp from './imageComponent';
 import BodyIntro from './introbody';
 import './Home.css';
+import DCards from './CardsHome';
 import {motion} from 'framer-motion';
 import DonatePrompt from './moneyDonation/box';
+import './HomeCom1.css';
 
 
 const Home = () => {
@@ -15,45 +17,12 @@ const Home = () => {
              exit={{x:window.innerWidth, transition:{duration:0.1}}}
         >
         
-
-
         
             <ImageComp/>
             <BodyIntro/>
 
             <div>
-        {/* <section>
-            <h2>title</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer 
-                took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic 
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s 
-                with the release of Letraset sheets containing Lorem Ipsum passages, and more 
-                recently with desktop publishing software like Aldus PageMaker including versions
-                 of Lorem Ipsum.
-                 Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer 
-                took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic 
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s 
-                with the release of Letraset sheets containing Lorem Ipsum passages, and more 
-                recently with desktop publishing software like Aldus PageMaker including versions
-                 of Lorem Ipsum
-                 Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer 
-                took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic 
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s 
-                with the release of Letraset sheets containing Lorem Ipsum passages, and more 
-                recently with desktop publishing software like Aldus PageMaker including versions
-                 of Lorem Ipsum</p>
-        </section> */}
-
-            <div className="img11 bg-dark">
+              <div className="img11 bg-dark">
                 <div class="img-overlay">
                     <h1>How Do You End Child Hunger? You Start With Nutritious Fruits & Vegetables.</h1>
                     <p>3 Proven areas of focus help distribute, supply and provide children the nutrition needed to help prevent Child Hunger.</p> 
@@ -92,6 +61,46 @@ const Home = () => {
                 
         </section>
 
+        <div className="imgx bg-dark">
+                <div class="img-overlay">
+                    
+                </div>
+            </div>
+        
+
+                <section>
+                  
+                  <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6  p-4">
+                    <h1>Why Is Feed God's Hungry
+                        Children Helping To Solve Children 
+                        Hunger
+                    </h1><br></br>
+                    <p>To end Child Hunger, we must work together to bring
+                        nutritious food to the children who need it most.
+                    </p><br></br>
+                    <button type="button" class="btn btn-primary">LEARN WHY</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6  p-4">
+                    <motion.div animate={{x:[300,-100]}}>
+                    <img class="sideImg rounded float-end"></img>
+                    </motion.div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="bottom container-fluid"></div>
+      
+        
+  
+                  </div>
+                </section>
+      
         <div className="img12 bg-dark">
                 <div class="img-overlay">
                     <h1>What you give today will help prevent Child Hunger in the lives of many tomorrow.</h1>
@@ -99,6 +108,8 @@ const Home = () => {
                     <button type="button" class="btn btn-outline-light mb-3 mt-3">Sign Up Now</button>
                 </div>
             </div>
+
+            <DCards/>
 
             <section className='m-3'>
         <h2>title</h2>

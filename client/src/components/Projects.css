@@ -1,0 +1,21 @@
+.bg-image-projects{
+    
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+}
+
+.bg-image-projects{
+
+    background-image: url('../images/image11.png');
+}
+
+.card1{
+    background-color: #535050;
+}
+
+.card2{
+    background-color: #807f81;
+}

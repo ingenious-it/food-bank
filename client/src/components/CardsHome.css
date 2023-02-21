@@ -1,0 +1,33 @@
+.moneyd, .foodd, .propose{
+    width: 400px;
+    min-height: 200px;
+    /* background-color: rgb(247, 109, 35); */
+    
+}
+
+.moneyd, .propose{
+    background-color: #ffffff;
+}
+
+.foodd{
+    background-color: #ffaa00;
+    color: #ffffff;
+}
+@media(max-width:991px){
+    .cardcontainer{
+        flex-direction: column;
+    }
+}
+
+.btnL{
+    background-color: rgb(0, 97, 139);
+}
+
+.major
+{
+    background-color: #cccccc;
+}
+
+.icon{
+    width: 80px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './navBar';
 import {motion} from 'framer-motion';
+import './Projects.css';
 
 
 const Projects = () => {
@@ -36,10 +37,10 @@ const Projects = () => {
             <div className='maincontainer m-5'>
                 <div class="row row-cols-1 row-cols-md-3 g-4 m-5">
                         <div class="col">
-                            <div class="card h-100 shadow p-3  rounded bg-secondary text-white">
+                            <div class="card1 h-100 shadow p-3  rounded  text-white">
                             <img src={require('../images/image14.png')} class="card-img-top" alt="project1" />
                             <div class="card-body">
-                                <h5 class="card-title">Project Title1</h5>
+                                <h5 class="card-title">Project Title 1</h5>
                                 <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
                                                 {/* <!-- Button trigger modal --> */}
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
@@ -50,31 +51,40 @@ const Projects = () => {
                         </div>
 
                         <div class="col">
-                            <div class="card h-100 shadow p-3  rounded">
+                            <div class="card2 h-100 shadow p-3  rounded  text-white">
                             <img src={require('../images/image16.png')} class="card-img-top" alt="project2"/>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a short card.</p>
+                                <h5 class="card-title">Project Title 2</h5>
+                                <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
+                                See More...
+                                </button>
                             </div>
                             </div>
                         </div>
 
                         <div class="col">
-                            <div class="card h-100">
+                            <div class="card1 h-100 shadow p-3  rounded  text-white">
                             <img src={require('../images/image17.png')} class="card-img-top" alt="project3"/>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                <h5 class="card-title">Project Title 3</h5>
+                                <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
+                                See More...
+                                </button>
                             </div>
                             </div>
                         </div>
 
                         <div class="col">
-                            <div class="card h-100">
+                            <div class="card2 h-100 shadow p-3  rounded  text-white">
                             <img src={require('../images/image15.png')} class="card-img-top" alt="project4"/>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title">Project Title 4</h5>
+                                <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
+                                See More...
+                                </button>
                             </div>
                             </div>
                         </div>

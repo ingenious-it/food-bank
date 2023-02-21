@@ -1,0 +1,65 @@
+.sideImg{
+    width: 500px;
+    border-radius: 5px;
+    background: url('../images/img1.jpeg');
+}
+
+.bottom {
+    height: 50px;
+    width: 1768px;
+    background-color: blueviolet;
+    margin-top: 322px;
+    margin-left: -1000px;
+    position: absolute;
+  
+  }
+
+
+
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  section {
+    display:inline-block;
+  }
+  
+  @media screen and (min-width: 860px)  {
+    .register .col-2 img{
+      display: initial;
+    }
+  }
+  
+  .App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }

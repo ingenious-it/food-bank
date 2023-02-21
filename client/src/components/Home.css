@@ -5,6 +5,18 @@
 .img12{
     background: url('../images/image13.png');
 }
+
+.imgx{
+    background: url('../images/img6.jpg');
+}
+
+.sideImg{
+    width: 500px;
+    border-radius: 5px;
+    background: url('../images/img1.jpeg');
+}
+
+
 .img11,.img12{
     min-height: 80%;
     height: 60vh;
@@ -22,6 +34,26 @@
     background:dark;
     opacity: 0.85;
 }
+
+
+.imgx{
+    min-height: 50%;
+    height: 40vh;
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:dark;
+    opacity: 0.85;
+}
+
 
 .section{
     padding: 50px 80px;
@@ -60,4 +92,28 @@
     margin-left: 2rem;
     margin-right: 2rem;
  }
+
+
+.bottom {
+    height: 50px;
+    width: 1768px;
+    background-color: blueviolet;
+    margin-top: 322px;
+    margin-left: -1000px;
+    position: absolute;
+    
+  
+  }
+
+
+
+
+
 }
+
+
+
+
+
+
+

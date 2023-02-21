@@ -52,7 +52,7 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={'/mission'}>
+                    <Link className="dropdown-item" to={'/Mission'}>
                       Our Mission
                     </Link>
                   </li>
