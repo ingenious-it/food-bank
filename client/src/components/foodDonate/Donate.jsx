@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from './navBar';
+import Nav from '../navBar/navBar';
 import {motion} from 'framer-motion';
 import './Donate.css'
 import { useState } from 'react';
