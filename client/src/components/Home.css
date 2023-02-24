@@ -75,6 +75,7 @@
 
 .accordion{
     width: 50%;
+    
 }
 
 @media(max-width:768px){
@@ -94,16 +95,6 @@
  }
 
 
-.bottom {
-    height: 50px;
-    width: 1768px;
-    background-color: blueviolet;
-    margin-top: 322px;
-    margin-left: -1000px;
-    position: absolute;
-    
-  
-  }
 
 
 

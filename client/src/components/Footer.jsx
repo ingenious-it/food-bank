@@ -15,14 +15,14 @@ import { FaInstagram } from "react-icons/fa";
 
 const DFooter = () => {
   return ( 
-    <footer class="bg-dark text-white pt-5 pb-5">
+    <footer class="bg-dark text-white pt-5 pb-5 w-100">
 
       <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
 
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
-             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+             <p className='text-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
               when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
 
@@ -151,7 +151,7 @@ const DFooter = () => {
           <div className='bottomd text-center p-4'>
         © 2021 Copyright:
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+          ndlcnsnczcv.com
         </a>
       </div>
           

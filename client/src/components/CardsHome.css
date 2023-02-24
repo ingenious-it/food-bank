@@ -19,9 +19,9 @@
     }
 }
 
-.btnL{
+/* .btnL{
     background-color: rgb(0, 97, 139);
-}
+} */
 
 .major
 {
@@ -29,5 +29,7 @@
 }
 
 .icon{
-    width: 80px;
+    min-width: 30px;
+    height:30px;
+    margin: 0.5rem;
 }

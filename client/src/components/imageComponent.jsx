@@ -11,6 +11,7 @@ const ImageComp = () => {
         className="bg-image"
         style={{
           backgroundImage: `url(${img})`,
+          width:'100%'
           // height: "75vh",
         }}
       >

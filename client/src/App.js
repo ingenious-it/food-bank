@@ -8,6 +8,7 @@ import BodyIntro from './components/introbody';
 import DonatePrompt from './components/moneyDonation/box'
 import { BrowserRouter } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
+import DFooter from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
        <AnimatedRoutes/>
 
       </BrowserRouter>
+      <DFooter/>
     </React.Fragment>
 
   );

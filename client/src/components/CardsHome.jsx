@@ -9,14 +9,14 @@ const DCards = () => {
     return ( 
         <div className='major'>
             
-            <div className='maincontainer d-flex justify-content-center align-items-center flex-column text-center '>
-                    <h1>Together We're On A Plan To End Child Hunger</h1>
+            <div className='maincontainer d-flex justify-content-center align-items-center flex-column text-center'>
+                    <h1 className='m-3'>Together We're On A Plan To End Child Hunger</h1>
                     <p>Donate To Feed God's Hungry Children</p>
 
            </div>
 
            <div className='cardcontainer d-flex align-items-center justify-content-around mt-4 '>
-            <div className='moneyd mb-4 rounded ms-4 text-center'>
+            <div className='moneyd mb-4 rounded  text-center'>
                 <div className='m-2'>
                     <FaShoppingCart className='icon' />
                 <h3>Food Donation</h3>
@@ -25,7 +25,7 @@ const DCards = () => {
                 </div>
             </div>
            
-            <div className='foodd mb-4 rounded ms-4 text-center '>
+            <div className='foodd mb-4 rounded text-center '>
                 <div className='m-2'>
                 <FaHandHoldingUsd className='icon' /> 
                     <h3>Money Donation</h3>
@@ -39,7 +39,7 @@ const DCards = () => {
                 
             </div>
 
-            <div className='propose mb-4 rounded ms-4 text-center'>
+            <div className='propose mb-4 rounded text-center'>
                 <div className='m-2'>
                 <FiUserPlus className='icon' />
                 <h3>Propose Victims</h3>

@@ -94,20 +94,20 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div class="bottom container-fluid"></div>
+      
       
         
   
                   </div>
                 </section>
       
-        <div className="img12 bg-dark">
+         <div className="img12 bg-dark">
                 <div class="img-overlay">
                     <h1>What you give today will help prevent Child Hunger in the lives of many tomorrow.</h1>
                     <p>We're on a mission to #StopChild Hunger! Join our network of heroes and begin changing lives today.</p> 
                     <button type="button" class="btn btn-outline-light mb-3 mt-3">Sign Up Now</button>
                 </div>
-            </div>
+            </div> 
 
             <DCards/>
 

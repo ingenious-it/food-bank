@@ -1,8 +1,10 @@
 import React from "react";
+import { AiFillHeart } from 'react-icons/ai';
+
 const BodyIntro = () => {
   return (
-    <div className=" mb-3 w-100 m-4 p-3">
-      <div className="row g-5">
+    <div className=" mb-3 w-100  p-3">
+      <div className="row g-4 align-items-center">
         <div className="col-md-4">
           <img src="b1.png" className="img-fluid rounded-5 p-3" alt="b1.png" />
         </div>
@@ -28,34 +30,37 @@ const BodyIntro = () => {
           </div>
         </div>
       </div>
+      
+      <div className="m-2"  >
       <div
-        className="btn-group d-flex justify-content-evenly m-2  p-2  rounded-bottom "
+        className="btn-group w-100 d-flex justify-content-evenly  p-1 rounded-bottom "
         role="group"
         ariaLabel="Basic outlined example"
       >
         <button
           type="button"
-          className="btn bg-danger text-white"
-          style={{ fontSize: "25px" }}
+          className="btn text-white bg-dark"
+          style={{ fontSize: "23px" }}
         >
           Let's Get You Started
         </button>
         <button
           type="button"
-          className="btn bg-danger  text-white"
-          style={{ fontSize: "25px" }}
+          className="btn text-white btncolor"
+          style={{ fontSize: "23px" }}
         >
           Join our awesome giving community
         </button>
         <button
           type="button"
-          className="btn bg-danger "
+          className="btn bg-dark "
           style={{ fontSize: "25px" }}
         >
-          <button className="btn btn-warning rounded-pill">
-            <h1> ❤️ Give now</h1>
+          <button className="btn btn-outline-warning text-white rounded-pill">
+            <h3 className="ps-2 pe-2"> <AiFillHeart/> Give now</h3>
           </button>
         </button>
+      </div>
       </div>
     </div>
   );
