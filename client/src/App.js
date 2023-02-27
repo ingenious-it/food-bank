@@ -9,6 +9,7 @@ import DonatePrompt from './components/moneyDonation/box'
 import { BrowserRouter } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import DFooter from './components/Footer';
+import Modal from './components/Modal';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
     <React.Fragment>
       <BrowserRouter>
        <AnimatedRoutes/>
-
+       <Modal/>
       </BrowserRouter>
       <DFooter/>
     </React.Fragment>
