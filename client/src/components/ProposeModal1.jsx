@@ -14,16 +14,21 @@ const ProposeModal1 = () => {
                      <div class="modal-content bg-dark text-white" id='content1'>
    
                          <div class="modal-body">
-                         <img src={require('../images/image113.png')} class="img-fluid" alt="modal1" />
+                         <img src={require('../images/Imagev1.png')} class="img-fluid" alt="modal1" />
                             <p className='mt-1'><i>“You have not lived today until you have done something for someone who can never repay you”</i></p>
                             <p> You can provide information about victims of food crisis.As a contributor for the sight, All we make sure your provided 
                                 information will not be disclose to any external party.</p>
-        
+                            
+                                <p> As a humanitarian organization helping victims of the food crisis, values any information provided about affected 
+                   individuals or communities. Your contribution is confidential and won't be shared with external parties. 
+                   Please share any relevant information to assist us in providing support to those in need.</p>
+         <p>“You have not lived today until you have done something for ”</p>
                          </div>
 
                     </div>
 
-                    <div class="modal-content " id='content2' >
+                   
+                    <div class="modal-content bg-dark text-white" id='content2'>
                         
                          <div class="modal-header  d-flex flex-column-reverse ">
 
@@ -32,35 +37,49 @@ const ProposeModal1 = () => {
                             </div>
                          <div class="modal-body">
 
-                    <form>
+                    <form>       
+
+                        
                                 <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                                <label for="floatingInput">First Name</label>
+                                <label for="floatingInput" style={{ color: "black" }}>First Name</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                                <label for="floatingInput">Last Name</label>
+                                <label for="floatingInput" style={{ color: "black" }}>Last Name</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                                <label for="floatingInput">NIC</label>
+                                <label for="floatingInput" style={{ color: "black" }}>NIC</label>
+                                </div>
+
+                                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                <div className="form-floating mb-3" style={{ marginRight: "10px", width: "20%"  }}>
+                                 <input type="text" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                 <label htmlFor="floatingInput" style={{ color: "black" }}>No </label>
+                                </div>
+      
+                                <div className="form-floating mb-3" style={{ marginLeft: "10px",width: "40%"  }}>
+                                <input type="text" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                <label htmlFor="floatingInput" style={{ color: "black" }}>Street</label>
+                                </div>
+
+                                <div className="form-floating mb-3" style={{ marginLeft: "10px",width: "40%"  }}>
+                                <input type="text" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                <label htmlFor="floatingInput" style={{ color: "black" }}>City</label>
+                                </div>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                                <label for="floatingInput">Address</label>
+                                <label for="floatingInput" style={{ color: "black" }}>Phone Number</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                                <label for="floatingInput">Phone Number</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                                <label for="floatingInput">Description</label>
+                                <label for="floatingInput" style={{ color: "black" }}>Description</label>
                                 </div>
 
                         <div className='d-flex justify-content-center mt-4 mb-5'>
