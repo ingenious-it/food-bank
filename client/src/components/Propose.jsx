@@ -41,7 +41,7 @@ const Propose = () => {
                 <h2>“You have not lived today until you have done something for someone who can never repay you” </h2>
                 <hr className='w-25 '/>
              <p>Never stop doing little things for others. Sometimes, those little things occupy the biggest part of their heart. </p>
-                 <p> JOIN US IN MAKING DIFFERENCE... </p> 
+             <p> JOIN US IN MAKING DIFFERENCE... </p> 
             </div>
 
           </div>

@@ -18,14 +18,23 @@ const ProposeModal1 = () => {
                             <p className='mt-1'><i>“You have not lived today until you have done something for someone who can never repay you”</i></p>
                             <p> You can provide information about victims of food crisis.As a contributor for the sight, All we make sure your provided 
                                 information will not be disclose to any external party.</p>
-                            
-                                <p> As a humanitarian organization helping victims of the food crisis, values any information provided about affected 
-                   individuals or communities. Your contribution is confidential and won't be shared with external parties. 
-                   Please share any relevant information to assist us in providing support to those in need.</p>
-         {/* <p>“You have not lived today until you have done something for ”</p> */}
+                                <div>
+                                <p>Who are suitable to get this donation?</p>
+                                <ul>
+                                <li>Orphans</li>
+                                <li>Families with low income - poverty</li>
+                                <li>Unemployed</li>
+                                </ul>
+                                </div>
+
+                                <p> JOIN US IN MAKING DIFFERENCE... </p> 
+                                
+
+
+
                          </div>
 
-                    </div>
+                     </div>
 
                    
                     <div class="modal-content bg-dark text-white" id='content2'>
