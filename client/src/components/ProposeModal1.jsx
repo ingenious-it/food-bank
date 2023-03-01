@@ -22,7 +22,7 @@ const ProposeModal1 = () => {
                                 <p> As a humanitarian organization helping victims of the food crisis, values any information provided about affected 
                    individuals or communities. Your contribution is confidential and won't be shared with external parties. 
                    Please share any relevant information to assist us in providing support to those in need.</p>
-         <p>“You have not lived today until you have done something for ”</p>
+         {/* <p>“You have not lived today until you have done something for ”</p> */}
                          </div>
 
                     </div>
