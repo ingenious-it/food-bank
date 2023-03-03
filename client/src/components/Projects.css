@@ -19,3 +19,11 @@
 .card2{
     background-color: #807f81;
 }
+
+/* @media(max-width:768px){
+
+    .card1 , .card2{
+        width: 100%;
+        margin: 0 !important;
+    }
+    } */
