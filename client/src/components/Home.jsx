@@ -5,10 +5,24 @@ import './Home.css';
 import DCards from './CardsHome';
 import {motion} from 'framer-motion';
 import DonatePrompt from './moneyDonation/box';
-import './HomeCom1.css';
+import { useInView } from 'react-intersection-observer'; 
+//allows to detect when an element is in view, and then trigger an animation.
+
 
 
 const Home = () => {
+  const { ref, inView } = useInView();
+
+  const variants = {
+    visible: { x: 0 },
+    hidden: { x: -250 },
+  };
+
+  const transition = {
+    duration: 2,
+    ease: 'easeInOut',
+  };
+
     return ( 
         <React.Fragment>
             <motion.div
@@ -70,10 +84,8 @@ const Home = () => {
 
                 <section>
                   
-                  <div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6  p-4">
+                  <div className='aimage d-flex justify-content-between align-items-center m-4 p-4'>
+                    <div>
                     <h1>Why Is Feed God's Hungry
                         Children Helping To Solve Children 
                         Hunger
@@ -82,22 +94,23 @@ const Home = () => {
                         nutritious food to the children who need it most.
                     </p><br></br>
                     <button type="button" class="btn btn-primary">LEARN WHY</button>
-                </div>
-            </div>
+                    </div>
+                    {/* <div className='m-2'>
+                        <motion.div animate={{x:[300,-50]}}>  
+                    < img class="sideImg rounded float-end " src={require('../images/img1.jpeg')}/>
+                      </motion.div>   
+                    </div>  */}
+                    <div className="m-2" ref={ref}>
+                      <motion.div animate={inView ? 'visible' : 'hidden'} variants={variants}  transition={transition}>
+                        <img
+                          className="sideImg rounded float-end"
+                          src={require('../images/img1.jpeg')}
+                          alt="example"
+                        />
+                      </motion.div>
+                    </div>
 
-            <div class="row">
-                <div class="col-6  p-4">
-                    <motion.div animate={{x:[300,-100]}}>
-                    <img class="sideImg rounded float-end"></img>
-                    </motion.div>
-                    
-                </div>
-            </div>
-        </div>
-      
-      
-        
-  
+
                   </div>
                 </section>
       

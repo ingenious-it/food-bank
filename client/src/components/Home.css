@@ -10,12 +10,21 @@
     background: url('../images/img6.jpg');
 }
 
-.sideImg{
-    width: 500px;
-    border-radius: 5px;
-    background: url('../images/img1.jpeg');
-}
+  .sideImg{
+      width: 500px; 
+     height: auto;
+    /* border-radius: 5px;  */
+    /* background: url('../images/img1.jpeg'); */
+  }
 
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
 .img11,.img12{
     min-height: 80%;
@@ -93,7 +102,9 @@
     margin-left: 2rem;
     margin-right: 2rem;
  }
-
+ .aimage, .dbuttongrp{
+    flex-direction:column;
+ }
 
 
 

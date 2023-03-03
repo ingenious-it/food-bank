@@ -1,4 +1,5 @@
 import React from "react";
+import './Home.css';
 import { AiFillHeart } from 'react-icons/ai';
 
 const BodyIntro = () => {
@@ -31,8 +32,8 @@ const BodyIntro = () => {
         </div>
       </div>
       
-      <div className="m-2"  >
-      <div
+      <div className="m-2 d-flex justify-content-center"  >
+       {/* <div
         className="btn-group w-100 d-flex justify-content-evenly  p-1 rounded-bottom "
         role="group"
         ariaLabel="Basic outlined example"
@@ -60,8 +61,13 @@ const BodyIntro = () => {
             <h3 className="ps-2 pe-2"> <AiFillHeart/> Give now</h3>
           </button>
         </button>
+      </div>  */}
+      <div className="dbuttongrp btncolor w-75 text-white rounded p-2 d-flex justify-content-around">
+        <div className="d-flex align-items-center justify-content-center"><h3>Let's Get You Started</h3></div>
+        <div className="d-flex align-items-center justify-content-center"><h4>Join our giving community</h4></div>
+        <div className="d-flex align-items-center justify-content-center"><button type="button" class="btn btn-outline-light ps-5 pe-5 w-100"><AiFillHeart className="me-1"/> Give now</button></div>
       </div>
-      </div>
+      </div> 
     </div>
   );
 };
