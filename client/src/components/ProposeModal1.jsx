@@ -102,8 +102,7 @@ const ProposeModal1 = () => {
                        
                     </form>
 
-                </div>
-                       
+                </div>     
                 </div>
   
   </div>
