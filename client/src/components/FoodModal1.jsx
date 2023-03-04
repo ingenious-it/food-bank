@@ -4,7 +4,7 @@ import {GrSecure} from 'react-icons/gr';
 
 
 
-const FoodModal1 = () => {
+const FoodModal1 = (props) => {
             // validation
             
             const [address, setAddress] = useState('');
@@ -27,6 +27,7 @@ const FoodModal1 = () => {
                 setDonationDate('');
                 setLocation('');
                 setFormSubmitted(true);
+                setErrors('');
                 console.log('Form submitted successfully!');
                
                 
@@ -34,6 +35,11 @@ const FoodModal1 = () => {
                 setErrors(newErrors);
               }
              
+            }
+
+            function handleClose(event){
+              event.preventDefault();
+              setFormSubmitted(false);
             }
           
             function validateInputs() {
@@ -103,9 +109,23 @@ const FoodModal1 = () => {
                             <h3 class="modal-title" >Donate Food Items</h3>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                         <div class="modal-body ">
+                        <div class="modal-body ">
                          {formSubmitted ? (
-                              <p>Thank you for submitting the form!</p>
+
+                          <React.Fragment>
+                            <form onSubmit={handleClose}>
+                            <h4 className='text-center'>Thank you for your generosity</h4>
+
+                            <div className='d-flex justify-content-center'>
+                            <button className="btn text-white btncolor  ps-5 pe-5 " type='submit'>
+                                    close </button>
+                            </div>
+
+
+                            </form>
+                         
+                          </React.Fragment>
+                              
                             ) : (
                               <React.Fragment>
                                 <p className='text-center'>Fill out this form to inform us about your food donations.</p>
