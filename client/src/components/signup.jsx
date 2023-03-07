@@ -14,11 +14,11 @@ const SignUp = () => {
 <div className="bg-image-signup">
 
 <Nav/>
-<div className='form-container mt-5 m-1'>
+<div className='form-container mt-5 '>
 <div class="form-box1">
 <div class="form-value">
     <form action="">
-    <h2>SignUp</h2>
+    <h2 className='mt-2'>SignUp</h2>
    
             <div class="inputbox">
               {/* <ion-icon name="mail-outline"></ion-icon>  */}
@@ -63,8 +63,8 @@ const SignUp = () => {
                 policy
               </label>
             </div>
-            <div class="butttoncontainer">
-            <button>Sign Up</button>
+            <div >
+            <button className='button1'>Sign Up</button>
             </div>
             <div class="register">
               <p>Already have an account? <a href='/Login'>Login here</a></p>
