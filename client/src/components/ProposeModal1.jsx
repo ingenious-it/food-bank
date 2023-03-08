@@ -1,7 +1,9 @@
 import React from 'react';
 import './Donate.css';
-import { useState } from 'react';
+import { useState,useEffect} from 'react';
 import { BsCheckCircle } from "react-icons/bs";
+import axios from 'axios';
+
 
 
 
@@ -22,8 +24,11 @@ const ProposeModal1 = (props) => {
        const [formSubmitted, setFormSubmitted] = useState(false);
 
 
+
+
+
      
-       function handleSubmit(event) {
+       async function handleSubmit(event) {
          event.preventDefault();
          const newErrors = validateInputs();
          if (Object.keys(newErrors).length === 0) {
@@ -39,11 +44,22 @@ const ProposeModal1 = (props) => {
            setFormSubmitted(true);
            setErrors('');
            console.log('Form submitted successfully!');
+           const userData = { firstname, lastname, nic,no,street,city,phonenumber };
+           console.log(userData)
+
+           try {
+            const response = await axios.post('http://127.0.0.1:3000/',userData);
+            console.log(response.data);
+          } catch (error) {
+            console.error(error);
+          }
+
           
            
          } else {
            setErrors(newErrors);
          }
+
         
        }
 
@@ -149,10 +165,6 @@ const ProposeModal1 = (props) => {
  <React.Fragment>
 
                  <form onSubmit={handleSubmit}>       
-                   
-
-
-                        
                                 <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="firstname" 
                                 value={firstname}
