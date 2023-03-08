@@ -119,7 +119,6 @@ const ProposeModal1 = (props) => {
 
                      </div>
 
-                   
                     <div class="modal-content bg-dark text-white" id='content2'>
                         
                          <div class="modal-header  d-flex flex-column-reverse ">
