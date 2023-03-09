@@ -1,0 +1,25 @@
+.bg-image-team{
+    background-image: url('../images/image114.png');
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+}
+
+.imgm{
+    height:400px;
+}
+
+
+@media(max-width:768px){
+
+    .teami{
+       flex-direction:column;
+       justify-content: center !important;
+       align-items:center;
+    }
+    .teami div{
+        width: 75% !important;
+    }
+}

@@ -7,7 +7,7 @@ import { FiUserPlus } from "react-icons/fi";
 
 const DCards = () => {
     return ( 
-        <div className='major'>
+        <div className='major w-100'>
             
             <div className='maincontainer d-flex justify-content-center align-items-center flex-column text-center'>
                     <h1 className='m-3'>Together We're On A Plan To End Human Hunger</h1>
