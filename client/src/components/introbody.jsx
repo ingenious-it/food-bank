@@ -12,21 +12,20 @@ const BodyIntro = () => {
         <div className="col-md-8">
           <div className="card-body m-4 p-4">
             <h5 className="card-title">
-              Feed God's Hungry Children Is On A Mission To Abolish Child
+              Food Bank Is On A Mission To Abolish
               Hunger.
             </h5>
-            <p className="card-text">
+            <p className="card-text" align="justify">
               <br />
-              Millions of children are dying every day from hunger and diseases
-              that are made worse by undernutrition. No child should ever go
-              hungry or suffer from preventable sickness and disease because
-              their basic nutritional needs go unmet. The statistics are
-              discouraging, but Feed God’s Hungry Children knows that even the
-              smallest gift of compassion can change lives one child at a time.
-              You can make a difference in the world and give hope to these
-              hopeless children. Please consider supporting the good work of
-              Feed God’s Hungry children today, and you can know that you will
-              be part of a much better tomorrow.
+              Millions of people in Sri Lanka are suffering from hunger and malnutrition,
+              which can lead to preventable illnesses and even death. 
+              It is heartbreaking to see people in our country struggle to find enough food to eat,
+              while their basic nutritional needs go unmet. The statistics are discouraging, but there is hope.
+              By supporting organizations like Food Bank, we can help provide food to those who need it most. 
+              Every small act of kindness can make a difference in the lives of these vulnerable people. 
+              Please consider supporting the efforts of Feed the people Sri Lanka today, 
+              and together we can create a better future for all of our people.
+
             </p>
           </div>
         </div>
