@@ -1,26 +1,25 @@
 import React from "react";
-import './hovers.css';
-import { Link,useNavigate } from "react-router-dom";
-
+import "./hovers.css";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "bootstrap";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Nav = () => {
-
-  const navigate=useNavigate();
-  const gotoNext= () => {
-    navigate('/donate');
-      
-  }
+  const navigate = useNavigate();
+  const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } =
+    useAuth0();
+  const gotoNext = () => {
+    navigate("/donate");
+  };
   return (
-  
     <React.Fragment>
-      
       <nav className="navbar navbar-expand-lg  p-2 ">
         <div className="container-fluid mt-4">
           <div>
-            <div class="container-fluid">
-              <Link class="navbar-brand" to={'/'}>
+            <div className="container-fluid">
+              <Link className="navbar-brand" to={"/"}>
                 logo
-                              </Link>
+              </Link>
             </div>
             <button
               className="navbar-toggler"
@@ -35,10 +34,7 @@ const Nav = () => {
             </button>
           </div>
 
-          <div
-            className="D-flex w-50"
-            id="navbarSupportedContent"
-          >
+          <div className="D-flex w-50" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
               <li className="nav-item dropdown">
                 <a
@@ -52,34 +48,34 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={'/Mission'}>
+                    <Link className="dropdown-item" to={"/Mission"}>
                       Our Mission
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={'/contactus'}>
+                    <Link className="dropdown-item" to={"/contactus"}>
                       Contact Us{" "}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={'/ourteam'}>
+                    <Link className="dropdown-item" to={"/ourteam"}>
                       Our Team{" "}
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white raise" to={'/whyFoodBank'}>
+                <Link className="nav-link text-white raise" to={"/whyFoodBank"}>
                   Why Food Bank?
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white raise" to={'/projects'}>
+                <Link className="nav-link text-white raise" to={"/projects"}>
                   Projects
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link text-white raise" to={'/propose'}>
+                <Link className="nav-link text-white raise" to={"/propose"}>
                   Propose
                 </Link>
               </li>
@@ -95,19 +91,22 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={'/login'}>
+                    <button className="dropdown-item" onClick={loginWithRedirect}>
                       Login
-                    </Link>
+                    </button>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={'/signup'}>
+                    <Link className="dropdown-item" to={"/signup"}>
                       Sign up{" "}
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <button className="btn btn-outline-warning nav-link text-white btncolor raise" onClick={gotoNext}>
+                <button
+                  className="btn btn-outline-warning nav-link text-white btncolor raise"
+                  onClick={gotoNext}
+                >
                   Donate
                 </button>
               </li>
@@ -115,8 +114,6 @@ const Nav = () => {
           </div>
         </div>
       </nav>
- 
-     
     </React.Fragment>
   );
 };
