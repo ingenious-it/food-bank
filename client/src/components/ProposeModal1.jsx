@@ -32,7 +32,7 @@ const ProposeModal1 = (props) => {
          event.preventDefault();
          const newErrors = validateInputs();
          if (Object.keys(newErrors).length === 0) {
-           // submit form
+           
            //  event.target.reset();
            setFirstName('');
            setLastName('');
