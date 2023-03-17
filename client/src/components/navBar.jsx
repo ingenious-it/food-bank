@@ -91,15 +91,18 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <button className="dropdown-item" onClick={loginWithRedirect}>
+                    <button
+                      className="dropdown-item"
+                      onClick={loginWithRedirect}
+                    >
                       Login
                     </button>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="dropdown-item" to={"/signup"}>
                       Sign up{" "}
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li className="nav-item">
