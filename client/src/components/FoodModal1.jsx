@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './Donate.css';
 import {GrSecure} from 'react-icons/gr';
+import axios from 'axios';
 
 
 
@@ -10,14 +11,14 @@ const FoodModal1 = (props) => {
             const [address, setAddress] = useState('');
             const [donationDate, setDonationDate] = useState('');
             const [location, setLocation] = useState('');
-            // const [preference, setPreference] = useState('comeToUs');
+            const [selectedOption, setSelectedOption] = useState('come to us');
             const [errors, setErrors] = useState({});
             // change the content
             const [formSubmitted, setFormSubmitted] = useState(false);
 
 
           
-            function handleSubmit(event) {
+            async function handleSubmit(event) {
               event.preventDefault();
               const newErrors = validateInputs();
               if (Object.keys(newErrors).length === 0) {
@@ -29,7 +30,15 @@ const FoodModal1 = (props) => {
                 setFormSubmitted(true);
                 setErrors('');
                 console.log('Form submitted successfully!');
-               
+                
+                const foodDoante={address,donationDate,location,selectedOption};
+                // give the enpoint here
+                try{
+                  const response=await axios.post('',foodDoante);
+                  console.log(response.data);
+                }catch(error){
+                  console.error(error);
+                }
                 
               } else {
                 setErrors(newErrors);
@@ -166,20 +175,36 @@ const FoodModal1 = (props) => {
 
                                     <p>To continue with the food donation you have two options, either you can bring them to us or we can come and 
                                         collect them. Please select your preference.</p>  
-                                    <div className='roption d-flex flex-column align-items-center  '>
-                                        <div class="form-check bg-color text-dark  mb-2  ps-4 p-2  rounded ">
-                                            <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked/>
-                                            <label class="form-check-label " for="flexRadioDefault1">
-                                                I will come and Donate to You
-                                            </label>
-                                            </div>
-                                            <div class="form-check bg-color text-dark   mb-2 ps-4 p-2  rounded">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                            You Have To Collect My Donation
-                                            </label>
-                                        </div>
-                                        </div>
+                                        <div className='roption d-flex flex-column align-items-center'>
+      <div className="form-check bg-color text-dark mb-2 ps-4 p-2 rounded">
+        <input
+          className="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+          value="come to us"
+          checked={selectedOption === 'come to us'}
+          onChange={(e)=>setSelectedOption(e.target.value)}
+        />
+        <label className="form-check-label" htmlFor="flexRadioDefault1">
+          I will come and Donate to You
+        </label>
+      </div>
+      <div className="form-check bg-color text-dark mb-2 ps-4 p-2 rounded">
+        <input
+          className="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          value="go to them"
+          checked={selectedOption === 'go to them'}
+          onChange={(e)=>setSelectedOption(e.target.value)}
+        />
+        <label className="form-check-label" htmlFor="flexRadioDefault2">
+          You Have To Collect My Donation
+        </label>
+      </div>
+    </div>
                                         <p className='text-center mt-1'>Click here to submit your details.</p>
                                     <div className='d-flex justify-content-center'>
                                     <button className="btn text-white btncolor  ps-5 pe-5 " type='submit'>
