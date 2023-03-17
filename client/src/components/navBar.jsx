@@ -62,8 +62,7 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
-                      {" "}
+                    <Link className="dropdown-item" to={'/ourteam'}>
                       Our Team{" "}
                     </Link>
                   </li>

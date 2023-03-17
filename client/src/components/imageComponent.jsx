@@ -28,7 +28,7 @@ const ImageComp = () => {
             <div>
               <b>
                 <p className="subtext d-flex align-items-center h-25">
-                  Help us build a better tomorrow today.
+                  Together, we can make a better tomorrow a reality
                 </p>
               </b>
               <button className="btn text-white btncolor raise w-75 mb-2">
