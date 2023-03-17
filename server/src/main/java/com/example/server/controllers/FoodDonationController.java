@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/FoodDonate")
 public class FoodDonationController {
     @Autowired
-    private FoodDonationService foodDonationService;
+    private FoodDonationService foodDonationService; //frm the service class
     @GetMapping("/view")
     public List<FoodDonation> getAllDonation() {
 
