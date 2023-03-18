@@ -102,11 +102,18 @@ const Nav = () => {
                       Login
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="dropdown-item" to={'/signup'}>
                       Sign up{" "}
                     </Link>
-                  </li>
+                  </li> */}
+                  {isAuthenticated && (
+                    <li>
+                      <Link className="dropdown-item" onClick={() => logout({ returnTo: window.location.origin })}>
+                        Logout
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </li>
               <li className="nav-item">
