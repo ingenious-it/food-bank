@@ -23,6 +23,7 @@ const FoodModal1 = (props) => {
               const newErrors = validateInputs();
               if (Object.keys(newErrors).length === 0) {
                 // submit form
+                const foodDoante={address,donationDate,location,selectedOption};
                 //  event.target.reset();
                 setAddress('');
                 setDonationDate('');
@@ -31,7 +32,7 @@ const FoodModal1 = (props) => {
                 setErrors('');
                 console.log('Form submitted successfully!');
                 
-                const foodDoante={address,donationDate,location,selectedOption};
+               
                 // give the enpoint here
                 try{
                   const response=await axios.post('',foodDoante);
