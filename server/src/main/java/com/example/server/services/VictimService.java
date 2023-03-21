@@ -10,10 +10,11 @@ public class VictimService {
     @Autowired
     private VictimRepository victimRepository ;
     public Victim saveVictimDetails(Victim victim){
+
         return victimRepository.save(victim);
     }
-   /* public List<Victim> getAllVictimDetails() {
+   public List<Victim> getAllVictimDetails() {
         return victimRepository.findAll();
-    }*/
+    }
 
 }

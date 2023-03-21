@@ -18,11 +18,11 @@ public class VictimController {
 
     }
 
-   /* @GetMapping("/viewVictimDetails")
+    @GetMapping("/viewVictimDetails")
     public List<Victim> getAllVictimDetails() {
 
         return victimService.getAllVictimDetails();
-    }*/
+    }
 
 
 }
