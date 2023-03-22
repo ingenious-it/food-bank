@@ -13,10 +13,11 @@ import jakarta.persistence.*;
 public class Victim {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int Nic;
+    private Long id;
+    private String Nic;
     private String FirstName;
     private String LastName;
-    private int PhoneNumber;
+    private String PhoneNumber;
     private String No;
     private String Street;
     private String City;
@@ -24,3 +25,5 @@ public class Victim {
     private Boolean IsVerified ;
 
 }
+
+

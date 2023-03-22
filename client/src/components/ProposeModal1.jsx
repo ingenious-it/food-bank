@@ -3,58 +3,66 @@ import './Donate.css';
 import { useState,useEffect} from 'react';
 import { BsCheckCircle } from "react-icons/bs";
 import axios from 'axios';
-
-
+import VictimService from './services/VictimService'
 
 
 const ProposeModal1 = (props) => {
        // validation
-       
-            
-       const [firstname, setFirstName] = useState('');
-       const [lastname, setLastName] = useState('');
+       const [firstName, setfirstName] = useState('');
+       const [lastName, setlastName] = useState('');
        const [nic, setNIC] = useState('');
        const [no, setNo] = useState('');
        const [street, setStreet] = useState('');
        const [city, setCity] = useState('');
-       const [phonenumber, setPhoneNumber] = useState('');
+       const [phoneNumber, setphoneNumber] = useState('');
+       const [description,setDescriotion]=useState('');
+       const [isVerified,setIsVerified]=useState(false);
+
+      //  const [victim,setVictim] = useState({
+      //   firstName : "",
+      //   lastName : "",
+      //   nic : "",
+      //   street : "",
+      //   city : "",
+      //   no : "",
+      //   phoneNumber : "",
+      //  })
+
        // const [preference, setPreference] = useState('comeToUs');
        const [errors, setErrors] = useState({});
        // change the content
        const [formSubmitted, setFormSubmitted] = useState(false);
 
-
-
-
-
      
-       async function handleSubmit(event) {
+       async function handleSubmit(event){
          event.preventDefault();
          const newErrors = validateInputs();
          if (Object.keys(newErrors).length === 0) {
+          
+          const victimData = { firstName, lastName, nic, no, street, city, phoneNumber,isVerified,description };
+          //saveVictim(e)
+            console.log(victimData);
            
-           //  event.target.reset();
-           setFirstName('');
-           setLastName('');
-           setNIC('');
-           setNo('');
-           setStreet('');
-           setCity('');
-           setPhoneNumber('');
-           setFormSubmitted(true);
-           setErrors('');
-           console.log('Form submitted successfully!');
-           const userData = { firstname, lastname, nic,no,street,city,phonenumber };
-           console.log(userData)
 
            try {
-            const response = await axios.post('http://127.0.0.1:3000/',userData);
+            const response = await axios.post("http://localhost:8080/Victim/saveVictimDetails", victimData);
             console.log(response.data);
           } catch (error) {
             console.error(error);
           }
+           //  event.target.reset();
+           setfirstName('');
+           setlastName('');
+           setNIC("");
+           setNo('');
+           setStreet('');
+           setCity('');
+           setphoneNumber('');
+           setDescriotion("")
+           setFormSubmitted(true);
+           setErrors('');
+           console.log('Form submitted successfully!');
 
-          
            
          } else {
            setErrors(newErrors);
@@ -63,18 +71,34 @@ const ProposeModal1 = (props) => {
         
        }
 
+      //  const saveVictim = (e) =>{
+      //   VictimService.saveVictim(victim).then(res =>{
+      //     console.log(res);
+      //   })
+      //   .catch(error => {
+      //     console.log(error);
+      //   })
+      //  }
+
        function handleClose(event){
          event.preventDefault();
          setFormSubmitted(false);
        }
+
+      //  const handleChange = (field, value) => {
+      //     setVictim({
+      //       ...victim,
+      //       [field]:value
+      //     });
+      //  }
      
        function validateInputs() {
          const newErrors = {};
-         if (firstname.trim() === '') {  //remove any whitespace from the beginning and end of the user input
-           newErrors.firstname = '*FirstName is required';
+         if (firstName.trim() === '') {  //remove any whitespace from the beginning and end of the user input
+           newErrors.firstName = '*firstName is required';
          }
-         if (lastname.trim() === '') {
-           newErrors.lastname = '*LastName is required';
+         if (lastName.trim() === '') {
+           newErrors.lastName = '*lastName is required';
          }
          if (nic.trim() === '') {
             newErrors.nic = '*NIC is required';
@@ -94,12 +118,12 @@ const ProposeModal1 = (props) => {
             newErrors.city = '* City is required';
           }
           
-          if (phonenumber.trim() === '') {
-            newErrors.phonenumber = '* PhoneNumber is required';
+          if (phoneNumber.trim() === '') {
+            newErrors.phoneNumber = '* phoneNumber is required';
           } else {
             const phoneNumberRegex = /^(0|94)[0-9]{9}$/;
-            if (!phoneNumberRegex.test(phonenumber.trim())) {
-              newErrors.phonenumber = '* Please enter a valid phone number';
+            if (!phoneNumberRegex.test(phoneNumber.trim())) {
+              newErrors.phoneNumber = '* Please enter a valid phone number';
             }
           }
          return newErrors;
@@ -166,19 +190,21 @@ const ProposeModal1 = (props) => {
 
                  <form onSubmit={handleSubmit}>       
                                 <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="firstname" 
-                                value={firstname}
-                                onChange={(e) => setFirstName(e.target.value)}/>
+                                <input type="text" class="form-control" id="floatingInput" placeholder="firstName" 
+                                // value={firstName}
+                                // onChange={(e) => setfirstName(e.target.value)}
+                                value={firstName}  
+                                onChange={(e) => setfirstName(e.target.value)}/>
                                 <label for="floatingInput" style={{ color: "black" }}>First Name</label>
-                                {errors.firstname && <span className="error">{errors.firstname}</span>}
+                                {errors.firstName && <span className="error">{errors.firstName}</span>}
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="lastname"
-                                value={lastname}
-                                onChange={(e) => setLastName(e.target.value)}/>
+                                <input type="text" class="form-control" id="floatingInput" placeholder="lastName"
+                                value={lastName}
+                                onChange={(e) => setlastName(e.target.value)}/>
                                 <label for="floatingInput" style={{ color: "black" }}>Last Name</label>
-                                {errors.lastname && <span className="error">{errors.lastname}</span>}
+                                {errors.lastName && <span className="error">{errors.lastName}</span>}
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -216,13 +242,83 @@ const ProposeModal1 = (props) => {
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="phonenumber" 
-                                value={phonenumber} 
-                                onChange={(e) => setPhoneNumber(e.target.value)}/>
+                                <input type="text" class="form-control" id="floatingInput" placeholder="phoneNumber" 
+                                value={phoneNumber} 
+                                onChange={(e) => setphoneNumber(e.target.value)}/>
                                 <label for="floatingInput" style={{ color: "black" }}>Phone Number</label>
-                                {errors.phonenumber && <span className="error">{errors.phonenumber}</span>}
+                                {errors.phoneNumber && <span className="error">{errors.phoneNumber}</span>}
                                 </div>
 
+                                <div class="form-floating mb-3">
+                                <textarea class="form-control" id="floatingInput" placeholder="description" value={description} onChange={(e)=>setDescriotion(e.target.value)}></textarea>
+                                <label for="floatingInput" style={{ color: "black" }}>Description</label>
+                                </div>
+
+                                 <p className='text-center mt-1'>Click here to submit your details.</p>
+                                 <div className='d-flex justify-content-center'>
+                                 <button className="btn text-white btncolor  ps-5 pe-5 " type='submit'>
+                                 Submit </button>
+                                 </div>
+                       
+                    </form>
+                    {/* <form onSubmit={(e) => handleSubmit(e)}>       
+                                <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="firstName" 
+                                value={victim.firstName}
+                                onChange={(e) => handleChange("firstName",e.target.value)}/>
+                                <label for="floatingInput" style={{ color: "black" }}>First Name</label>
+                                {errors.firstName && <span className="error">{errors.firstName}</span>}
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="lastName"
+                                value={victim.lastName}
+                                onChange={(e) => handleChange("lastName",e.target.value)}/>
+                                <label for="floatingInput" style={{ color: "black" }}>Last Name</label>
+                                {errors.lastName && <span className="error">{errors.lastName}</span>}
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="nic"
+                                value={victim.nic}
+                                onChange={(e) => handleChange("nic",e.target.value)}/>
+                                <label for="floatingInput" style={{ color: "black" }}>NIC</label>
+                                {errors.nic && <span className="error">{errors.nic}</span>}
+                                </div>
+                                 <p>Enter the Address</p>
+                                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                <div className="form-floating mb-3" style={{ marginRight: "10px", width: "20%"  }}>
+                                 <input type="text" className="form-control" id="floatingInput" placeholder="no"
+                                 value={victim.no}
+                                 onChange={(e) => handleChange("no",e.target.value)}/>
+                                 <label htmlFor="floatingInput" style={{ color: "black" }}>No </label>
+                                 {errors.no && <span className="error">{errors.no}</span>}
+                                </div>
+      
+                                <div className="form-floating mb-3" style={{ marginLeft: "10px",width: "40%"  }}>
+                                <input type="text" className="form-control" id="floatingInput" placeholder="street"
+                                value={victim.street} 
+                                onChange={(e) => handleChange("street",e.target.value)}/>
+                                <label htmlFor="floatingInput" style={{ color: "black" }}>Street</label>
+                                {errors.street && <span className="error">{errors.street}</span>}
+                                </div>
+
+                                <div className="form-floating mb-3" style={{ marginLeft: "10px",width: "40%"  }}>
+                                <input type="text" className="form-control" id="floatingInput" placeholder="city"
+                                value={victim.city}
+                                onChange={(e) => handleChange("city",e.target.value)}/>
+                                <label htmlFor="floatingInput" style={{ color: "black" }}>City</label>
+                                {errors.city && <span className="error">{errors.city}</span>}
+                                </div>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="phoneNumber" 
+                                value={victim.phoneNumber} 
+                                onChange={(e) => handleChange("phoneNumber",e.target.value)}/>
+                                <label for="floatingInput" style={{ color: "black" }}>Phone Number</label>
+                                {errors.phoneNumber && <span className="error">{errors.phoneNumber}</span>}
+                                </div>
                                 <div class="form-floating mb-3">
                                 <textarea class="form-control" id="floatingInput" placeholder="description"></textarea>
                                 <label for="floatingInput" style={{ color: "black" }}>Description</label>
@@ -234,7 +330,7 @@ const ProposeModal1 = (props) => {
                                  Submit </button>
                                  </div>
                        
-                    </form>
+                    </form> */}
  </React.Fragment>
   )
   }
