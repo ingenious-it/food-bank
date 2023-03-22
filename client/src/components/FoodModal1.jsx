@@ -11,7 +11,7 @@ const FoodModal1 = (props) => {
             const [address, setAddress] = useState('');
             const [donationDate, setDonationDate] = useState('');
             const [location, setLocation] = useState('');
-            const [selectedOption, setSelectedOption] = useState('come to us');
+            const [selectedOption, setSelectedOption] = useState('');
             const [errors, setErrors] = useState({});
             // change the content
             const [formSubmitted, setFormSubmitted] = useState(false);
@@ -24,6 +24,12 @@ const FoodModal1 = (props) => {
               if (Object.keys(newErrors).length === 0) {
                 // submit form
                 const foodDoante={address,donationDate,location,selectedOption};
+                  try{
+                  const response=await axios.post('http://localhost8080/FoodDonate/saveDonation',foodDoante);
+                  console.log(response.data);
+                }catch(error){
+                  console.error(error);
+                }
                 //  event.target.reset();
                 setAddress('');
                 setDonationDate('');
@@ -34,12 +40,7 @@ const FoodModal1 = (props) => {
                 
                
                 // give the enpoint here
-                try{
-                  const response=await axios.post('',foodDoante);
-                  console.log(response.data);
-                }catch(error){
-                  console.error(error);
-                }
+
                 
               } else {
                 setErrors(newErrors);
