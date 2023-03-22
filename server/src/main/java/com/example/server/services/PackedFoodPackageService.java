@@ -5,6 +5,8 @@ import com.example.server.repositories.PackedFoodPackageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PackedFoodPackageService {
 
@@ -13,5 +15,11 @@ public class PackedFoodPackageService {
 
     public void savePackedPackages(PackedFoodPackage packedFoodPackage){
         packedFoodPackageRepository.save(packedFoodPackage);
+    }
+
+    public List<PackedFoodPackage> getAllItems()
+    {
+
+        return packedFoodPackageRepository.findAll();
     }
 }

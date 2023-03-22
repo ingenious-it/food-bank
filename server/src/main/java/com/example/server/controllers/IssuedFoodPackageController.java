@@ -2,12 +2,12 @@ package com.example.server.controllers;
 
 import com.example.server.entities.IssuedFoodPackage;
 import com.example.server.services.IssuedFoodPackageService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/issuedPackages")
 public class IssuedFoodPackageController {
     private IssuedFoodPackageService issuedFoodPackageService;
@@ -15,5 +15,11 @@ public class IssuedFoodPackageController {
     @PostMapping("/saveICount")
     public void saveIssuedPackages(@RequestBody IssuedFoodPackage issuedFoodPackage){
         issuedFoodPackageService.saveIssuedPackages(issuedFoodPackage);
+    }
+
+    @GetMapping("/viewIssuedPackages")
+    public List<IssuedFoodPackage> getAllIssuedFoodPackages()
+    {
+        return issuedFoodPackageService.getAllItems();
     }
 }

@@ -1,10 +1,12 @@
 package com.example.server.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 
 @Entity
+@Data
 @Table(name="issuedFoodPackage")
 public class IssuedFoodPackage {
     @Id

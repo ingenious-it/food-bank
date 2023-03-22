@@ -20,6 +20,7 @@ public class FoodDonation {
     private String DonationAddress;
     private Date DonationDate;
     private String NearestLocation;
+    private String Option;
 //    @ManyToOne
 //    @JoinColumn(name = "user_ID")
 

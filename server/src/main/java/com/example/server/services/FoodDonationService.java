@@ -19,6 +19,7 @@ public class FoodDonationService {  // access entity through repo
     }
     public List<FoodDonation> getAllDonation()
     {
+
         return foodDonationRepsoitory.findAll();
     }
 }
