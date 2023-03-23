@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name="issuedFoodPackage")
+@Table(name="issued_food_package")
 public class IssuedFoodPackage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
