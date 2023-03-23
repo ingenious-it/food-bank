@@ -3,7 +3,6 @@ package com.example.server.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.NaturalId;
 import jakarta.persistence.*;
 @Entity
 @Data
@@ -22,8 +21,12 @@ public class Victim {
     private String Street;
     private String City;
     private String Description;
-    private Boolean IsVerified ;
+    private Boolean isVerified ;
+
+
+
 
 }
+
 
 
