@@ -22,6 +22,7 @@ public class Victim {
     private String City;
     private String Description;
     private Boolean isVerified ;
+    private Boolean isDelivered=false;
 
 
 

@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface VictimRepository extends JpaRepository<Victim ,Long> {
     List<Victim> findByIsVerifiedTrue();
+    List<Victim> findByIsVerifiedTrueAndIsDeliveredFalse();
    // This method uses Spring Data JPA's query creation mechanism to automatically generate a query to retrieve all Victim entities where the isVerified property is set to true.
 
 }

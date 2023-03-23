@@ -1,6 +1,7 @@
 package com.example.server.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.example.server.entities.Victim;
 import com.example.server.repositories.VictimRepository;
@@ -30,7 +31,8 @@ public class VictimService {
         return victimRepository.findAll();
     }
     public List<Victim> getAllVerifiedVictims() {
-      return victimRepository.findByIsVerifiedTrue();
+      return victimRepository.findByIsVerifiedTrueAndIsDeliveredFalse();
   }
+
 
 }
