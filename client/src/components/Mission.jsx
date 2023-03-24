@@ -18,32 +18,29 @@ import {motion} from 'framer-motion';
        <div className="bg-img-mission bg-dark">
        <Nav/>
                 <div class="img-overlay ">
-                    <div className ="imgmission rounded "></div>
-                    
-                <div className='wrap-out d-flex justify-content-center mt-6'>
-            <div className="wrap d-flex justify-content-center align-items-center h-100 mt-5 p-5">
-               <h2 className='text-white pt-5'>Read The Mission of Feed God’s Hungry Children</h2>
-
-            </div>
+                    <div className ="imgmission"></div>
+                    <h2 className='text-white'>Read The Mission of Feed God’s Hungry Children</h2>
                 </div>
 
-                </div>
-                </div>
+        </div>
+                
+                
+                <br/>
 
                 
                 <section>
-              
-
-
                     <div class="container-fluid">
                     <div class="row">
                         <div class="col-6  p-4 ">
-                            <h1>Feed God's Hungry Children Is Changing Lives</h1>
+                            <h1>FOOD BANK Is Changing Lives</h1>
                             <h4>Our Mission</h4>
                             <p>
-                            Feed God’s Hungry Children reaches out to hurting children and 
-                            their families all over the world by providing food, clothing, and spiritual education. 
-                            You can be a part of helping and healing these forgotten and hurting children.
+                            Our mission is to address food insecurity and hunger by providing a platform that connects food donors with victims in need. 
+                            We aim to make it easy for people to donate food, as well as monetary donations.
+                             Our goal is to create a community of generosity and compassion, where those who have excess food can share it with those who are struggling to put food on the table. 
+                             We believe that everyone deserves access to nutritious food, and we are committed to helping bridge the gap between those who have and those who need 
+                             and making that a reality by leveraging technology to help solve this issue.
+                             Our vision is a world where hunger is no longer a barrier to human potential and well-being.
                             </p>
 
                             <h4>Why FGHC?</h4>

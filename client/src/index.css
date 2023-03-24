@@ -30,6 +30,7 @@ code {
   background-color: #f0900f !important;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -354,3 +355,8 @@ display: block;
 /*-------------------------------*/
 
 
+=======
+.colorthemed{
+  color: #f0900f !important;
+}
+>>>>>>> main

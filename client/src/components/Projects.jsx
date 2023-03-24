@@ -35,13 +35,15 @@ const Projects = () => {
             </motion.div>
 
             <div className='maincontainer m-5'>
-                <div class="row row-cols-1 row-cols-md-3 g-4 m-5">
+                <div class="row ">
                         <div class="col">
-                            <div class="card1 h-100 shadow p-3  rounded  text-white">
+                            <div class="card1 h-80 shadow p-3  rounded  text-white">
                             <img src={require('../images/image14.png')} class="card-img-top" alt="project1" />
                             <div class="card-body">
                                 <h5 class="card-title">Project Title 1</h5>
-                                <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                                <p class="card-text">There are many variations of passages of Lorem Ipsum available,
+                                 but the majority have suffered alteration in some form, by injected humour, 
+                                 or randomised words which don't look even slightly believable</p>
                                                 {/* <!-- Button trigger modal --> */}
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
                                 See More...

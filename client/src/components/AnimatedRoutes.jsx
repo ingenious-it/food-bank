@@ -10,8 +10,12 @@ import Propose from './Propose';
 import Login from './Login';
 import SignUp from './signup';
 import Donate from './Donate';
+<<<<<<< HEAD
 import DonatePrompt from './moneyDonation/box';
 import SideBar from './dashBoard/sideBar';
+=======
+import Team from './ourteam';
+>>>>>>> main
 
 const AnimatedRoutes = () => {
     const location=useLocation();
@@ -23,6 +27,7 @@ const AnimatedRoutes = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/projects' element={<Projects/>}/>
             <Route path='/contactus' element={<ContactUs/>}/>
+            <Route path='/ourteam' element={<Team/>}/>
             <Route path='/mission' element={<Mission/>}/>
             <Route path='/whyFoodBank' element={<Why/>}/>
             <Route path='/propose' element={<Propose/>}/>

@@ -14,8 +14,18 @@
 
 .card1{
     background-color: #535050;
+    width: 100%;
 }
 
 .card2{
     background-color: #807f81;
+    width: 100%;
 }
+
+/* @media(max-width:768px){
+
+    .card1 , .card2{
+        width: 100%;
+        margin: 0 !important;
+    }
+    } */

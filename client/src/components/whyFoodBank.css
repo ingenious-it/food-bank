@@ -1,0 +1,17 @@
+.bg-img-why{
+    
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-image: url('../images/image12.png');
+}
+
+.card{
+    background-color: #d6cecec5;
+    width: 100%;
+}
+
