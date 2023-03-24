@@ -41,9 +41,18 @@ public class VictimController {
         List<Victim> verifiedVictims = victimService.getAllVerifiedVictims();
         return verifiedVictims;
     }
-
-
-
-
-
+    @PutMapping("/{id}")
+    public ResponseEntity<Victim> updateVictim(@PathVariable Long id, @RequestBody Victim updatedVictim) {
+        Victim savedVictim = victimService.updateVictim(id, updatedVictim);
+        if (savedVictim != null) {
+            return ResponseEntity.ok(savedVictim);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+    @GetMapping("/viewToDelivery")
+    public List<Victim> getAllToDeliveyVictims() {
+        List<Victim> todeliveyVictims = victimService.getAllToDeliveyVictims();
+        return todeliveyVictims;
+    }
 }

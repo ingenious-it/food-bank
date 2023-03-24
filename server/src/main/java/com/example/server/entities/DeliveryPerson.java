@@ -14,6 +14,11 @@ public class DeliveryPerson {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private int Deliveryid;
+    private int DeliveryPersonId;
     private String DeliveryPersonName;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "did", referencedColumnName = "DId")
+    private Delivery delivery;
+
+
 }

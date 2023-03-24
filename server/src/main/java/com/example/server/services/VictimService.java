@@ -33,6 +33,20 @@ public class VictimService {
     public List<Victim> getAllVerifiedVictims() {
       return victimRepository.findByIsVerifiedTrueAndIsDeliveredFalse();
   }
+    public Victim updateVictim(Long id, Victim updatedVictim) {
+        Optional<Victim> optionalVictim = victimRepository.findById(id);
+        if (optionalVictim.isPresent()) {
+            Victim victim = optionalVictim.get();
+            victim.setIsDelivered(updatedVictim.getIsDelivered());
+            return victimRepository.save(victim);
+        } else {
+            return null;
+        }
+    }
+    public List<Victim> getAllToDeliveyVictims() {
+        return victimRepository.findByIsVerifiedTrueAndIsDeliveredTrue();
+    }
+
 
 
 }

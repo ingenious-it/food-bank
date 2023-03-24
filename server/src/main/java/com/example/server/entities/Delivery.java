@@ -5,7 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -19,5 +21,7 @@ public class Delivery {
     private String VictimNic;
     private Date DeliveryDate;
     private Boolean isCompleted ;
+    @OneToMany(mappedBy = "delivery", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<DeliveryPerson> deliveryPersons = new ArrayList<>();
 
 }
