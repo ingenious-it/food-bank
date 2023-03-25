@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/FoodDonate")
 public class FoodDonationController {
     @Autowired
-    private FoodDonationService foodDonationService;
-    @GetMapping("/view")
+    private FoodDonationService foodDonationService; //frm the service class
+    @GetMapping("/viewFoodDonations")
     public List<FoodDonation> getAllDonation() {
 
         return foodDonationService.getAllDonation();
