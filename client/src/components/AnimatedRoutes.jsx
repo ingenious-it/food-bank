@@ -12,6 +12,7 @@ import SignUp from "./signup";
 import Donate from "./Donate";
 import Team from "./ourteam";
 import DonatePrompt from "./moneyDonation/box";
+import PayPalPrompt from "./moneyDonation/payPalIntegration";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -31,6 +32,7 @@ const AnimatedRoutes = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/money-donate" element={<DonatePrompt />} />
+          <Route path='/checkout'  element={<PayPalPrompt/>} />
         </Routes>
       </AnimatePresence>
     </React.Fragment>
