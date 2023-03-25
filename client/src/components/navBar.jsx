@@ -1,15 +1,13 @@
 import React from "react";
-import './hovers.css';
-import { Link,useNavigate } from "react-router-dom";
-
+import "./hovers.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
 
-  const navigate=useNavigate();
-  const gotoNext= () => {
-    navigate('/donate');
-      
-  }
+  const navigate = useNavigate();
+  const gotoNext = () => {
+    // navigate('/donate');
+  };
   return (
   
     <React.Fragment>
@@ -18,7 +16,7 @@ const Nav = () => {
         <div className="container-fluid mt-4">
           <div>
             <div class="container-fluid">
-              <Link class="navbar-brand" to={'/'}>
+              <Link class="navbar-brand" to={"/"}>
                 logo
                               </Link>
             </div>
