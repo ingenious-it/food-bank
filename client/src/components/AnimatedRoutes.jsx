@@ -11,6 +11,8 @@ import Login from './Login';
 import SignUp from './signup';
 import Donate from './Donate';
 import Team from './ourteam';
+import DonatePrompt from './moneyDonation/box';
+import SideBar from './dashBoard/sideBar';
 
 const AnimatedRoutes = () => {
     const location=useLocation();
@@ -29,6 +31,8 @@ const AnimatedRoutes = () => {
             <Route path='/login' element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/donate' element={<Donate/>}/>
+            <Route path='/money-donate' element={<DonatePrompt/>}/>
+            <Route path='/admin' element={<SideBar/>} />
             </Routes>
         </AnimatePresence>
         </React.Fragment>
