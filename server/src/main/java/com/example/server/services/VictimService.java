@@ -5,21 +5,20 @@ import java.util.Optional;
 
 import com.example.server.entities.Victim;
 import com.example.server.repositories.VictimRepository;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
 @Service
 public class VictimService {
-
     @Autowired
-    private VictimRepository victimRepository;
+    private VictimRepository victimRepository ;
+    public Victim saveVictimDetails(Victim victim){
 
-    public Victim saveVictimDetails(Victim victim) {
         return victimRepository.save(victim);
     }
-
-    public List<Victim> getAllVictimDetails() {
+   public List<Victim> getAllVictimDetails() {
         return victimRepository.findAll();
     }
 
@@ -33,6 +32,14 @@ public class VictimService {
     public List<Victim> getAllVerifiedVictims() {
       return victimRepository.findByIsVerifiedTrueAndIsDeliveredFalse();
   }
+  public List<Victim> showAllVerifiedVictim(){ //View Verified Victims only Don't care about Delivery
+        return victimRepository.findByIsVerifiedTrue();
+  }
+  public List<Victim> showAllUnverifiedVictim() //View UnVerified Victims only Don't care about Delivery
+  {
+      return victimRepository.findByIsVerifiedFalse();
+  }
+
     public Victim updateVictim(Long id, Victim updatedVictim) {
         Optional<Victim> optionalVictim = victimRepository.findById(id);
         if (optionalVictim.isPresent()) {
@@ -45,6 +52,26 @@ public class VictimService {
     }
     public List<Victim> getAllToDeliveyVictims() {
         return victimRepository.findByIsVerifiedTrueAndIsDeliveredTrue();
+    }
+    public List<Victim> getRejectedVictims()
+    {
+        return victimRepository.findByIsVerifiedTrueAndIsRejectedTrue();
+    }
+
+//    public Victim updateVerifyVictim(Long id, Victim updatedVictim) {
+//        Optional<Victim> optionalVictim = victimRepository.findById(id);
+//        if (optionalVictim.isPresent()) {
+//            Victim victim = optionalVictim.get();
+//            victim.setIsDelivered(updatedVictim.getIsVerified());
+//            return victimRepository.save(victim);
+//        } else {
+//            return null;
+//        }
+//    }
+    public Victim updateTheVictim(Long id, Boolean isVerified) {
+        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        victim.setIsVerified(isVerified);
+        return victimRepository.save(victim);
     }
 
 

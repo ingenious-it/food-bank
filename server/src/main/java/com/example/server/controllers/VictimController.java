@@ -5,8 +5,14 @@ import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.example.server.repositories.VictimRepository;
 
+
+import javax.swing.event.ListDataEvent;
+import java.security.PublicKey;
+import java.sql.ClientInfoStatus;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -30,11 +36,21 @@ public class VictimController {
         return victimService.getAllVictimDetails();
     }
 
-//    @GetMapping("/{id}")
-//    public Victim getVictimDetails(@PathVariable int id) {
-//        return victimService.getVictimById(id);
-//    }
 
+
+    @GetMapping("/viewUnverifiedVictims") //View UnVerified Victims only Don't care about Delivery
+    public List<Victim>showAllUnverifiedVictim()
+    {
+        List<Victim> unverifiedVictims=victimService.showAllUnverifiedVictim();
+        return unverifiedVictims;
+    }
+    @GetMapping("/viewVerifiedVictims") //View Verified Victims only Don't care about Delivery
+
+        public List<Victim> showAllVerifiedVictim()
+        {
+            List<Victim> AllVerifiedVictims=victimService.showAllVerifiedVictim();
+            return AllVerifiedVictims;
+        }
 
     @GetMapping("/viewAllVerifiedVictims")
     public List<Victim> getAllVerifiedVictims() {
@@ -50,9 +66,21 @@ public class VictimController {
             return ResponseEntity.notFound().build();
         }
     }
+    @PutMapping("/select/{id}")
+    public Victim updateVictim(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
+        Boolean isVerified = requestBody.get("isVerified");
+        return victimService.updateTheVictim(id, isVerified);
+    }
+
     @GetMapping("/viewToDelivery")
     public List<Victim> getAllToDeliveyVictims() {
         List<Victim> todeliveyVictims = victimService.getAllToDeliveyVictims();
         return todeliveyVictims;
+    }
+    @GetMapping("/viewRejectedVictims")
+    public List<Victim> getRejectedVictims()
+    {
+        List<Victim> rejectedVictims = victimService.getRejectedVictims();
+        return rejectedVictims;
     }
 }
