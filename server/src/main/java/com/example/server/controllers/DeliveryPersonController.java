@@ -19,7 +19,8 @@ public class DeliveryPersonController {
     }
 
     @GetMapping("/viewDeliveryPerson")
-    public List<DeliveryPerson> getAllDeliveryPerson() {
+    public List<DeliveryPerson> getAllDeliveryPerson()
+    {
         return deliveryPersonService.getAllDeliveryPerson();
     }
 

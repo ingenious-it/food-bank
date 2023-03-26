@@ -1,5 +1,6 @@
 package com.example.server.controllers;
 
+import com.example.server.entities.DeliveryPerson;
 import com.example.server.entities.Victim;
 import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,9 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3001","http://localhost:3000"})
+@CrossOrigin(origins = {"http://localhost:3001","http://localhost:3001"})
 @RequestMapping("/Victim")
+
 public class VictimController {
     @Autowired
     private VictimService victimService;
@@ -69,6 +71,7 @@ public class VictimController {
     @PutMapping("/select/{id}")
     public Victim updateVictim(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
         Boolean isVerified = requestBody.get("isVerified");
+        Boolean isRejected = requestBody.get("isVerified");
         return victimService.updateTheVictim(id, isVerified);
     }
 
@@ -83,4 +86,15 @@ public class VictimController {
         List<Victim> rejectedVictims = victimService.getRejectedVictims();
         return rejectedVictims;
     }
+
+    @GetMapping("/viewAcceptedVictims")
+    public List<Victim> getAcceptedVictims()
+    {
+        List<Victim> AcceptedVictims = victimService.getAcceptedVictims();
+        return AcceptedVictims;
+    }
+
+
+
+
 }

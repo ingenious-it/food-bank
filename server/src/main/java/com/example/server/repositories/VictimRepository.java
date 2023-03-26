@@ -16,6 +16,8 @@ public interface VictimRepository extends JpaRepository<Victim ,Long> {
     List<Victim> findByIsVerifiedTrueAndIsDeliveredFalse();
     List<Victim> findByIsVerifiedTrueAndIsDeliveredTrue();
     List<Victim> findByIsVerifiedTrueAndIsRejectedTrue();
+    List<Victim> findByIsVerifiedTrueAndIsRejectedFalse();
+
    // This method uses Spring Data JPA's query creation mechanism to automatically generate a query to retrieve all Victim entities where the isVerified property is set to true.
 
 }

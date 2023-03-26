@@ -18,27 +18,34 @@ public class VictimService {
 
         return victimRepository.save(victim);
     }
+
    public List<Victim> getAllVictimDetails() {
         return victimRepository.findAll();
     }
-
     public Victim getVictimById(Long id) {
+
         return victimRepository.findById(id).orElse(null);
     }
 
     public List<Victim> getAllVictims() {
         return victimRepository.findAll();
     }
+
     public List<Victim> getAllVerifiedVictims() {
       return victimRepository.findByIsVerifiedTrueAndIsDeliveredFalse();
   }
-  public List<Victim> showAllVerifiedVictim(){ //View Verified Victims only Don't care about Delivery
+
+
+  public List<Victim> showAllVerifiedVictim() { //View Verified Victims only Don't care about Delivery
         return victimRepository.findByIsVerifiedTrue();
   }
+
   public List<Victim> showAllUnverifiedVictim() //View UnVerified Victims only Don't care about Delivery
   {
       return victimRepository.findByIsVerifiedFalse();
   }
+
+
 
     public Victim updateVictim(Long id, Victim updatedVictim) {
         Optional<Victim> optionalVictim = victimRepository.findById(id);
@@ -50,12 +57,22 @@ public class VictimService {
             return null;
         }
     }
+
+
     public List<Victim> getAllToDeliveyVictims() {
+
         return victimRepository.findByIsVerifiedTrueAndIsDeliveredTrue();
     }
     public List<Victim> getRejectedVictims()
     {
+
         return victimRepository.findByIsVerifiedTrueAndIsRejectedTrue();
+    }
+
+    public List<Victim> getAcceptedVictims()
+    {
+
+        return victimRepository.findByIsVerifiedTrueAndIsRejectedFalse();
     }
 
 //    public Victim updateVerifyVictim(Long id, Victim updatedVictim) {
