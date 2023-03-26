@@ -9,18 +9,20 @@ import java.util.Date;
 
 @Entity
 @Data
+@Table(name="packed_food_package")
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="food_donation")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class FoodDonation {
+public class PackedFoodPackage {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int DonationID;
-    private String DonationAddress;
-    private Date DonationDate;
-    private String NearestLocation;
-    private String SelectedOption;
+    private int packedID;
+
+    private String packageTypeName;
+    private Date packedDate;
+    private int packedQuantity;
+
+    @ManyToOne
+    @JoinColumn(name="typeID")
+    private PackageType packageType;
 }
