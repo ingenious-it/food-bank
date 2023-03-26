@@ -25,8 +25,12 @@ public class PackedFoodPackageService {
 
         // retrive current attributes
         PackageType packageType = savedPackedFoodPackage.getPackageType();
-        packageType.setQuantity(packageType.getQuantity() + savedPackedFoodPackage.getPackedQuantity());
-        packageTypeRepository.save(packageType);
+        if (packageType != null) {
+            // Update the quantity attribute
+            int newQuantity = packageType.getQuantity() + savedPackedFoodPackage.getPackedQuantity();
+            packageType.setQuantity(newQuantity);
+            packageTypeRepository.save(packageType);
+        }
 
         return savedPackedFoodPackage;
     }

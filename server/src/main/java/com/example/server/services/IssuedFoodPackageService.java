@@ -23,15 +23,15 @@ public class IssuedFoodPackageService {
 
         // retrieve current attributes
         PackageType packageType = savedIssuedFoodPackage.getPackageType();
-        packageType.setQuantity(packageType.getQuantity() - savedIssuedFoodPackage.getIssuedQuantity());
-        packageTypeRepository.save(packageType);
-
+        if(packageType != null){
+            packageType.setQuantity(packageType.getQuantity() - savedIssuedFoodPackage.getIssuedQuantity());
+            packageTypeRepository.save(packageType);
+        }
         return savedIssuedFoodPackage;
     }
 
     public List<IssuedFoodPackage> getAllItems()
     {
-
         return issuedFoodPackageRepository.findAll();
     }
 
