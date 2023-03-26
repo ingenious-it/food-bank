@@ -1,11 +1,14 @@
-import React from 'react';
+
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CardsHome.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
+import ProposeModal1 from './ProposeModal1';
 
 const DCards = () => {
+    const [openProposeModal,setOpenProposeModal]=useState(false);
     return ( 
         <div className='major w-100'>
             
@@ -47,7 +50,13 @@ const DCards = () => {
                 <p>We invite you to submit the details of individuals or families affected by food crisis who are in need of assistance. 
                     Through the generous donations from compassionate individuals, 
                     we are determined to uncover their circumstances and provide them with the necessary aid</p>
-                <button type="button" class="btn btn-outline-warning">PROPOSE VICTIMS</button>
+                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>{
+                        setOpenProposeModal(true);
+                    }}>
+                    Propose Victim </button>
+                    </div>
+
+                    {openProposeModal && <ProposeModal1/>}
 
                 </div>
                 
@@ -59,7 +68,7 @@ const DCards = () => {
             
 
 
-        </div>
+        // </div>
      );
 }
  
