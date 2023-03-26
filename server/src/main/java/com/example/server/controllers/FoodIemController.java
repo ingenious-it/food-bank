@@ -16,7 +16,7 @@ import java.util.List;
 public class FoodIemController {
     @Autowired
     private FoodItemService foodItemService;
-    @GetMapping
+    @GetMapping("/viewAllItems")
     public List<FoodItem> getAllFoodItems()
     {
         return foodItemService.getAllItems();

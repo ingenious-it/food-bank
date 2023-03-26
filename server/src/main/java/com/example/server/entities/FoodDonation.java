@@ -8,21 +8,17 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
-@Data
 @Table(name="food_donation")
+@Data
 @NoArgsConstructor
-@AllArgsConstructor  // automatic constructors
+@AllArgsConstructor
 public class FoodDonation {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int DonationID;
-
     private String DonationAddress;
     private Date DonationDate;
     private String NearestLocation;
-    private String Option;
-//    @ManyToOne
-//    @JoinColumn(name = "user_ID")
-
-
+    private String SelectedOption;
 }
