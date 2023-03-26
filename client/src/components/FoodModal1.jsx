@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Donate.css";
 import { GrSecure } from "react-icons/gr";
-import {BsCheckCircle} from "react-icons/bs"
+import { BsCheckCircle } from "react-icons/bs";
 import axios from "axios";
 
 const FoodModal1 = () => {
@@ -149,8 +149,15 @@ const FoodModal1 = () => {
                     <h4 className="text-center">
                       Thank you for your generosity
                     </h4>
-                <div className='d-flex justify-content-center mb-2 mt-4'><BsCheckCircle size={80} /></div>
-                <p className='mt-3' ><i> <center> Your Submission has been sent! </center></i></p>
+                    <div className="d-flex justify-content-center mb-2 mt-4">
+                      <BsCheckCircle size={80} />
+                    </div>
+                    <p className="mt-3">
+                      <i>
+                        {" "}
+                        <center> Your Submission has been sent! </center>
+                      </i>
+                    </p>
 
                     <div className="d-flex justify-content-center">
                       <button
