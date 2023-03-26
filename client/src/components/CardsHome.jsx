@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CardsHome.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
+import FoodModal1 from './FoodModal1';
 
 const DCards = () => {
+    const [openFoodModal,setOpenFoodModal]=useState(false);
     return ( 
         <div className='major w-100'>
             
@@ -23,9 +25,13 @@ const DCards = () => {
                 <p>Give to join us in providing nutritious meals to people facing malnutrition. By donating food,
                      you are helping to address the issue of hunger,
                      which affects thousands of people around Sri Lanka, including in your local community.</p>
-                <button type="button" class="btn btn-outline-warning">DONATE FOOD</button>
+                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>{
+                        setOpenFoodModal(true);
+                    }}>DONATE FOOD</button>
                 </div>
             </div>
+            {openFoodModal && <FoodModal1/>} 
+
            
             <div className='foodd mb-4 rounded text-center'>
                 <div className='m-2'>
