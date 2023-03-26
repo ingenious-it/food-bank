@@ -3,7 +3,7 @@ import './Donate.css';
 import { useState,useEffect} from 'react';
 import { BsCheckCircle } from "react-icons/bs";
 import axios from 'axios';
-import VictimService from './services/VictimService'
+
 
 
 const ProposeModal1 = (props) => {
