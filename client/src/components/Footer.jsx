@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Footer.css";
+//import "./Footer.css";
 
 import { FaHome } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
@@ -11,9 +11,9 @@ import { FaInstagram } from "react-icons/fa";
 
 const DFooter = () => {
   return (
-    <footer className="footer_container bg-dark text-white w-100">
-      <div class="d-flex">
-        <div class="col">
+    <footer className="footer_container bg-dark text-white w-100 ">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 ms-5 mt-5 ">
           <div class=" d-flex">
               <div className="divimg">
                 <img src="logo.png" height={100} width={100} alt="" />
@@ -30,7 +30,7 @@ const DFooter = () => {
             and well-being.
           </p>
         </div>
-        <div class="col">
+        <div class="col-lg-2 col-md-3 col-sm-6 mt-5 ms-5">
           <h4 class="mb-4 font-weight-bold text-warning">About</h4>
           <div>
             <p class="para">About Us</p>
@@ -39,7 +39,7 @@ const DFooter = () => {
             <p class="para">Contact Us</p>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
           <h4 class="mb-4 font-weight-bold text-warning">Our Impact</h4>
           <div>
             <p class="para">Mission</p>
@@ -48,7 +48,7 @@ const DFooter = () => {
           </div>
         </div>
 
-        <div class="col">
+        <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
           <h4 class="mb-4 font-weight-bold text-warning">Take Action</h4>
           <div>
             <p class="para">Donate Food</p>
@@ -57,7 +57,7 @@ const DFooter = () => {
           </div>
         </div>
 
-        <div class="col">
+        <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
           <h4 class="mb-4 font-weight-bold text-warning">Contact Us</h4>
           <p class="para">
             <FaHome class="icon" />
@@ -76,24 +76,35 @@ const DFooter = () => {
 
       <hr className="hr" />
 
-      <div class="bottom">
-        <div class="info">
+      <div class="row ms-3">
+        <div class="d-flex">
+          <div class="info">
           <span class="full">
             <span class="first">
               Copyright @2023 Allright reserved | This is made by{" "}
-              <span class="second">Ingenious</span>
+              <span class="second text-warning">Ingenious</span>
             </span>
           </span>
         </div>
-        <div class="icons">
+        
+        
+          
+          <div class="icons d-flex justify-content-right">
           <FaFacebookF class="icon" />
           <FaTwitter class="icon" />
           <FaInstagram class="icon" />
-        </div>
+        
+
+          </div>
+ 
+        
+      </div>
       </div>
     </footer>
 
-    // <footer class="bg-dark text-white pt-5 pb-5 w-100">
+
+
+  // <footer class="bg-dark text-white pt-5 pb-5 w-100">
 
     //   <div class="container text-center text-md-left">
     //     <div class="row text-center text-md-left">
@@ -235,7 +246,12 @@ const DFooter = () => {
     //   </div>
 
     // </footer>
+
+
+
+
   );
 };
 
 export default DFooter;
+
