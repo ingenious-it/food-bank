@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PackageTypeService {
@@ -20,4 +21,8 @@ public class PackageTypeService {
     {
         return packageTypeRepository.findAll();
     }
+
+//    public Optional<PackageType> getPackageTypeById(int id) {
+//        return packageTypeRepository.findById(id);
+//    }
 }

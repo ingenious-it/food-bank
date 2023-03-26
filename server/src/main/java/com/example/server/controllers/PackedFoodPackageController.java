@@ -1,6 +1,7 @@
 package com.example.server.controllers;
 import com.example.server.entities.PackedFoodPackage;
 import com.example.server.services.PackedFoodPackageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.List;
 @RequestMapping("/packedPackages")
 public class PackedFoodPackageController {
 
-    private PackedFoodPackageService packedFoodPackageService;
+    @Autowired
+    PackedFoodPackageService packedFoodPackageService;
 
     @PostMapping("/saveCount")
      public void savePackedPackages(@RequestBody PackedFoodPackage packedFoodPackage){
@@ -20,6 +22,7 @@ public class PackedFoodPackageController {
     @GetMapping("/viewPackedPackages")
     public List<PackedFoodPackage> getAllPackedFoodPackages()
     {
+
         return packedFoodPackageService.getAllItems();
     }
 }
