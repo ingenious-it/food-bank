@@ -11,6 +11,10 @@ const DonatePrompt = () => {
   const [success, setSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [orderID, setOrderID] = useState(false);
+  const [paymentTime, setPaymentTime] = useState(null);
+  const [donations, setDonations] = useState(null);
+
+ 
 
   // function to handle clicking on the amount buttons
   const handleAmountButtonClick = (value) => {
@@ -47,6 +51,31 @@ const DonatePrompt = () => {
     return actions.order.capture().then(function (details) {
       const { payer } = details;
       setSuccess(true);
+      // const now = new Date();
+      // setPaymentTime(now);
+      // const donation = {
+      //   donationID: orderID,
+      //   donationAmount: amount,
+      //   dateAndTime: now.toISOString()
+      // };
+      
+      // fetch('http://localhost:8080/MoneyDonate/saveDonation', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify(donation)
+      // })
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     console.log('Donation submitted successfully:', data);
+      //   })
+      //   .catch(error => {
+      //     console.error('Error submitting donation:', error);
+      //   });
+        
+      //   setDonations(JSON.stringify(donation));
+
     });
   };
 
@@ -54,12 +83,38 @@ const DonatePrompt = () => {
   const onError = (data, actions) => {
     setErrorMessage("An error occurred with your payment.");
   };
+ 
 
   // useEffect hook to handle displaying a success message when the payment is successful
   useEffect(() => {
     if (success) {
       alert("Payment successful!!");
+      const now = new Date();
+      setPaymentTime(now);
+      const donation = {
+        donationID: orderID,
+        donationAmount: amount,
+        dateAndTime: now.toISOString()
+      };
+      fetch('http://localhost:8080/MoneyDonate/saveDonation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(donation)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Donation submitted successfully:', data);
+          console.log(JSON.stringify(data));
+        })
+        .catch(error => {
+          console.error('Error submitting donation:', error);
+        });            
       console.log("Order successful. Your order ID is:", orderID);
+      console.log(paymentTime);
+      console.log("tHE JSON DATA IS: ",donations);
+      
     }
   }, [success]);
   return (
