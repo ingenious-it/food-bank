@@ -43,8 +43,8 @@ const DCards = () => {
                 
             </div>
 
-            <div className='propose mb-4 rounded text-center'>
-                <div className='m-2'>
+            <div className='propose mb-4 rounded'>
+                <div className='m-2 text-center'>
                 <FiUserPlus className='icon' />
                 <h3>Propose Victims</h3>
                 <p>We invite you to submit the details of individuals or families affected by food crisis who are in need of assistance. 

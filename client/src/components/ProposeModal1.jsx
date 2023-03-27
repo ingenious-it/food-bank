@@ -144,7 +144,7 @@ const ProposeModal1 = (props) => {
 
                             <p> You can provide information about victims of food crisis.As a contributor for the sight, All we make sure your provided 
                                 information will not be disclose to any external party.</p>
-                        <div>
+                        <div className='text-justify'> 
                             <p>Who are suitable to get this donation?</p>
                                 <ul>
                                 <li>Orphans</li>
