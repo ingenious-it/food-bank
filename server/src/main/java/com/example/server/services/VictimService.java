@@ -88,8 +88,11 @@ public class VictimService {
         return victimRepository.save(victim);
     }
 
-
-
+    public Victim updateTobeDeliverStatusStatus(Long id, Boolean status) {
+        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        victim.setIsDeliverySelected(status);
+        return victimRepository.save(victim);
+    }
 
 
 
