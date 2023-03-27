@@ -80,12 +80,13 @@ public class VictimController {
         List<Victim> AcceptedVictims = victimService.getAcceptedVictims();
         return AcceptedVictims;
     }
-//    @PutMapping("/selectselectReject/${id}")
-//    public Victim updateRejectedVictim(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
-//        Boolean isVerified = requestBody.get("isVerified");
-//        Boolean isAccepted= requestBody.get("")
-//        return victimService.updateTheRejectedVictim(id, isRejected);
-//    }
+    @PutMapping("/selectReject/{id}")
+    public Victim updateVictimRejected(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
+    Boolean isVerified = requestBody.get("isVerified");
+    Boolean isAccepted= requestBody.get("isAccepted");
+    return victimService.updateVictimRejected(id, isVerified,isAccepted);
+}
+
 
 
 
