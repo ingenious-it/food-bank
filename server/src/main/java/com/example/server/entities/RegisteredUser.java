@@ -11,13 +11,13 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="food_donation")
-public class FoodDonation {
+@Table(name="registered_user")
+
+public class RegisteredUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int DonationID;
-    private String DonationAddress;
-    private Date DonationDate;
-    private String NearestLocation;
-    private String SelectedOption;
+    private Long id;
+    private String email;
+    private String username;
+
 }

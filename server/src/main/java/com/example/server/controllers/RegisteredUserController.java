@@ -1,0 +1,32 @@
+package com.example.server.controllers;
+
+import com.example.server.entities.FoodDonation;
+import com.example.server.entities.RegisteredUser;
+import com.example.server.services.FoodDonationService;
+import com.example.server.services.RegisteredUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/RegisteredUser")
+public class RegisteredUserController {
+    @Autowired
+    private RegisteredUserService registeredUserService; //from the service class
+    @GetMapping("/getAllRegisteredUser")
+    public List<RegisteredUser> getAllRegisteredUser() {
+        return registeredUserService.getAllRegisteredUser();
+    }
+    @PostMapping("/saveRegisteredUser")
+    public RegisteredUser saveRegisteredUser(@RequestBody RegisteredUser registeredUser)
+    {
+        registeredUser.setId(null); // Set the id to null to trigger the auto-generation
+        //System.out.println(registeredUser.getEmail());
+        //System.out.println(registeredUser.getUsername());
+        return registeredUserService.SaveRegisteredUser(registeredUser);
+    }
+
+
+}

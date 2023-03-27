@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './hovers.css';
 import { Link,useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
 
 
 const Nav = () => {
@@ -13,6 +14,27 @@ const Nav = () => {
     navigate('/donate');
       
   }
+
+
+  // useEffect(() => {
+  //   axios.post("http://localhost:3000/user/saveUser",
+  //     {
+  //       Username:user.name
+
+  //     }
+  //   )
+  //   .then(
+  //     res=>{
+  //       console.log(res);
+  //     }
+  //   )
+  //   .catch((e)=>{
+  //     console.log(e);
+  //   })
+  
+  // }, [isAuthenticated])
+  
+
   return (
   
     <React.Fragment>
