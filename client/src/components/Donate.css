@@ -34,6 +34,9 @@
   .form-check{
     width: 100%;
   }
+  .roption div{
+    width:100% !important;
+  }
 }
 .form-check{
   width: 50%;
@@ -48,5 +51,17 @@
 }
 
 .bg-color{
-  background-color: #f0900f ;
+  background-color:#fecf50;
+}
+
+.bg-color1{
+  background-color:#ff9b21;
+}
+.sicon{
+  color:#fff;
+}
+
+.error{
+  color: #f0900f;
+  font-size: smaller;
 }
