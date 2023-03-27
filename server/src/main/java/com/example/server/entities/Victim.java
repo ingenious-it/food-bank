@@ -23,9 +23,9 @@ public class Victim {
     private String City;
     private String Description;
     private String PackageType;
-    private Boolean isVerified ;
-    private Boolean isRejected;
-    private Boolean isDelivered;
+    private Boolean isVerified;
+    private Boolean isAccepted;
+    private Boolean isDeliverySelected;
 
 
 }

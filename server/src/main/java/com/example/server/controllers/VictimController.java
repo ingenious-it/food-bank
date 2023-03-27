@@ -32,31 +32,18 @@ public class VictimController {
         this.victimService = victimService;
     }
 
-    @GetMapping("/viewVictimDetails")
-    public List<Victim> getAllVictimDetails() {
-
-        return victimService.getAllVictimDetails();
-    }
 
 
 
     @GetMapping("/viewUnverifiedVictims") //View UnVerified Victims only Don't care about Delivery
     public List<Victim>showAllUnverifiedVictim()
     {
-        List<Victim> unverifiedVictims=victimService.showAllUnverifiedVictim();
+        List<Victim> unverifiedVictims=victimService.getAllUnverifiedVictims();
         return unverifiedVictims;
     }
-    @GetMapping("/viewVerifiedVictims") //View Verified Victims only Don't care about Delivery
-
-        public List<Victim> showAllVerifiedVictim()
-        {
-            List<Victim> AllVerifiedVictims=victimService.showAllVerifiedVictim();
-            return AllVerifiedVictims;
-        }
-
     @GetMapping("/viewAllVerifiedVictims")
     public List<Victim> getAllVerifiedVictims() {
-        List<Victim> verifiedVictims = victimService.getAllVerifiedVictims();
+        List<Victim> verifiedVictims = victimService.getAcceptedandNeedtobeSelectDeliveryVictim();
         return verifiedVictims;
     }
     @PutMapping("/{id}")
@@ -68,16 +55,16 @@ public class VictimController {
             return ResponseEntity.notFound().build();
         }
     }
-    @PutMapping("/select/{id}")
+    @PutMapping("/selectAccept/{id}")
     public Victim updateVictim(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
         Boolean isVerified = requestBody.get("isVerified");
-        Boolean isRejected = requestBody.get("isVerified");
-        return victimService.updateTheVictim(id, isVerified);
+        Boolean isAccepted= requestBody.get("isAccepted");
+        return victimService.updateAcceptanceStatus(id, isVerified,isAccepted);
     }
 
     @GetMapping("/viewToDelivery")
     public List<Victim> getAllToDeliveyVictims() {
-        List<Victim> todeliveyVictims = victimService.getAllToDeliveyVictims();
+        List<Victim> todeliveyVictims = victimService.getAcceptedAndSelectedtoDelivery();
         return todeliveyVictims;
     }
     @GetMapping("/viewRejectedVictims")
@@ -93,6 +80,12 @@ public class VictimController {
         List<Victim> AcceptedVictims = victimService.getAcceptedVictims();
         return AcceptedVictims;
     }
+//    @PutMapping("/selectselectReject/${id}")
+//    public Victim updateRejectedVictim(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
+//        Boolean isVerified = requestBody.get("isVerified");
+//        Boolean isAccepted= requestBody.get("")
+//        return victimService.updateTheRejectedVictim(id, isRejected);
+//    }
 
 
 

@@ -13,16 +13,13 @@ public class PackageTypeService {
     @Autowired
     private PackageTypeRepository packageTypeRepository;
 
-    public PackageType SavePackageType(PackageType packageType)//entity
+    public PackageType SavePackageType(PackageType packageType)
     {
         return packageTypeRepository.save(packageType);
     }
-    public List<PackageType> getAllPackageTypes()
+    public List<PackageType> getAllPackageDetails()
     {
         return packageTypeRepository.findAll();
     }
 
-//    public Optional<PackageType> getPackageTypeById(int id) {
-//        return packageTypeRepository.findById(id);
-//    }
 }
