@@ -50,3 +50,7 @@
 .bg-color{
   background-color: #f0900f ;
 }
+
+.bg-image-propose{
+  background-image: url('../images/image161.png');
+}

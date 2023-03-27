@@ -15,7 +15,7 @@ const Propose = () => {
                      animate={{width:"100vw"}}
                      exit={{x:window.innerWidth, transition:{duration:0.1}}}
         >
-        <div className="bg-image-contact">
+        <div className="bg-image-propose">
           
         <Nav/>
         <div className='wrap-out d-flex justify-content-center mt-5'>
