@@ -1,5 +1,7 @@
 package com.example.server.services;
+import com.example.server.entities.FoodItem;
 import com.example.server.entities.Victim;
+import com.example.server.repositories.FoodItemRepository;
 import com.example.server.repositories.VictimRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ public class VictimService {
     public Victim getVictimById(int id) {
         return victimRepository.findById(id).orElse(null);
     }
+
+
 
 
 
