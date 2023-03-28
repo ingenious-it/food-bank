@@ -15,4 +15,7 @@ public class MoneyDonationService {
         return moneyDonationRepository.save(moneyDonation);
 
     }
+    public long getDonationAmountSum() {
+        return moneyDonationRepository.getDonationAmountSum();
+    }
 }

@@ -14,8 +14,6 @@ const DonatePrompt = () => {
   const [paymentTime, setPaymentTime] = useState(null);
   const [donations, setDonations] = useState(null);
 
- 
-
   // function to handle clicking on the amount buttons
   const handleAmountButtonClick = (value) => {
     setAmount(value);
@@ -58,7 +56,7 @@ const DonatePrompt = () => {
       //   donationAmount: amount,
       //   dateAndTime: now.toISOString()
       // };
-      
+
       // fetch('http://localhost:8080/MoneyDonate/saveDonation', {
       //   method: 'POST',
       //   headers: {
@@ -73,9 +71,8 @@ const DonatePrompt = () => {
       //   .catch(error => {
       //     console.error('Error submitting donation:', error);
       //   });
-        
-      //   setDonations(JSON.stringify(donation));
 
+      //   setDonations(JSON.stringify(donation));
     });
   };
 
@@ -83,7 +80,6 @@ const DonatePrompt = () => {
   const onError = (data, actions) => {
     setErrorMessage("An error occurred with your payment.");
   };
- 
 
   // useEffect hook to handle displaying a success message when the payment is successful
   useEffect(() => {
@@ -94,29 +90,30 @@ const DonatePrompt = () => {
       const donation = {
         donationID: orderID,
         donationAmount: amount,
-        dateAndTime: now.toISOString()
+        dateAndTime: now.toISOString(),
       };
-      fetch('http://localhost:8080/MoneyDonate/saveDonation', {
-        method: 'POST',
+      fetch("http://localhost:8080/MoneyDonate/saveDonation", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(donation)
+        body: JSON.stringify(donation),
       })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Donation submitted successfully:', data);
-          console.log(JSON.stringify(data));
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Donation submitted successfully:", data);
+          console.log(data);
         })
-        .catch(error => {
-          console.error('Error submitting donation:', error);
-        });            
-      console.log("Order successful. Your order ID is:", orderID);
-      console.log(paymentTime);
-      console.log("tHE JSON DATA IS: ",donations);
-      
+        .catch((error) => {
+          console.error("Error submitting donation:", error);
+        });
+      // console.log("Order successful. Your order ID is:", orderID);
+      // console.log(paymentTime);
+      setDonations(JSON.stringify(donation));
     }
   }, [success]);
+  console.log("tHE JSON DATA IS: ", donations);
+
   return (
     <React.Fragment>
       <section className=" d-flex justify-content-around  dGrid">

@@ -73,6 +73,9 @@ public class VictimService {
         victim.setIsVerified(isVerified);
         return victimRepository.save(victim);
     }
+    public long getVerifiedVictimCount() {
+        return victimRepository.countByIsVerifiedTrue();
+    }
 
 
 
