@@ -23,6 +23,7 @@ const ContactUs = () => {
     
               e.target.reset();
           };
+        // useRef allow to get a reference to a DOM element or a React component instance and access its properties and methods.
           
     return (
       <React.Fragment>

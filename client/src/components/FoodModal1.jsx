@@ -14,13 +14,13 @@ const FoodModal1 = () => {
   // change the content
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  useEffect(() => {
-    // Fetch datalist options from backend
-    fetch("http://your-api-endpoint.com/locations")
-      .then((response) => response.json())
-      .then((data) => setLocationOptions(data.locations))
-      .catch((error) => console.log(error));
-  }, []);
+  // useEffect(() => {
+  //   // Fetch datalist options from backend
+  //   fetch("http://your-api-endpoint.com/locations")
+  //     .then((response) => response.json())
+  //     .then((data) => setLocationOptions(data.locations))
+  //     .catch((error) => console.log(error));
+  // }, []);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -186,7 +186,7 @@ const FoodModal1 = () => {
                         onChange={(e) => setdonationAddress(e.target.value)}
                       />
                       <label for="floatingInput" style={{ color: "black" }}>
-                        donationAddress
+                        My Address
                       </label>
                       {errors.donationAddress && (
                         <span className="error">{errors.donationAddress}</span>
