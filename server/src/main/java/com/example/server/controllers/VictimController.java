@@ -1,6 +1,5 @@
 package com.example.server.controllers;
 
-import com.example.server.entities.DeliveryPerson;
 import com.example.server.entities.Victim;
 import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
