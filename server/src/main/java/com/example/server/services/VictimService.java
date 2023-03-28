@@ -41,11 +41,11 @@ public class VictimService {
 //            return null;
 //        }
 //    }
-    public Victim updateTheVictim(Long id, Boolean isVerified) {
-        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
-        victim.setIsVerified(isVerified);
-        return victimRepository.save(victim);
-    }
+//    public Victim updateTheVictim(Long id, Boolean isVerified) {
+//        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+//        victim.setIsVerified(isVerified);
+//        return victimRepository.save(victim);
+//    }
 //    public Victim updateTheRejectedVictim(Long id, Boolean isRejected) {
 //        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
 //        victim.setIsRejected(isRejected);
@@ -81,7 +81,18 @@ public class VictimService {
         victim.setIsAccepted(AcceptenceStatus);
         return victimRepository.save(victim);
     }
+    public Victim updateVictimRejected(Long id, Boolean Victimstatus,Boolean AcceptenceStatus) {
+        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        victim.setIsVerified(Victimstatus);
+        victim.setIsAccepted(AcceptenceStatus);
+        return victimRepository.save(victim);
+    }
 
+    public Victim updateTobeDeliverStatusStatus(Long id, Boolean status) {
+        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        victim.setIsDeliverySelected(status);
+        return victimRepository.save(victim);
+    }
 
 
 
