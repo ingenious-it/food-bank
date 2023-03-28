@@ -121,7 +121,7 @@ const Home = () => {
 
           <DCards />
           <section className=" ms-5 text-center" >
-            <h2>
+            <h2 className="text-dark mt-2">
             "We make a living by what we get,but we make a life by what we give."</h2>
             <br></br> 
             <h3>- Winston Churchil</h3>
@@ -132,7 +132,7 @@ const Home = () => {
         </div>
       </motion.div>
       <section>
-        <h2 className="text-center fw-bold mb-3">Frequently Asked Questions</h2>
+        <h2 className="text-center text-dark fw-bold mb-3">Frequently Asked Questions</h2>
         <div className="d-flex justify-content-center">
           <div class="accordion  mb-3 " id="accordionPanelsStayOpenExample">
             <div class="accordion-item mb-1 ">
