@@ -8,9 +8,6 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name="food_donation")
 public class FoodDonation {
     @Id

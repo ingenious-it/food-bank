@@ -2,6 +2,7 @@ package com.example.server.controllers;
 
 import com.example.server.entities.PackageType;
 import com.example.server.services.PackageTypeService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,5 +22,10 @@ public class PackageTypeController {
         return packageTypeService.getAllPackageTypes();
     }
 
+    @GetMapping("/{typeID}/quantity")
+    public ResponseEntity<Integer> getQuantityByTypeID(@PathVariable int typeID) {
+        int quantity = packageTypeService.getQuantityByTypeID(typeID);
+        return ResponseEntity.ok(quantity);
+    }
 
 }

@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 
 const Nav = () => {
-  const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } =
+  const {  loginWithRedirect, logout, user, isAuthenticated } =
     useAuth0();
 
   const navigate = useNavigate();
