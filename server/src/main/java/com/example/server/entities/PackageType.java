@@ -19,6 +19,4 @@ public class PackageType {
     private String typeName;
     private int quantity;
 
-
-
 }
