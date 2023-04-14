@@ -32,23 +32,28 @@ const FoodModal1 = () => {
         const response = await axios.post(
           "http://localhost:8080/FoodDonate/saveDonation",
           foodDonate
-        ); // give the enpoint here
+        ); 
         console.log(response.data);
+        setFormSubmitted(true);
+        // Display a success message to the user
+        alert("Form submitted successfully!");
       } catch (error) {
         console.error(error);
+        // Display an error message to the user
+        alert("An error occurred while submitting the form. Please try again later.");
       }
-
-      //  event.target.reset();
+  
+      // event.target.reset();
       setdonationAddress("");
       setDonationDate("");
       setNearestLocation("");
-      setFormSubmitted(true);
+     
       setErrors("");
-      console.log("Form submitted successfully!");
     } else {
       setErrors(newErrors);
     }
   }
+  
 
   function handleClose(event) {
     event.preventDefault();
