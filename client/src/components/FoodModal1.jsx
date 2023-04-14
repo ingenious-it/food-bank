@@ -3,6 +3,8 @@ import "./Donate.css";
 import { GrSecure } from "react-icons/gr";
 import { BsCheckCircle } from "react-icons/bs";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FoodModal1 = () => {
   const [donationAddress, setdonationAddress] = useState("");
@@ -36,11 +38,11 @@ const FoodModal1 = () => {
         console.log(response.data);
         setFormSubmitted(true);
         // Display a success message to the user
-        alert("Form submitted successfully!");
+        toast.success("Form submitted successfully!");
       } catch (error) {
         console.error(error);
         // Display an error message to the user
-        alert("An error occurred while submitting the form. Please try again later.");
+        toast.error("An error occurred while submitting the form. Please try again later.");
       }
   
       // event.target.reset();
@@ -77,6 +79,18 @@ const FoodModal1 = () => {
 
   return (
     <React.Fragment>
+    <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={true}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+/>
       <div
         class="modal fade"
         id="exampleModal"
