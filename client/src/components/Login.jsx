@@ -35,7 +35,7 @@ const Login = () => {
                     </div>
                     <div class="forget d-flex justify-content-between mt-1">
                         <label for=""><input type="checkbox" />Remember Me</label>
-                        <p><a className='text-white' href="#"><p>Forget Password</p></a></p>
+                        <p><a className='text-white' href="/forgetpassword"><p>Forget Password</p></a></p>
                     </div>
                     <button className='button1'>Log in</button>
                     <div class="register">
