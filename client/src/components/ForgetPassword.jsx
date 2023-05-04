@@ -26,7 +26,7 @@ const ForgetPassword = () => {
         <div className="bg-image-login">
           <Nav />
           <div className="form-container mt-5 m-1">
-            <div class="form-box1">
+            <div class="form-box2">
               <div class="form-value">
                 <form action="">
                   <h2>Forget password?</h2>

@@ -26,13 +26,22 @@ const SignUp = () => {
       confirmPassword,
     };
 
-    axios.post('/api/users/saveUser', newUser)
+    axios.post('http://localhost:8080/RegisteredUser/saveUser', newUser)
       .then((response) => {
         console.log(response);
       })
       .catch((error) => {
         console.log(error);
       });
+
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setContactNumber("");
+      setUsername("");
+      setPassword("");
+      setConfirmPassword("");
+
   };
     return ( 
         <React.Fragment>
@@ -80,12 +89,12 @@ const SignUp = () => {
                     <label>Confirm Password</label>
                   </div>
 
-                  <div class="forget">
+                  {/* <div class="forget">
                     <label>
                       <input type="checkbox" required />I agree to the terms of use & Privacy
                       policy
                     </label>
-                  </div>
+                  </div> */}
                   <div>
                     <button className='button1' type="submit">Sign Up</button>
                   </div>

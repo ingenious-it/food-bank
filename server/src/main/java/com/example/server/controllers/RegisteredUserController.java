@@ -2,6 +2,7 @@ package com.example.server.controllers;
 
 import com.example.server.entities.FoodDonation;
 import com.example.server.entities.RegisteredUser;
+import com.example.server.entities.Victim;
 import com.example.server.services.FoodDonationService;
 import com.example.server.services.RegisteredUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,16 +21,22 @@ public class RegisteredUserController {
 //    public List<RegisteredUser> getAllRegisteredUser() {           for data supplier
 //        return registeredUserService.getAllRegisteredUser();
 //    }
-    @PostMapping("/saveRegisteredUser")
-    public RegisteredUser saveRegisteredUser(@RequestBody RegisteredUser registeredUser)
-    {
-        registeredUser.setId(null); // Set the id to null to trigger the auto-generation
-        RegisteredUser returnData=null;
-        try {
-            returnData=registeredUserService.SaveRegisteredUser(registeredUser);
-        }catch(DataAccessException exception){
-            System.out.println(exception.getMessage());
-        }
-        return returnData;
+//    @PostMapping("/saveRegisteredUser")
+//    public RegisteredUser saveRegisteredUser(@RequestBody RegisteredUser registeredUser)
+//    {
+//        registeredUser.setId(null); // Set the id to null to trigger the auto-generation
+//        RegisteredUser returnData=null;
+//        try {
+//            returnData=registeredUserService.SaveRegisteredUser(registeredUser);
+//        }catch(DataAccessException exception){
+//            System.out.println(exception.getMessage());
+//        }
+//        return returnData;
+//    }
+
+    @PostMapping("/saveUser")
+    public RegisteredUser saveUserDetails(@RequestBody RegisteredUser registeredUser)
+    { return registeredUserService.SaveRegisteredUser(registeredUser);
+
     }
 }
