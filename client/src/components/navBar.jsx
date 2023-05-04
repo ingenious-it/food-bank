@@ -6,8 +6,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Nav = () => {
 
-   const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
-
+   const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();//amal
+ 
   const navigate=useNavigate();
   const gotoNext= () => {
     navigate('/donate');
