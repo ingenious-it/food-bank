@@ -3,6 +3,8 @@ import './signup.css';
 import Nav from './navBar';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('');
@@ -15,6 +17,11 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      toast.error("Passwords do not match");
+      return;
+    }
 
     const newUser = {
       firstName,
@@ -29,9 +36,11 @@ const SignUp = () => {
     axios.post('http://localhost:8080/RegisteredUser/saveUser', newUser)
       .then((response) => {
         console.log(response);
+        toast.success("form submitted successfully");
       })
       .catch((error) => {
         console.log(error);
+        toast.error("An error occured while sending data");
       });
 
       setFirstName("");
@@ -45,6 +54,18 @@ const SignUp = () => {
   };
     return ( 
         <React.Fragment>
+              <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={true}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+/>
         <motion.div
          initial={{width:0}}
          animate={{width:"100vw"}}
