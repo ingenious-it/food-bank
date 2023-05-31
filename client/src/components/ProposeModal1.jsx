@@ -3,6 +3,8 @@ import './Donate.css';
 import { useState,useEffect} from 'react';
 import { BsCheckCircle } from "react-icons/bs";
 import axios from 'axios';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -42,14 +44,25 @@ const ProposeModal1 = (props) => {
           const victimData = { firstName, lastName, nic, no, street, city, phoneNumber,isVerified,description };
           //saveVictim(e)
             console.log(victimData);
+
            
 
            try {
             const response = await axios.post("http://localhost:8080/Victim/saveVictimDetails", victimData);
             console.log(response.data);
+            setFormSubmitted(true);
+            // Display a success message to the user
+            toast.success("Form submitted successfully!");
           } catch (error) {
             console.error(error);
+            // Display an error message to the user
+            toast.error("An error occurred while submitting the form. Please try again later.");
           }
+
+
+
+         
+
            //  event.target.reset();
            setfirstName('');
            setlastName('');
@@ -134,6 +147,18 @@ const ProposeModal1 = (props) => {
     return ( 
 
         <React.Fragment>
+               <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={true}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+/>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                  <div class="modal-dialog modal-dialog-centered modal-xl d-flex">
                      <div class="modal-content bg-dark text-white" id='content1'>
