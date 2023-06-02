@@ -15,7 +15,7 @@ const Home = () => {
 
   const variants = {
     visible: { x: 0 },
-    hidden: { x: 250 },
+    hidden: { x: -250 },
   };
 
   const transition = {
@@ -27,7 +27,7 @@ const Home = () => {
         <React.Fragment>
             <motion.div
              initial={{width:0}}
-             animate={{width:"100vw"}}
+             animate={{width:"99vw"}}
              exit={{x:window.innerWidth, transition:{duration:0.1}}}
         >
         
