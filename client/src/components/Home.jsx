@@ -27,7 +27,7 @@ const Home = () => {
         <React.Fragment>
             <motion.div
              initial={{width:0}}
-             animate={{width:"99vw"}}
+             animate={{width:"100vw"}}
              exit={{x:window.innerWidth, transition:{duration:0.1}}}
         >
         
