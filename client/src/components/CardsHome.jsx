@@ -28,7 +28,7 @@ const DCards = () => {
             </p>
             <button
               type="button"
-              class="btn btn-outline-warning"
+              class="btn btn-outline-success"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               onClick={() => {
@@ -68,7 +68,7 @@ const DCards = () => {
               determined to uncover their circumstances and provide them with
               the necessary aid
             </p>
-            <button type="button" class="btn btn-outline-warning">
+            <button type="button" class="btn btn-outline-success">
               PROPOSE VICTIMS
             </button>
           </div>

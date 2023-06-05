@@ -90,7 +90,7 @@ const Home = () => {
                     </h1><br/>
                     <p>To end Food Scarcity, we must work together to bring food to the victims who need it most.<br/>Every donation counts and can make a difference in the lives of those who are struggling to put food on the table.
                     </p><br></br>
-                    <button type="button" class="btn btn-primary">LEARN WHY</button>
+                    <button type="button" class="btn btn-success">LEARN WHY</button>
                     </div>
                     {/* <div className='m-2'>
                         <motion.div animate={{x:[300,-50]}}>  
