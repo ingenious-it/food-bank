@@ -69,6 +69,10 @@
 .bg-image-propose{
   background-image: url('../images/image161.png');
 }
+.bg-image-donate{
+  background-image: url('../images/image312.png');
+
+}
 .error{
   color: #2fc4b2;
   font-size: smaller;
