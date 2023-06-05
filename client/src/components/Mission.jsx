@@ -1,6 +1,5 @@
 import React from 'react';
 import Nav from './navBar';
-import DFooter from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Mission.css';
 import {motion} from 'framer-motion';
@@ -17,9 +16,13 @@ import {motion} from 'framer-motion';
                  
        <div className="bg-img-mission bg-dark">
        <Nav/>
-                <div class="img-overlay ">
-                    <div className ="imgmission"></div>
-                    <h2 className='text-white'>Read The Mission of Feed God’s Hungry Children</h2>
+                <div class="img-overlay1 d-flex justify-content-center">
+                <div className="wrap-out d-flex justify-content-center mt-5 ">
+            <div className="wrap d-flex justify-content-center align-items-center text-center h-100 mt-5 p-5">
+              <h1 className="text-white pt-5 ">Read the mission of Food Bank</h1>
+            </div>
+          </div>
+                  
                 </div>
 
         </div>
@@ -28,10 +31,10 @@ import {motion} from 'framer-motion';
                 <br/>
 
                 
-                <section>
-                    <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-6  p-4 ">
+          
+                    <div class="">
+                    <div class="lcontain d-flex justify-content-around w-100">
+                        <div className='w-50 m-5'>
                             <h1>FOOD BANK Is Changing Lives</h1>
                             <h4>Our Mission</h4>
                             <p>
@@ -50,14 +53,14 @@ import {motion} from 'framer-motion';
                             </p>
 
                         </div>
-                        <div class="col-6  p-4">
+                        <div className='w-50 m-5'>
                         <div className ="imgmission2 rounded "></div>
 
 
                         </div>
                     </div>
                     </div>
-                </section>
+              
 
 
 
