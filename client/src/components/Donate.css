@@ -1,5 +1,5 @@
 .lcontainer .scontainer hr{
-    border: 3px solid #ff9900;
+    border: 3px solid #2fc4b2;
     border-radius: 5px;
 }
 
@@ -49,4 +49,8 @@
 
 .bg-color{
   background-color: #f0900f ;
+}.error{
+  color: #2fc4b2;
+  font-size: smaller;
 }
+

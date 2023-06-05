@@ -25,9 +25,13 @@ code {
 
 }
 
-.btncolor
+/* .btncolor
 {
   background-color: #f0900f !important;
+} */
+.btncolor
+{
+  background-color: #2fc4b2!important;
 }
 
 .colorthemed{
