@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import "./Footer.css";
+// import "./Footer.css";
 
 import { FaHome } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
@@ -31,7 +31,7 @@ const DFooter = () => {
           </p>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5 ms-5">
-          <h4 class="mb-4 font-weight-bold text-warning">About</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">About</h4>
           <div>
             <p class="para">About Us</p>
             <p class="para">Projects</p>
@@ -40,7 +40,7 @@ const DFooter = () => {
           </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
-          <h4 class="mb-4 font-weight-bold text-warning">Our Impact</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">Our Impact</h4>
           <div>
             <p class="para">Mission</p>
             <p class="para">Our Approach</p>
@@ -49,7 +49,7 @@ const DFooter = () => {
         </div>
 
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
-          <h4 class="mb-4 font-weight-bold text-warning">Take Action</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">Take Action</h4>
           <div>
             <p class="para">Donate Food</p>
             <p class="para">Donate Money</p>
@@ -58,7 +58,7 @@ const DFooter = () => {
         </div>
 
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
-          <h4 class="mb-4 font-weight-bold text-warning">Contact Us</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">Contact Us</h4>
           <p class="para">
             <FaHome class="icon" />
             NewYork,NY2333,USA
@@ -82,7 +82,7 @@ const DFooter = () => {
           <span class="full">
             <span class="first">
               Copyright @2023 Allright reserved | This is made by{" "}
-              <span class="second text-warning">Ingenious</span>
+              <span class="second themecolor">Ingenious</span>
             </span>
           </span>
         </div>
