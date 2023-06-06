@@ -26,5 +26,8 @@ public class AdminUserService {
     public List<AdminUser> getAllAdminUser() {
         return adminUserRepository.findAll();
     }
+    public AdminUser getAdminUserById(String userName) {
+        return adminUserRepository.findById(userName).orElse(null);
+    }
 
 }

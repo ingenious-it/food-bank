@@ -1,7 +1,6 @@
 package com.example.server.controllers;
 
 import com.example.server.entities.AdminUser;
-import com.example.server.entities.Delivery;
 import com.example.server.services.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
