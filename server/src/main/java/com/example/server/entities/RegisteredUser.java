@@ -4,22 +4,25 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.jdbc.core.SqlReturnType;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Table(name="registered_user")
-
+@Table(name = "registered_user")
 public class RegisteredUser {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private String userId;
     private String firstName;
     private String lastName;
-    private String email;
-    private int contactNumber;
-    private String username;
     private String password;
+    private String phoneNumber;
+    private String email;
+    private long points;
+    private Boolean donatorFlag;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<MoneyDonation> donations = new HashSet<>();
 
 }
