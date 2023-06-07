@@ -28,4 +28,6 @@ public class Victim {
     private Boolean isDeliverySelected;
 
 
+    public Victim(int i, String s, String tharushni, String thathya, String s1, String s2, String main_street, String galle, String good) {
+    }
 }
