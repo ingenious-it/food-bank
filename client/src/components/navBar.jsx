@@ -55,9 +55,9 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    {/* <Link className="dropdown-item" to={'/Mission'}>
+                    <Link className="dropdown-item" to={'/Mission'}>
                       Our Mission
-                    </Link> */}
+                    </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={'/contactus'}>
