@@ -1,5 +1,5 @@
 .lcontainer .scontainer hr{
-    border: 3px solid #ff9900;
+    border: 3px solid #2fc4b2;
     border-radius: 5px;
 }
 
@@ -34,6 +34,9 @@
   .form-check{
     width: 100%;
   }
+  .roption div{
+    width:100% !important;
+  }
 }
 .form-check{
   width: 50%;
@@ -47,6 +50,26 @@
   color: #000;
 }
 
+/* .bg-color{
+  background-color:#fecf50;
+} */
+
 .bg-color{
-  background-color: #f0900f ;
+  background-color:#8de5d8;
+}
+
+.bg-color1{
+  background-color:#ff9b21;
+}
+.sicon{
+  color:#fff;
+}
+
+
+.bg-image-propose{
+  background-image: url('../images/image161.png');
+}
+.error{
+  color: #2fc4b2;
+  font-size: smaller;
 }

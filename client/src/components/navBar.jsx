@@ -1,9 +1,12 @@
 import React from "react";
 import './hovers.css';
 import { Link,useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 const Nav = () => {
+
+   const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   const navigate=useNavigate();
   const gotoNext= () => {
@@ -40,6 +43,11 @@ const Nav = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
+            <li className="nav-item">
+                <Link className="nav-link text-white raise" to={'/'}>
+                  Home
+                </Link>
+              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle text-white raise"
@@ -95,19 +103,26 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={'/login'}>
+                    <Link className="dropdown-item" onClick={loginWithRedirect}>
                       Login
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="dropdown-item" to={'/signup'}>
                       Sign up{" "}
                     </Link>
-                  </li>
+                  </li> */}
+                  {isAuthenticated && (
+                    <li>
+                      <Link className="dropdown-item" onClick={() => logout({ returnTo: window.location.origin })}>
+                        Logout
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </li>
               <li className="nav-item">
-                <button className="btn btn-outline-warning nav-link text-white btncolor raise" onClick={gotoNext}>
+                <button className="btn nav-link text-white btncolor raise" onClick={gotoNext}>
                   Donate
                 </button>
               </li>

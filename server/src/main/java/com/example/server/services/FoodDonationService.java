@@ -8,15 +8,18 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FoodDonationService {
+public class FoodDonationService {  // access entity through repo
     @Autowired
     private FoodDonationRepsoitory foodDonationRepsoitory;
 
-    public FoodDonation SaveDonation(FoodDonation foodDonation)
+    public FoodDonation SaveDonation(FoodDonation foodDonation)//entity
     {
-       return foodDonationRepsoitory.save(foodDonation);
+
+        return foodDonationRepsoitory.save(foodDonation);
     }
-    public List<FoodDonation> getAllDonation() {
+    public List<FoodDonation> getAllDonation()
+    {
+
         return foodDonationRepsoitory.findAll();
     }
 }
