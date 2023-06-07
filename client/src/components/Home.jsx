@@ -56,7 +56,7 @@ const Home = () => {
             impacted by the food crisis. People can donate food or money through this app, as well as 
             identify those who are affected by the food crisis. The system's objective is to make food 
             donations more effective and efficient while also developing a user-friendly platform to donate. 
-            In that regard, the system aids in persuading individuals to perform these social tasks.
+            In that regard, the system aids in persuading individuals to perform these social tasksssss.
             </h6>
             <br></br>
           </section>
