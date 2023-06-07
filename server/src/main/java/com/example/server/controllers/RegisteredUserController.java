@@ -39,4 +39,9 @@ public class RegisteredUserController {
     { return registeredUserService.SaveRegisteredUser(registeredUser);
 
     }
+    @GetMapping("/getRegisteredUser")
+    public List<RegisteredUser> getRegisteredUsers()
+    {
+        return registeredUserService.getAllRegisteredUser();
+    }
 }
