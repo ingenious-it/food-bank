@@ -7,41 +7,52 @@ import axios from "axios";
 import useAuthToken from "./services/UseAuthToken";
 import jwtDecode from "jwt-decode";
 const Login = () => {
-    const [loginData, setLoginData] = useState({
-      username: '',
-      password: '',
-    });
-    
-    const handleInputChange = (e) => {
-        setLoginData({
-          ...loginData,
-          [e.target.name]: e.target.value,
-        });
-      };
-      const HandleLogin = async (e) => {
-        e.preventDefault(); // Prevent form submission and page refresh
-    
-        try {
-          const response = await axios.post('http://localhost:8080/RegisteredUser/login', loginData);
-    
-          if (response.status === 200) {
-            
-            const untoken = response.data.token;
-            console.log(untoken);
-            // Save token to local storage and perform further actions
-            localStorage.setItem('token', untoken);
-            const decodedToken = jwtDecode(untoken);
-            console.log(decodedToken);
-          } else {
-            // Login failed
-            // Handle error, display error message, etc.
-          }
-        } catch (error) {
-          // Handle network error
-        }
-      };
+  const [loginData, setLoginData] = useState({
+    username: "",
+    password: "",
+  });
 
-  
+  const handleInputChange = (e) => {
+    setLoginData({
+      ...loginData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const HandleLogin = async (e) => {
+    e.preventDefault(); // Prevent form submission and page refresh
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/RegisteredUser/login",
+        loginData
+      );
+
+      if (response.status === 200 ) {
+        if(response.data.token != null)
+        {
+          const untoken = response.data.token;
+        localStorage.setItem("token", untoken);
+        const token = localStorage.getItem("token");
+        const decodedToken = jwtDecode(token);
+        console.log(decodedToken);
+        //right 
+        }
+        else{
+        // Login failed
+        // Handle error, display error message, etc.
+          console.log("lOGIN vfd")
+        }
+       
+      } else {
+
+       
+      }
+    } catch (error) {
+     
+      // Handle network error
+    }
+  };
+
   return (
     <React.Fragment>
       <motion.div
@@ -59,11 +70,11 @@ const Login = () => {
                   <div class="inputbox">
                     {/* <ion-icon name="mail-outline"></ion-icon> */}
                     <input
-                     type="text"
-                     name="username"
-                     placeholder="Username"
-                     value={loginData.username}
-                     onChange={handleInputChange}
+                      type="text"
+                      name="username"
+                      placeholder="Username"
+                      value={loginData.username}
+                      onChange={handleInputChange}
                       required
                     />
                     <label for="">Username</label>
@@ -91,7 +102,9 @@ const Login = () => {
                       </a>
                     </p>
                   </div>
-                  <button className="button1"  onClick={HandleLogin}>Log in</button>
+                  <button className="button1" onClick={HandleLogin}>
+                    Log in
+                  </button>
                   <div class="register">
                     <p>
                       Don't have an account? <a href="/signup">SignUp</a>
