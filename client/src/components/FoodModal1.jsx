@@ -4,6 +4,7 @@ import { GrSecure } from "react-icons/gr";
 import { BsCheckCircle } from "react-icons/bs";
 import axios from "axios";
 
+
 const FoodModal1 = () => {
   const [address, setAddress] = useState("");
   const [donationDate, setDonationDate] = useState("");
@@ -34,8 +35,10 @@ const FoodModal1 = () => {
           foodDonate
         ); // give the enpoint here
         console.log(response.data);
+    
       } catch (error) {
         console.error(error);
+       
       }
 
       //  event.target.reset();
@@ -72,6 +75,10 @@ const FoodModal1 = () => {
 
   return (
     <React.Fragment>
+      
+
+
+
       <div
         class="modal fade"
         id="exampleModal"

@@ -11,6 +11,7 @@ import Login from './Login';
 import SignUp from './signup';
 import Donate from './Donate';
 import Team from './ourteam';
+import ForgetPassword from './ForgetPassword';
 
 const AnimatedRoutes = () => {
     const location=useLocation();
@@ -28,6 +29,7 @@ const AnimatedRoutes = () => {
             <Route path='/propose' element={<Propose/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
+            <Route path='/forgetpassword' element={<ForgetPassword/>}/>
             <Route path='/donate' element={<Donate/>}/>
             </Routes>
         </AnimatePresence>

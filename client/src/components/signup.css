@@ -20,7 +20,7 @@
 .form-box1{
     position: relative;
     width: 450px;
-    height: min-content;
+    height:min-content;
     background: transparent;
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;
