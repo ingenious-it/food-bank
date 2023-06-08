@@ -40,13 +40,19 @@ public class RegisteredUserService {  // access entity through repo
     }
     public String generateToken(String username) {
         // Generate JWT token
+        RegisteredUser user = registeredUserRepository.findByUsername(username);
         byte[] secretKeyBytes = Keys.secretKeyFor(SignatureAlgorithm.HS512).getEncoded();
         String secretKey = Base64.getEncoder().encodeToString(secretKeyBytes);
         System.out.println(secretKey);
-                String token = Jwts.builder()
-                .setSubject(username)
+        String token = Jwts.builder()
+                .claim("id", user.getId())
+                .claim("firstName", user.getFirstName())
+                .claim("lastName", user.getLastName())
+                .claim("email", user.getEmail())
+                .claim("contactNumber", user.getContactNumber())
+                .setSubject(user.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis()+1000*60*60*10))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
                 .signWith(SignatureAlgorithm.HS512, secretKey)
                 .compact();
 

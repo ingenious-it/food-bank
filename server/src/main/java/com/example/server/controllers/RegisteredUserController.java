@@ -45,8 +45,10 @@ public class RegisteredUserController {
             System.out.println(loginResponse.getToken());
             return ResponseEntity.ok(loginResponse);
 
-        } else {
+        } else if(loginResponse.getToken() == null) {
             System.out.println(loginResponse.getToken());
+            return ResponseEntity.ok(loginResponse);}
+            else{
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(loginResponse);
         }
     }
