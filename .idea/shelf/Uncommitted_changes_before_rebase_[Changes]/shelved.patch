@@ -1,0 +1,216 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" default=\"true\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 6106924821050167a7c5d0c7a0f3fad9938c46ca)
++++ b/.idea/misc.xml	(date 1686196297155)
+@@ -1,4 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" default="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/server/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: node_modules/.package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"food-bank\",\r\n  \"lockfileVersion\": 2,\r\n  \"requires\": true,\r\n  \"packages\": {\r\n    \"node_modules/@auth0/auth0-react\": {\r\n      \"version\": \"2.0.1\",\r\n      \"resolved\": \"https://registry.npmjs.org/@auth0/auth0-react/-/auth0-react-2.0.1.tgz\",\r\n      \"integrity\": \"sha512-7Rla3del7inUloaWMsECs0JvBpDEj9lgfy+BQE/Z75zs9tveNvxab+xFdfrBC0GPN0eoiq1PeHcc++YjLnti+g==\",\r\n      \"dependencies\": {\r\n        \"@auth0/auth0-spa-js\": \"^2.0.4\"\r\n      },\r\n      \"peerDependencies\": {\r\n        \"react\": \"^16.11.0 || ^17 || ^18\",\r\n        \"react-dom\": \"^16.11.0 || ^17 || ^18\"\r\n      }\r\n    },\r\n    \"node_modules/@auth0/auth0-spa-js\": {\r\n      \"version\": \"2.0.4\",\r\n      \"resolved\": \"https://registry.npmjs.org/@auth0/auth0-spa-js/-/auth0-spa-js-2.0.4.tgz\",\r\n      \"integrity\": \"sha512-NgD6Fkm5Xnbned1VjhEW8irm1/Y8AWtdSLexgLXNwwBVgfnYicCVBu8w75m2t+4QljXkTcI7IXVEFhVmxMuxaA==\"\r\n    },\r\n    \"node_modules/asynckit\": {\r\n      \"version\": \"0.4.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz\",\r\n      \"integrity\": \"sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==\"\r\n    },\r\n    \"node_modules/axios\": {\r\n      \"version\": \"1.3.4\",\r\n      \"resolved\": \"https://registry.npmjs.org/axios/-/axios-1.3.4.tgz\",\r\n      \"integrity\": \"sha512-toYm+Bsyl6VC5wSkfkbbNB6ROv7KY93PEBBL6xyDczaIHasAiv4wPqQ/c4RjoQzipxRD2W5g21cOqQulZ7rHwQ==\",\r\n      \"dependencies\": {\r\n        \"follow-redirects\": \"^1.15.0\",\r\n        \"form-data\": \"^4.0.0\",\r\n        \"proxy-from-env\": \"^1.1.0\"\r\n      }\r\n    },\r\n    \"node_modules/combined-stream\": {\r\n      \"version\": \"1.0.8\",\r\n      \"resolved\": \"https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz\",\r\n      \"integrity\": \"sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==\",\r\n      \"dependencies\": {\r\n        \"delayed-stream\": \"~1.0.0\"\r\n      },\r\n      \"engines\": {\r\n        \"node\": \">= 0.8\"\r\n      }\r\n    },\r\n    \"node_modules/delayed-stream\": {\r\n      \"version\": \"1.0.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz\",\r\n      \"integrity\": \"sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==\",\r\n      \"engines\": {\r\n        \"node\": \">=0.4.0\"\r\n      }\r\n    },\r\n    \"node_modules/follow-redirects\": {\r\n      \"version\": \"1.15.2\",\r\n      \"resolved\": \"https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz\",\r\n      \"integrity\": \"sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==\",\r\n      \"funding\": [\r\n        {\r\n          \"type\": \"individual\",\r\n          \"url\": \"https://github.com/sponsors/RubenVerborgh\"\r\n        }\r\n      ],\r\n      \"engines\": {\r\n        \"node\": \">=4.0\"\r\n      },\r\n      \"peerDependenciesMeta\": {\r\n        \"debug\": {\r\n          \"optional\": true\r\n        }\r\n      }\r\n    },\r\n    \"node_modules/form-data\": {\r\n      \"version\": \"4.0.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/form-data/-/form-data-4.0.0.tgz\",\r\n      \"integrity\": \"sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==\",\r\n      \"dependencies\": {\r\n        \"asynckit\": \"^0.4.0\",\r\n        \"combined-stream\": \"^1.0.8\",\r\n        \"mime-types\": \"^2.1.12\"\r\n      },\r\n      \"engines\": {\r\n        \"node\": \">= 6\"\r\n      }\r\n    },\r\n    \"node_modules/js-tokens\": {\r\n      \"version\": \"4.0.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz\",\r\n      \"integrity\": \"sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==\",\r\n      \"peer\": true\r\n    },\r\n    \"node_modules/loose-envify\": {\r\n      \"version\": \"1.4.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz\",\r\n      \"integrity\": \"sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==\",\r\n      \"peer\": true,\r\n      \"dependencies\": {\r\n        \"js-tokens\": \"^3.0.0 || ^4.0.0\"\r\n      },\r\n      \"bin\": {\r\n        \"loose-envify\": \"cli.js\"\r\n      }\r\n    },\r\n    \"node_modules/mime-db\": {\r\n      \"version\": \"1.52.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz\",\r\n      \"integrity\": \"sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==\",\r\n      \"engines\": {\r\n        \"node\": \">= 0.6\"\r\n      }\r\n    },\r\n    \"node_modules/mime-types\": {\r\n      \"version\": \"2.1.35\",\r\n      \"resolved\": \"https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz\",\r\n      \"integrity\": \"sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==\",\r\n      \"dependencies\": {\r\n        \"mime-db\": \"1.52.0\"\r\n      },\r\n      \"engines\": {\r\n        \"node\": \">= 0.6\"\r\n      }\r\n    },\r\n    \"node_modules/proxy-from-env\": {\r\n      \"version\": \"1.1.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz\",\r\n      \"integrity\": \"sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==\"\r\n    },\r\n    \"node_modules/react\": {\r\n      \"version\": \"18.2.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/react/-/react-18.2.0.tgz\",\r\n      \"integrity\": \"sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==\",\r\n      \"peer\": true,\r\n      \"dependencies\": {\r\n        \"loose-envify\": \"^1.1.0\"\r\n      },\r\n      \"engines\": {\r\n        \"node\": \">=0.10.0\"\r\n      }\r\n    },\r\n    \"node_modules/react-dom\": {\r\n      \"version\": \"18.2.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz\",\r\n      \"integrity\": \"sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==\",\r\n      \"peer\": true,\r\n      \"dependencies\": {\r\n        \"loose-envify\": \"^1.1.0\",\r\n        \"scheduler\": \"^0.23.0\"\r\n      },\r\n      \"peerDependencies\": {\r\n        \"react\": \"^18.2.0\"\r\n      }\r\n    },\r\n    \"node_modules/scheduler\": {\r\n      \"version\": \"0.23.0\",\r\n      \"resolved\": \"https://registry.npmjs.org/scheduler/-/scheduler-0.23.0.tgz\",\r\n      \"integrity\": \"sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==\",\r\n      \"peer\": true,\r\n      \"dependencies\": {\r\n        \"loose-envify\": \"^1.1.0\"\r\n      }\r\n    }\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/node_modules/.package-lock.json b/node_modules/.package-lock.json
+--- a/node_modules/.package-lock.json	(revision 6106924821050167a7c5d0c7a0f3fad9938c46ca)
++++ b/node_modules/.package-lock.json	(date 1686196297100)
+@@ -1,6 +1,6 @@
+ {
+   "name": "food-bank",
+-  "lockfileVersion": 2,
++  "lockfileVersion": 3,
+   "requires": true,
+   "packages": {
+     "node_modules/@auth0/auth0-react": {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"ac64549a-1376-4ca6-9c07-2add43138d0b\" name=\"Changes\" comment=\"Commented fooditemdonation entity and repo\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_53_AM_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_53_AM__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_58_AM_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_58_AM__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OO4u0KJOjHIFXu6r8A6CJeow9Q\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Git.Branch.Popup.ShowAllRemotes\": \"true\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"E:/projectcode/FoodBank/food-bank\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\",\r\n    \"spring.configuration.checksum\": \"cf1e8c14e54505f60aa10ceb8d5d8ab3\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mysql\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"JUnit.VictimControllerTest\">\r\n    <configuration name=\"VictimControllerTest\" type=\"JUnit\" factoryName=\"JUnit\" nameIsGenerated=\"true\">\r\n      <module name=\"server\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"VictimControllerTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VictimControllerTest.testGetAcceptedVictims\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"server\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"VictimControllerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testGetAcceptedVictims\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VictimControllerTest.testGetAllToDeliveyVictims\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"server\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"VictimControllerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testGetAllToDeliveyVictims\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VictimControllerTest.testGetRejectedVictims\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"server\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"VictimControllerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testGetRejectedVictims\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VictimControllerTest.testUpdateVictimRejected\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"server\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"VictimControllerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testUpdateVictimRejected\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"server\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"server\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ServerApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"server\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.example.server.ServerApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.VictimControllerTest.testUpdateVictimRejected\" />\r\n        <item itemvalue=\"JUnit.VictimControllerTest.testGetAcceptedVictims\" />\r\n        <item itemvalue=\"JUnit.VictimControllerTest.testGetRejectedVictims\" />\r\n        <item itemvalue=\"JUnit.VictimControllerTest.testGetAllToDeliveyVictims\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"ac64549a-1376-4ca6-9c07-2add43138d0b\" name=\"Changes\" comment=\"\" />\r\n      <created>1681418512224</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681418512224</updated>\r\n      <workItem from=\"1681418515307\" duration=\"542000\" />\r\n      <workItem from=\"1681532459035\" duration=\"115000\" />\r\n      <workItem from=\"1681583220440\" duration=\"681000\" />\r\n      <workItem from=\"1681669459989\" duration=\"89000\" />\r\n      <workItem from=\"1682325855553\" duration=\"34000\" />\r\n      <workItem from=\"1683180375259\" duration=\"2061000\" />\r\n      <workItem from=\"1683483057600\" duration=\"629000\" />\r\n      <workItem from=\"1683544286450\" duration=\"3704000\" />\r\n      <workItem from=\"1684088058496\" duration=\"39000\" />\r\n      <workItem from=\"1685941202402\" duration=\"16519000\" />\r\n      <workItem from=\"1686054740927\" duration=\"614000\" />\r\n      <workItem from=\"1686120647576\" duration=\"190000\" />\r\n      <workItem from=\"1686120851495\" duration=\"2207000\" />\r\n      <workItem from=\"1686169319295\" duration=\"447000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Commented fooditemdonation entity and repo\">\r\n      <created>1683182325536</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683182325536</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Commented fooditemdonation entity and repo\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Commented fooditemdonation entity and repo\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/server/src/main/java/com/example/server/controllers/VictimController.java</url>\r\n          <line>37</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6106924821050167a7c5d0c7a0f3fad9938c46ca)
++++ b/.idea/workspace.xml	(date 1686196322181)
+@@ -5,14 +5,11 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="Commented fooditemdonation entity and repo">
+-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_53_AM_[Changes]/shelved.patch" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_53_AM__Changes_.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_58_AM_[Changes]/shelved.patch" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_8_2023_1_58_AM__Changes_.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/loose-envify" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -27,6 +24,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="verify-victim" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -44,28 +46,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Git.Branch.Popup.ShowAllRemotes": "true",
+-    "RequestMappingsPanelOrder0": "0",
+-    "RequestMappingsPanelOrder1": "1",
+-    "RequestMappingsPanelWidth0": "75",
+-    "RequestMappingsPanelWidth1": "75",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "E:/projectcode/FoodBank/food-bank",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+-    "spring.configuration.checksum": "cf1e8c14e54505f60aa10ceb8d5d8ab3"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
++    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
++    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
++    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
++    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;E:/projectcode/FoodBank/food-bank&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
++    &quot;spring.configuration.checksum&quot;: &quot;cf1e8c14e54505f60aa10ceb8d5d8ab3&quot;
+   },
+-  "keyToStringList": {
+-    "DatabaseDriversLRU": [
+-      "mysql"
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;mysql&quot;
+     ]
+   }
+-}]]></component>
+-  <component name="RunManager" selected="JUnit.VictimControllerTest">
++}</component>
++  <component name="RunManager" selected="Spring Boot.ServerApplication">
+     <configuration name="VictimControllerTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+       <module name="server" />
+       <option name="PACKAGE_NAME" value="" />
+@@ -115,19 +117,6 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration default="true" type="JetRunConfigurationType">
+-      <module name="server" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+-      <module name="server" />
+-      <option name="filePath" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+       <module name="server" />
+       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.server.ServerApplication" />
+@@ -166,6 +155,7 @@
+       <workItem from="1686120647576" duration="190000" />
+       <workItem from="1686120851495" duration="2207000" />
+       <workItem from="1686169319295" duration="447000" />
++      <workItem from="1686195932680" duration="388000" />
+     </task>
+     <task id="LOCAL-00001" summary="Commented fooditemdonation entity and repo">
+       <created>1683182325536</created>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile default=\"true\" name=\"Default\" enabled=\"true\" />\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 6106924821050167a7c5d0c7a0f3fad9938c46ca)
++++ b/.idea/compiler.xml	(date 1686196297182)
+@@ -3,6 +3,20 @@
+   <component name="CompilerConfiguration">
+     <annotationProcessing>
+       <profile default="true" name="Default" enabled="true" />
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="server" />
++      </profile>
+     </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="server" target="17" />
++    </bytecodeTargetLevel>
++  </component>
++  <component name="JavacSettings">
++    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="server" options="-parameters" />
++    </option>
+   </component>
+ </project>
+\ No newline at end of file
+Index: node_modules/.bin/loose-envify
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../loose-envify/cli.js
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/node_modules/.bin/loose-envify b/node_modules/.bin/loose-envify
+--- a/node_modules/.bin/loose-envify	(revision 6106924821050167a7c5d0c7a0f3fad9938c46ca)
++++ b/node_modules/.bin/loose-envify	(date 1686196297214)
+@@ -1,1 +1,12 @@
+-../loose-envify/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*) basedir=`cygpath -w "$basedir"`;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../loose-envify/cli.js" "$@"
++else 
++  exec node  "$basedir/../loose-envify/cli.js" "$@"
++fi
