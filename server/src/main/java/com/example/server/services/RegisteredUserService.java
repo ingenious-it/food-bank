@@ -1,14 +1,13 @@
 package com.example.server.services;
 
-import com.example.server.entities.FoodDonation;
 import com.example.server.entities.RegisteredUser;
 import com.example.server.loginconfig.LoginResponse;
-import com.example.server.repositories.FoodDonationRepsoitory;
 import com.example.server.repositories.RegisteredUserRepository;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Base64;
@@ -17,24 +16,39 @@ import java.util.List;
 
 @Service
 public class RegisteredUserService {  // access entity through repo
+
     @Autowired
     private RegisteredUserRepository registeredUserRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
+
+    public RegisteredUserService() {
+        passwordEncoder = new BCryptPasswordEncoder();
+    }
+
+
 
     public RegisteredUser SaveRegisteredUser(RegisteredUser registeredUser)//entity
     {
-
+        String encryptedPassword=passwordEncoder.encode(registeredUser.getPassword());
+        registeredUser.setPassword(encryptedPassword);
         return registeredUserRepository.save(registeredUser);
     }
+    public boolean checkUsernameExists(String username) {
+        RegisteredUser user = registeredUserRepository.findByUsername(username);
+        return user != null;
+    }
+
     public List<RegisteredUser> getAllRegisteredUser()
     {
         return registeredUserRepository.findAll();
     }
     public boolean validateCredentials(String username, String password) {
         RegisteredUser user = registeredUserRepository.findByUsername(username);
+//        password=passwordEncoder.encode(password);
         System.out.println(user);
         if (user != null) {
-            System.out.println(user.getPassword().equals(password));
-            return user.getPassword().equals(password);
+            System.out.println(passwordEncoder.encode(password));
+            return passwordEncoder.matches(password,user.getPassword());
         }
         return false;
     }
@@ -50,6 +64,10 @@ public class RegisteredUserService {  // access entity through repo
                 .claim("lastName", user.getLastName())
                 .claim("email", user.getEmail())
                 .claim("contactNumber", user.getContactNumber())
+                .claim("role",user.getRole())
+                .claim("donaterPoints",user.getDonaterPoints())
+                .claim("dataSupplierPoints",user.getDataSupplierPoints())
+                .claim("userName",user.getUsername())
                 .setSubject(user.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))

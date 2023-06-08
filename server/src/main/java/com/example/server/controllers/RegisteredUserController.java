@@ -33,12 +33,16 @@ public class RegisteredUserController {
     {
         return registeredUserService.getAllRegisteredUser();
     }
+    @GetMapping("/exists/{username}")
+    public ResponseEntity<Boolean> checkUsernameExists(@PathVariable String username) {
+        boolean exists = registeredUserService.checkUsernameExists(username);
+        return ResponseEntity.ok(exists);
+    }
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody RegisteredUser loginRequest) {
         String username = loginRequest.getUsername();
-        String password = loginRequest.getPassword();
+        String password = loginRequest.getPassword() ;
         System.out.println(loginRequest);
-
         LoginResponse loginResponse = registeredUserService.performLogin(username, password);
 
         if (loginResponse.getToken() != null) {

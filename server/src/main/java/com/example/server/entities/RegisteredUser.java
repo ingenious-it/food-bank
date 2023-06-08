@@ -18,9 +18,12 @@ public class RegisteredUser {
     private String firstName;
     private String lastName;
     private String email;
-    private int contactNumber;
+    private String contactNumber;
     private String username;
     private String password;
+    private String role;
+    private double donaterPoints;
+    private  double dataSupplierPoints;
 
     public int getId() {
         return id;
@@ -54,11 +57,11 @@ public class RegisteredUser {
         this.email = email;
     }
 
-    public int getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 
-    public void setContactNumber(int contactNumber) {
+    public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
     }
 
@@ -76,5 +79,29 @@ public class RegisteredUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public double getDonaterPoints() {
+        return donaterPoints;
+    }
+
+    public void setDonaterPoints(double donaterPoints) {
+        this.donaterPoints = donaterPoints;
+    }
+
+    public double getDataSupplierPoints() {
+        return dataSupplierPoints;
+    }
+
+    public void setDataSupplierPoints(double dataSupplierPoints) {
+        this.dataSupplierPoints = dataSupplierPoints;
     }
 }

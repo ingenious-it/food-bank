@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { GrUserAdmin } from "react-icons/gr";
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('');
@@ -14,44 +16,60 @@ const SignUp = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [role,SetRole]= useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  
     // Check if passwords match
     if (password !== confirmPassword) {
       toast.error("Passwords do not match");
       return;
     }
-
-    const newUser = {
-      firstName,
-      lastName,
-      email,
-      contactNumber,
-      username,
-      password,
-      confirmPassword,
-    };
-
-    axios.post('http://localhost:8080/RegisteredUser/saveUser', newUser)
+  
+    // Check if the username is already taken
+    axios.get(`http://localhost:8080/RegisteredUser/exists/${username}`)
       .then((response) => {
-        console.log(response);
-        toast.success("form submitted successfully");
+        if (response.data) {
+          toast.error("Username is already taken");
+        } else {
+          // Proceed with form submission
+          const newUser = {
+            firstName,
+            lastName,
+            email,
+            contactNumber,
+            username,
+            password,
+            confirmPassword,
+            role
+          };
+  
+          axios.post('http://localhost:8080/RegisteredUser/saveUser', newUser)
+            .then((response) => {
+              console.log(response);
+              toast.success("Form submitted successfully");
+            })
+            .catch((error) => {
+              console.log(error);
+              toast.error("An error occurred while sending data");
+            });
+  
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setContactNumber("");
+          setUsername("");
+          setPassword("");
+          setConfirmPassword("");
+        }
       })
       .catch((error) => {
         console.log(error);
-        toast.error("An error occured while sending data");
+        toast.error("An error occurred while checking username availability");
       });
-
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setContactNumber("");
-      setUsername("");
-      setPassword("");
-      setConfirmPassword("");
-
   };
+  
     return ( 
         <React.Fragment>
               <ToastContainer
@@ -110,12 +128,13 @@ const SignUp = () => {
                     <label>Confirm Password</label>
                   </div>
 
-                  {/* <div class="forget">
-                    <label>
-                      <input type="checkbox" required />I agree to the terms of use & Privacy
-                      policy
-                    </label>
-                  </div> */}
+                  <label for="role">Choose a Role:</label>
+                    <select name="roles" id="role" onChange={(e) => SetRole(e.target.value)}> 
+                    <option value='DataSupplier'>DataSupplier</option>
+                    <option value='Donator'>Donator</option>
+                    <option value='Both' >Both</option>
+                      
+                </select>  
                   <div>
                     <button className='button1' type="submit">Sign Up</button>
                   </div>
