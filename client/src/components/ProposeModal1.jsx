@@ -50,8 +50,7 @@ const ProposeModal1 = (props) => {
           } catch (error) {
             console.error(error);
           }
-           //  event.target.reset();
-           setfirstName('');
+           //  event.target.rese   setfirstName('');
            setlastName('');
            setNIC("");
            setNo('');

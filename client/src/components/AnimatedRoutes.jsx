@@ -10,11 +10,10 @@ import Propose from './Propose';
 import Login from './Login';
 import SignUp from './signup';
 import Donate from './Donate';
-<<<<<<< HEAD
 import DonatePrompt from './moneyDonation/box';
 import SideBar from './dashBoard/sideBar';
-=======
 import Team from './ourteam';
+import ForgetPassword from './ForgetPassword';
 >>>>>>> main
 
 const AnimatedRoutes = () => {
@@ -33,6 +32,7 @@ const AnimatedRoutes = () => {
             <Route path='/propose' element={<Propose/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
+            <Route path='/forgetpassword' element={<ForgetPassword/>}/>
             <Route path='/donate' element={<Donate/>}/>
             <Route path='/money-donate' element={<DonatePrompt/>}/>
             <Route path='/admin' element={<SideBar/>} />

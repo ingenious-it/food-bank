@@ -10,7 +10,8 @@
 }
 
 .foodd{
-    background-color: #ffaa00;
+    /* background-color: #ffaa00; */
+    background-color: #d69f27;
     color: #ffffff;
 }
 @media(max-width:991px){
