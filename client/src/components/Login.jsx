@@ -66,7 +66,7 @@ const Login = () => {
             <div class="form-box1">
               <div class="form-value">
                 <form action="">
-                  <h2>Login</h2>
+                  <h2 className='mt-2 text-center'>Login</h2>
                   <div class="inputbox">
                     {/* <ion-icon name="mail-outline"></ion-icon> */}
                     <input

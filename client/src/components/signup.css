@@ -127,4 +127,20 @@ top: -5px;
    justify-content: center;
    /* height: 100vh; */
 }
-
+.dropd {
+    color: rgb(251, 251, 251);
+    margin-right: 10px;
+}
+.transparent-dropdown {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white; /* Set the default color for the dropdown text */
+  }
+  
+  .transparent-dropdown option {
+    color: black; /* Set the color for the options */
+  }
+  
+  
+  

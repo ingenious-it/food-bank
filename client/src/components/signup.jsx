@@ -96,7 +96,7 @@ const SignUp = () => {
 <div class="form-box1">
 <div class="form-value">
 <form onSubmit={handleSubmit}>
-                  <h2 className='mt-2'>SignUp</h2>
+                  <h2 className='mt-2 text-center'>SignUp</h2>
 
                   <div class="inputbox">
                     <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
@@ -128,9 +128,9 @@ const SignUp = () => {
                     <label>Confirm Password</label>
                   </div>
 
-                  <label for="role">Choose a Role:</label>
-                    <select name="roles" id="role" onChange={(e) => SetRole(e.target.value)}> 
-                    <option value='DataSupplier'>DataSupplier</option>
+                  <label for="role" class="dropd">Choose a Role:</label>
+                  <select name="roles" id="role" onChange={(e) => SetRole(e.target.value)} class="transparent-dropdown">
+                    <option value='DataSupplier' >DataSupplier</option>
                     <option value='Donator'>Donator</option>
                     <option value='Both' >Both</option>
                       
