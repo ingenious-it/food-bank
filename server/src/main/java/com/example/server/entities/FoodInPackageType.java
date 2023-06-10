@@ -1,10 +1,27 @@
 package com.example.server.entities;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "food_in_package_type")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@IdClass(FoodInPackageTypeID.class)
 public class FoodInPackageType {
 
-    private int typeID;
-    // refer the type id in package type
-    private int itemNo;
-    // refer the itemNo in food item
-    private int qunatityOfEach;
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "typeID")
+    private PackageType packageType;
+
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private FoodItem foodItem;
+
+    private int quantityAvailable;
 }

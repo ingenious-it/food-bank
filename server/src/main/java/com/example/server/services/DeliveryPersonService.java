@@ -23,4 +23,9 @@ public class DeliveryPersonService {
     public List<DeliveryPerson> getAllDeliveryPerson() {
         return deliveryPersonRepository.findAll();
     }
+
+     //Remove a DeliveryPerson by ID
+    public void removeDeliveryPerson(int id) {
+        deliveryPersonRepository.deleteById(id);
+    }
 }
