@@ -22,7 +22,12 @@ public class PackageTypeService {
         return packageTypeRepository.findAll();
     }
 
-//    public Optional<PackageType> getPackageTypeById(int id) {
-//        return packageTypeRepository.findById(id);
-//    }
+    public int getQuantityByTypeID(int typeID) {
+        PackageType packageType = packageTypeRepository.findById(typeID).orElse(null);
+        if (packageType != null) {
+            return packageType.getQuantity();
+        }
+        return 0;
+    }
+
 }
