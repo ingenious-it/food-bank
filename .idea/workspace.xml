@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="Commented fooditemdonation entity and repo" />
+    <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="added foreign key" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="verify-victim" />
+        <entry key="$PROJECT_DIR$" value="verify-victimV2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -134,9 +134,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.VictimControllerTest.testUpdateVictimRejected" />
-        <item itemvalue="JUnit.VictimControllerTest.testGetAcceptedVictims" />
         <item itemvalue="JUnit.VictimControllerTest.testGetRejectedVictims" />
         <item itemvalue="JUnit.VictimControllerTest.testGetAllToDeliveyVictims" />
+        <item itemvalue="JUnit.VictimControllerTest.testGetAcceptedVictims" />
+        <item itemvalue="JUnit.VictimControllerTest.testUpdateVictimRejected" />
       </list>
     </recent_temporary>
   </component>
