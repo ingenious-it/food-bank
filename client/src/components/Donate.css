@@ -61,6 +61,10 @@
   color:#fff;
 }
 
+.bg-image-propose{
+  background-image: url('../images/image161.png');
+}
+
 .error{
   color: #f0900f;
   font-size: smaller;
