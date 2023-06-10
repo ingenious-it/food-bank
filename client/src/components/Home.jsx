@@ -15,7 +15,7 @@ const Home = () => {
 
   const variants = {
     visible: { x: 0 },
-    hidden: { x: 250 },
+    hidden: { x: -250 },
   };
 
   const transition = {

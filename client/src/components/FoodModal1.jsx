@@ -66,7 +66,7 @@ const FoodModal1 = () => {
     const newErrors = {};
     if (donationAddress.trim() === "") {
       //remove any whitespace from the beginning and end of the user input
-      newErrors.donationAddress = "*donationAddress is required";
+      newErrors.donationAddress = "*Donation Address is required";
     }
     if (donationDate.trim() === "") {
       newErrors.donationDate = "*Donation Date is required";

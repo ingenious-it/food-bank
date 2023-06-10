@@ -4,6 +4,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 
+
 const Nav = () => {
 
    const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
@@ -21,9 +22,13 @@ const Nav = () => {
         <div className="container-fluid mt-4">
           <div>
             <div class="container-fluid">
+              
+              <div className="divimg">
               <Link class="navbar-brand" to={'/'}>
-                logo
-                              </Link>
+              <img src="logo1.png" height={80} width={100} alt="" />
+              </Link>
+            </div>
+                             
             </div>
             <button
               className="navbar-toggler"
@@ -43,6 +48,11 @@ const Nav = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
+            <li className="nav-item">
+                <Link className="nav-link text-white raise" to={'/'}>
+                  Home
+                </Link>
+              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle text-white raise"
@@ -117,7 +127,7 @@ const Nav = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <button className="btn btn-outline-warning nav-link text-white btncolor raise" onClick={gotoNext}>
+                <button className="btn nav-link text-white btncolor raise" onClick={gotoNext}>
                   Donate
                 </button>
               </li>
