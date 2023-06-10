@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.Date;
 import java.util.List;
@@ -88,5 +89,9 @@ public class RegisteredUserService {  // access entity through repo
         } else {
             return new LoginResponse("Invalid username or password", null);
         }
+    }
+    public List<RegisteredUser> getUsersWithRoles() {
+        List<String> roles = Arrays.asList("Both", "DataSupplier");
+        return registeredUserRepository.findByRoleIn(roles);
     }
 }

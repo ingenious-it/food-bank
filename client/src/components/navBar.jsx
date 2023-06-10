@@ -29,12 +29,17 @@ const Nav = () => {
   }, [isAuthenticated]);
 
   return (
+  
     <React.Fragment>
+      
       <nav className="navbar navbar-expand-lg  p-2 ">
         <div className="container-fluid mt-4">
           <div>
             <div class="container-fluid">
-              
+              <Link class="navbar-brand" to={"/"}>
+                logo
+              </Link>
+
               <div className="divimg">
               <Link class="navbar-brand" to={'/'}>
               <img src="logo1.png" height={80} width={100} alt="" />
@@ -128,7 +133,7 @@ const Nav = () => {
                     <Link className="dropdown-item" to={'/signup'}>
                       Sign up{" "}
                     </Link>
-                  </li> 
+                  </li>
                   {/* {isAuthenticated && (
                     <li>
                       <Link

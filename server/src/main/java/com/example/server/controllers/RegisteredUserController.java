@@ -1,13 +1,9 @@
 package com.example.server.controllers;
 
-import com.example.server.entities.FoodDonation;
 import com.example.server.entities.RegisteredUser;
-import com.example.server.entities.Victim;
 import com.example.server.loginconfig.LoginResponse;
-import com.example.server.services.FoodDonationService;
 import com.example.server.services.RegisteredUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -55,5 +51,10 @@ public class RegisteredUserController {
             else{
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(loginResponse);
         }
+    }
+    @GetMapping("/getDataSupplier")
+    public List<RegisteredUser> getDetails()
+    {
+        return registeredUserService.getUsersWithRoles();
     }
 }
