@@ -16,9 +16,8 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000","http://localhost:3001"})
+@CrossOrigin(origins = {"http://localhost:3001","http://localhost:3000","http://localhost:54194" })
 @RequestMapping("/Victim")
-
 public class VictimController {
     @Autowired
     private VictimService victimService;
@@ -31,8 +30,16 @@ public class VictimController {
         this.victimService = victimService;
     }
 
+    @GetMapping("/viewVictimDetails")
+    public List<Victim> getAllVictimDetails() {
 
+        return victimService.getAllVictimDetails();
+    }
 
+//    @GetMapping("/{id}")
+//    public Victim getVictimDetails(@PathVariable int id) {
+//        return victimService.getVictimById(id);
+//    }
 
     @GetMapping("/viewUnverifiedVictims") //View UnVerified Victims only Don't care about Delivery
     public List<Victim>showAllUnverifiedVictim()

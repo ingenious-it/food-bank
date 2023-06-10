@@ -96,5 +96,7 @@ public class VictimService {
     }
 
 
-
+    public List<Victim> getAllVictimDetails() {
+        return victimRepository.findAll();
+    }
 }

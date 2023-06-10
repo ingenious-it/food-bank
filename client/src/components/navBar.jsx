@@ -1,33 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./hovers.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import axios from "axios";
 
 const Nav = () => {
-  const {  loginWithRedirect, logout, user, isAuthenticated } =
-    useAuth0();
 
-  const navigate = useNavigate();
-  const gotoNext = () => {
-    navigate("/donate");
-  };
-
-  useEffect(() => {
-    user &&
-      axios
-        .post("http://localhost:8080/RegisteredUser/saveRegisteredUser", {
-          username: user.nickname,
-          email: user.email,
-        })
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-  }, [isAuthenticated]);
-
+  const navigate=useNavigate();
+  const gotoNext= () => {
+    navigate('/donate');
+      
+  }
   return (
   
     <React.Fragment>
@@ -36,7 +17,7 @@ const Nav = () => {
         <div className="container-fluid mt-4">
           <div>
             <div class="container-fluid">
-              <Link class="navbar-brand" to={"/"}>
+              <Link class="navbar-brand" to={'/'}>
                 logo
               </Link>
 
@@ -44,8 +25,6 @@ const Nav = () => {
               <Link class="navbar-brand" to={'/'}>
               <img src="logo1.png" height={80} width={100} alt="" />
               </Link>
-            </div>
-                             
             </div>
             <button
               className="navbar-toggler"
@@ -79,34 +58,34 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={"/Mission"}>
+                    <Link className="dropdown-item" to={'/Mission'}>
                       Our Mission
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/contactus"}>
+                    <Link className="dropdown-item" to={'/contactus'}>
                       Contact Us{" "}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/ourteam"}>
+                    <Link className="dropdown-item" to={'/ourteam'}>
                       Our Team{" "}
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white raise" to={"/whyFoodBank"}>
+                <Link className="nav-link text-white raise" to={'/whyFoodBank'}>
                   Why Food Bank?
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white raise" to={"/projects"}>
+                <Link className="nav-link text-white raise" to={'/projects'}>
                   Projects
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link text-white raise" to={"/propose"}>
+                <Link className="nav-link text-white raise" to={'/propose'}>
                   Propose
                 </Link>
               </li>
@@ -129,23 +108,11 @@ const Nav = () => {
                       Login{" "}
                     </Link>
                   </li>
-                   <li>
+                  <li>
                     <Link className="dropdown-item" to={'/signup'}>
                       Sign up{" "}
                     </Link>
                   </li>
-                  {/* {isAuthenticated && (
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        onClick={() =>
-                          logout({ returnTo: window.location.origin })
-                        }
-                      >
-                        Logout
-                      </Link>
-                    </li>
-                  )} */}
                 </ul>
               </li>
               <li className="nav-item">
@@ -160,6 +127,8 @@ const Nav = () => {
           </div>
         </div>
       </nav>
+ 
+     
     </React.Fragment>
   );
 };
