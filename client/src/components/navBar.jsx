@@ -4,6 +4,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 
+
 const Nav = () => {
 
    const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
@@ -21,9 +22,13 @@ const Nav = () => {
         <div className="container-fluid mt-4">
           <div>
             <div class="container-fluid">
+              
+              <div className="divimg">
               <Link class="navbar-brand" to={'/'}>
-                logo
-                              </Link>
+              <img src="logo1.png" height={80} width={100} alt="" />
+              </Link>
+            </div>
+                             
             </div>
             <button
               className="navbar-toggler"
