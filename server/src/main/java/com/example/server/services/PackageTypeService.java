@@ -1,6 +1,7 @@
 package com.example.server.services;
 import com.example.server.entities.PackageType;
 import com.example.server.repositories.PackageTypeRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

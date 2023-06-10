@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.example.server.entities.Victim;
+import com.example.server.repositories.FoodItemRepository;
 import com.example.server.repositories.VictimRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,8 @@ public class VictimService {
     public List<Victim> getAllToDeliveyVictims() {
         return victimRepository.findByIsVerifiedTrueAndIsDeliveredTrue();
     }
+
+
 
 
 
