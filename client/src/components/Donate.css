@@ -1,5 +1,5 @@
 .lcontainer .scontainer hr{
-    border: 3px solid #ff9900;
+    border: 3px solid #2fc4b2;
     border-radius: 5px;
 }
 
@@ -50,8 +50,12 @@
   color: #000;
 }
 
-.bg-color{
+/* .bg-color{
   background-color:#fecf50;
+} */
+
+.bg-color{
+  background-color:#8de5d8;
 }
 
 .bg-color1{
@@ -61,7 +65,11 @@
   color:#fff;
 }
 
+
+.bg-image-propose{
+  background-image: url('../images/image161.png');
+}
 .error{
-  color: #f0900f;
+  color: #2fc4b2;
   font-size: smaller;
 }

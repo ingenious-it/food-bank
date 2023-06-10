@@ -1,0 +1,23 @@
+Index: server/src/main/java/com/example/server/controllers/VictimController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/src/main/java/com/example/server/controllers/VictimController.java b/server/src/main/java/com/example/server/controllers/VictimController.java
+--- a/server/src/main/java/com/example/server/controllers/VictimController.java	
++++ b/server/src/main/java/com/example/server/controllers/VictimController.java	
+@@ -2,12 +2,12 @@
+ 
+ import com.example.server.entities.Victim;
+ import com.example.server.services.VictimService;
++import org.hibernate.mapping.List;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.*;
+ 
+-import java.util.List;
+-import java.util.Optional;
++
+ 
+ @RestController
+ @CrossOrigin(origins = {"http://localhost:3001","http://localhost:3000"})

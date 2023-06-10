@@ -3,55 +3,59 @@ import "./Donate.css";
 import { GrSecure } from "react-icons/gr";
 import { BsCheckCircle } from "react-icons/bs";
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FoodModal1 = () => {
-  const [address, setAddress] = useState("");
+  const [donationAddress, setdonationAddress] = useState("");
   const [donationDate, setDonationDate] = useState("");
-  const [location, setLocation] = useState("");
+  const [nearestLocation, setNearestLocation] = useState("");
   const [locationOptions, setLocationOptions] = useState([]);
   const [selectedOption, setSelectedOption] = useState("");
   const [errors, setErrors] = useState({});
   // change the content
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  useEffect(() => {
-    // Fetch datalist options from backend
-    fetch("http://your-api-endpoint.com/locations")
-      .then((response) => response.json())
-      .then((data) => setLocationOptions(data.locations))
-      .catch((error) => console.log(error));
-  }, []);
+  // useEffect(() => {
+  //   // Fetch datalist options from backend
+  //   fetch("http://your-api-endpoint.com/locations")
+  //     .then((response) => response.json())
+  //     .then((data) => setLocationOptions(data.locations))
+  //     .catch((error) => console.log(error));
+  // }, []);
 
   async function handleSubmit(event) {
     event.preventDefault();
     const newErrors = validateInputs();
     if (Object.keys(newErrors).length === 0) {
       // submit form
-      const foodDonate = { address, donationDate, location, selectedOption };
+      const foodDonate = { donationAddress, donationDate, nearestLocation, selectedOption };
       try {
         const response = await axios.post(
-          "http://localhost8080/FoodDonate/saveDonation",
+          "http://localhost:8080/FoodDonate/saveDonation",
           foodDonate
-        ); // give the enpoint here
+        ); 
         console.log(response.data);
-    
+        setFormSubmitted(true);
+        // Display a success message to the user
+        toast.success("Form submitted successfully!");
       } catch (error) {
         console.error(error);
-       
+        // Display an error message to the user
+        toast.error("An error occurred while submitting the form. Please try again later.");
       }
-
-      //  event.target.reset();
-      setAddress("");
+  
+      // event.target.reset();
+      setdonationAddress("");
       setDonationDate("");
-      setLocation("");
-      setFormSubmitted(true);
+      setNearestLocation("");
+     
       setErrors("");
-      console.log("Form submitted successfully!");
     } else {
       setErrors(newErrors);
     }
   }
+  
 
   function handleClose(event) {
     event.preventDefault();
@@ -60,14 +64,14 @@ const FoodModal1 = () => {
 
   function validateInputs() {
     const newErrors = {};
-    if (address.trim() === "") {
+    if (donationAddress.trim() === "") {
       //remove any whitespace from the beginning and end of the user input
-      newErrors.address = "*Address is required";
+      newErrors.donationAddress = "*Donation Address is required";
     }
     if (donationDate.trim() === "") {
       newErrors.donationDate = "*Donation Date is required";
     }
-    if (location.trim() === "") {
+    if (nearestLocation.trim() === "") {
       newErrors.location = "* Location is required";
     }
     return newErrors;
@@ -75,10 +79,18 @@ const FoodModal1 = () => {
 
   return (
     <React.Fragment>
-      
-
-
-
+    <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={true}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+/>
       <div
         class="modal fade"
         id="exampleModal"
@@ -188,15 +200,15 @@ const FoodModal1 = () => {
                         type="text"
                         class="form-control"
                         id="floatingInput"
-                        placeholder="address"
-                        value={address}
-                        onChange={(e) => setAddress(e.target.value)}
+                        placeholder="donationAddress"
+                        value={donationAddress}
+                        onChange={(e) => setdonationAddress(e.target.value)}
                       />
                       <label for="floatingInput" style={{ color: "black" }}>
-                        Address
+                        My Address
                       </label>
-                      {errors.address && (
-                        <span className="error">{errors.address}</span>
+                      {errors.donationAddress && (
+                        <span className="error">{errors.donationAddress}</span>
                       )}
                     </div>
 
@@ -222,9 +234,9 @@ const FoodModal1 = () => {
                         class="form-control"
                         list="datalistOptions"
                         id="exampleDataList"
-                        placeholder="location"
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
+                        placeholder="nearestLocation"
+                        value={nearestLocation}
+                        onChange={(e) => setNearestLocation(e.target.value)}
                       />
                       <label
                         for="exampleDataList"

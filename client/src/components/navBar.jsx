@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 
+
 const Nav = () => {
   const {  loginWithRedirect, logout, user, isAuthenticated } =
     useAuth0();
@@ -29,7 +30,9 @@ const Nav = () => {
   }, [isAuthenticated]);
 
   return (
+  
     <React.Fragment>
+      
       <nav className="navbar navbar-expand-lg  p-2 ">
         <div className="container-fluid mt-4">
           <div>
@@ -37,6 +40,13 @@ const Nav = () => {
               <Link class="navbar-brand" to={"/"}>
                 logo
               </Link>
+
+              <div className="divimg">
+              <Link class="navbar-brand" to={'/'}>
+              <img src="logo1.png" height={80} width={100} alt="" />
+              </Link>
+            </div>
+
             </div>
             <button
               className="navbar-toggler"
@@ -53,6 +63,11 @@ const Nav = () => {
 
           <div className="D-flex w-50" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
+            <li className="nav-item">
+                <Link className="nav-link text-white raise" to={'/'}>
+                  Home
+                </Link>
+              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle text-white raise"
@@ -119,7 +134,7 @@ const Nav = () => {
                     <Link className="dropdown-item" to={'/signup'}>
                       Sign up{" "}
                     </Link>
-                  </li> 
+                  </li>
                   {/* {isAuthenticated && (
                     <li>
                       <Link
@@ -135,6 +150,7 @@ const Nav = () => {
                 </ul>
               </li>
               <li className="nav-item">
+                <button className="btn nav-link text-white btncolor raise" onClick={gotoNext}>
                 <button
                   className="btn btn-outline-warning nav-link text-white btncolor raise"
                   onClick={gotoNext}

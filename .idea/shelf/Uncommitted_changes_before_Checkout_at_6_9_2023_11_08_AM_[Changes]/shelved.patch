@@ -1,0 +1,14 @@
+Index: server/src/main/java/com/example/server/controllers/RegisteredUserController.java
+===================================================================
+diff --git a/server/src/main/java/com/example/server/controllers/RegisteredUserController.java b/server/src/main/java/com/example/server/controllers/RegisteredUserController.java
+--- a/server/src/main/java/com/example/server/controllers/RegisteredUserController.java	
++++ b/server/src/main/java/com/example/server/controllers/RegisteredUserController.java	
+@@ -11,7 +11,7 @@
+ import java.util.List;
+ 
+ @RestController
+-@CrossOrigin(origins = "http://localhost:3000")
++@CrossOrigin(origins = {"http://localhost:3000" ,"http://localhost:3001"})
+ @RequestMapping("/RegisteredUser")
+ public class RegisteredUserController {
+     @Autowired

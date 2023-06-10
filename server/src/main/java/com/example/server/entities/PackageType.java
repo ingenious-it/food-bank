@@ -1,5 +1,6 @@
 package com.example.server.entities;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +18,5 @@ public class PackageType {
     private int typeID;
     private String typeName;
     private int quantity;
+
 }
