@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="added foreign key">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controllers/VictimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controllers/VictimController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/entities/RegisteredUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/entities/RegisteredUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +59,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "E:/projectcode/FoodBank/food-bank/server/src/main/resources/dataBase/foodbank/data.sql",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "spring.configuration.checksum": "cf1e8c14e54505f60aa10ceb8d5d8ab3"
   },
   "keyToStringList": {
@@ -170,7 +175,8 @@
       <workItem from="1686201060202" duration="768000" />
       <workItem from="1686207157894" duration="1232000" />
       <workItem from="1686384961931" duration="57000" />
-      <workItem from="1686399521991" duration="3411000" />
+      <workItem from="1686399521991" duration="4719000" />
+      <workItem from="1686408784168" duration="6251000" />
     </task>
     <task id="LOCAL-00001" summary="Commented fooditemdonation entity and repo">
       <created>1683182325536</created>
@@ -199,16 +205,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commented fooditemdonation entity and repo" />
     <option name="LAST_COMMIT_MESSAGE" value="Commented fooditemdonation entity and repo" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/example/server/controllers/VictimController.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

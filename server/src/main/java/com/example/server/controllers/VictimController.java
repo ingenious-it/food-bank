@@ -1,6 +1,8 @@
 package com.example.server.controllers;
 
+import com.example.server.entities.RegisteredUser;
 import com.example.server.entities.Victim;
+import com.example.server.repositories.RegisteredUserRepository;
 import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +23,8 @@ import java.util.Optional;
 public class VictimController {
     @Autowired
     private VictimService victimService;
+    @Autowired
+    private RegisteredUserRepository registeredUserRepository;
     @PostMapping("/saveVictimDetails")
     public Victim saveVictimDetails(@RequestBody Victim victim)
     { return victimService.saveVictimDetails(victim);
@@ -73,9 +77,22 @@ public class VictimController {
     @PutMapping("/selectAccept/{id}")
     public Victim updateVictim(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
         Boolean isVerified = requestBody.get("isVerified");
-        Boolean isAccepted= requestBody.get("isAccepted");
-        return victimService.updateAcceptanceStatus(id, isVerified,isAccepted);
+        Boolean isAccepted = requestBody.get("isAccepted");
+        Victim victim = victimService.updateAcceptanceStatus(id, isVerified, isAccepted);
+
+        // Update RegisterUser's points based on the isAccepted value
+        RegisteredUser donater = victim.getUser();
+        if (isAccepted) {
+            donater.setDataSupplierPoints(donater.getDataSupplierPoints() + 1);
+        } else {
+            donater.setDataSupplierPoints(donater.getDataSupplierPoints() - 1);
+        }
+        // Save the updated RegisteredUser entity
+        registeredUserRepository.save(donater);
+
+        return victim;
     }
+
 
     @GetMapping("/viewToDelivery")
     public List<Victim> getAllToDeliveyVictims() {

@@ -10,8 +10,9 @@ import java.util.Set;
 
 @Entity
 @Data
-@NoArgsConstructor
+
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name="registered_user")
 
 public class RegisteredUser {
@@ -29,6 +30,8 @@ public class RegisteredUser {
     private  double dataSupplierPoints;
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Victim> supplyData = new HashSet<>();
+
+
 
     public int getId() {
         return id;
