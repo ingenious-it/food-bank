@@ -3,6 +3,7 @@ package com.example.server.controllers;
 import com.example.server.entities.PackageType;
 import com.example.server.services.PackageTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,4 +29,11 @@ public class PackageTypeController {
     public int getQuantityByTypeID(@PathVariable int typeID) {
         return packageTypeService.getQuantityByTypeID(typeID);
     }
+
+    @PutMapping("/{typeID}/quantity")
+    public ResponseEntity<String> updateQuantityByTypeID(@PathVariable int typeID, @RequestParam int newQuantity) {
+        packageTypeService.updateQuantityByTypeID(typeID, newQuantity);
+        return ResponseEntity.ok().build();
+    }
+
 }

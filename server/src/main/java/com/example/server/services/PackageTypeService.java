@@ -30,4 +30,18 @@ public class PackageTypeService {
         return 0;
     }
 
+    public void updateQuantityByTypeID(int typeID, int newQuantity) {
+        Optional<PackageType> optionalPackageType = packageTypeRepository.findById(typeID);
+        if (optionalPackageType.isPresent()) {
+            PackageType packageType = optionalPackageType.get();
+            packageType.setQuantity(newQuantity);
+            packageTypeRepository.save(packageType);
+        } else {
+            throw new IllegalArgumentException("Invalid typeID: " + typeID);
+        }
+    }
+
+
+
+
 }
