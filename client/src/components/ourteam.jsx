@@ -21,11 +21,8 @@ const Team = () => {
         </div>
         <div className="textcontain d-flex ms-5 me-5 text-justify flex-direction-column">
           <h5 className="mt-5">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting.
+          Together, our diverse team brings together a wealth of knowledge, skills, and experiences. We are united by a shared passion for excellence and a drive to exceed expectations. Working collaboratively, we turn ideas into reality and create extraordinary outcomes for our clients.
+          Get in touch with us today and discover how our talented team can bring your vision to life!
           </h5>
         </div>
         <hr className="hr1 d-flex ms-5 me-5 mb-5" />
