@@ -27,21 +27,20 @@ const Mission = () => {
         exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
       >
         <div className="bg-blue">
-  <Nav />
-  <section className="d-flex align-items-center justify-content-center">
-    <motion.div
-      animate={inView ? 'visible' : 'hidden'}
-      variants={variants}
-      transition={transition}
-    >
-      <div className="img-overlay d-flex align-items-center justify-content-center">
-        <div className="imgmission rounded"></div>
-      </div>
-    </motion.div>
-    <h2>Read The Mission of Feed God’s Hungry Children</h2>
-  </section>
-</div>
-
+          <Nav />
+          <section className="d-flex align-items-center justify-content-center">
+            <motion.div
+              animate={inView ? "visible" : "hidden"}
+              variants={variants}
+              transition={transition}
+            >
+              <div className="img-overlay d-flex align-items-center justify-content-center">
+                <div className="imgmission rounded"></div>
+              </div>
+            </motion.div>
+            <h2>Read The Mission of Feed God’s Hungry Children</h2>
+          </section>
+        </div>
 
         <br />
         <hr></hr>
@@ -77,9 +76,19 @@ const Mission = () => {
               <div className="col-6 p-4">
                 <div className="imgmission2 rounded"></div>
               </div>
+              <div className="img12 bg-dark">
+                <div class="img-overlay">
+                    <h1>A little generosity can go a long way. What you give today will help prevent Hunger in the lives of many tomorrow.</h1>
+                    <p>We're on a mission to #Stop Hunger! Join our network of heroes and begin changing lives today.</p> 
+                    <button type="button" class="btn btn-outline-light mb-3 mt-3">Sign Up Now</button>
+                </div>
+            </div> 
             </div>
+            
           </div>
+          
         </section>
+        
       </motion.div>
     </React.Fragment>
   );
