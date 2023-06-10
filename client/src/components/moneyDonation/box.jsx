@@ -3,6 +3,7 @@ import { useState, useContext, useEffect } from "react";
 import "./buttonText.css";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { CLIENT_ID } from "../../config/config";
+import jwtDecode from "jwt-decode";
 
 const DonatePrompt = () => {
   // state variables for amount, whether to show the donate prompt, whether the donation was successful, error message, and the order ID
@@ -13,6 +14,10 @@ const DonatePrompt = () => {
   const [orderID, setOrderID] = useState(false);
   const [paymentTime, setPaymentTime] = useState(null);
   const [donations, setDonations] = useState(null);
+
+  const token = localStorage.getItem("token");
+  const decodedToken = jwtDecode(token);
+  console.log(decodedToken);
 
   // function to handle clicking on the amount buttons
   const handleAmountButtonClick = (value) => {
