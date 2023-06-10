@@ -14,17 +14,18 @@ const Nav = () => {
     <React.Fragment>
       
       <nav className="navbar navbar-expand-lg  p-2 ">
-        <div className="container-fluid mt-4">
+        <div className="container-fluid ">
           <div>
             <div class="container-fluid">
               <Link class="navbar-brand" to={'/'}>
-                logo
+              
               </Link>
 
               <div className="divimg">
               <Link class="navbar-brand" to={'/'}>
               <img src="logo1.png" height={80} width={100} alt="" />
               </Link>
+            </div>
             </div>
             <button
               className="navbar-toggler"
@@ -126,6 +127,8 @@ const Nav = () => {
             </ul>
           </div>
         </div>
+        
+
       </nav>
  
      
