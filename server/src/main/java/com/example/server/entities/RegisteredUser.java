@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -24,6 +27,8 @@ public class RegisteredUser {
     private String role;
     private double donaterPoints;
     private  double dataSupplierPoints;
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
+    private Set<Victim> supplyData = new HashSet<>();
 
     public int getId() {
         return id;

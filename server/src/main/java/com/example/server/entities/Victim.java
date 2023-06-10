@@ -26,8 +26,11 @@ public class Victim {
     private Boolean isVerified;
     private Boolean isAccepted;
     private Boolean isDeliverySelected;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "donaterId")
+    private RegisteredUser user;
 
 
-    public Victim(int i, String s, String tharushni, String thathya, String s1, String s2, String main_street, String galle, String good) {
-    }
+
+
 }
