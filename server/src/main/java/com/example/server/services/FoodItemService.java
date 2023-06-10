@@ -15,6 +15,10 @@ public class FoodItemService {
     {
         return foodItemRepository.findAll();
     }
+    public FoodItem saveIssued(FoodItem foodItem)
+    {
+        return foodItemRepository.save(foodItem);
+    }
 
 
 }
