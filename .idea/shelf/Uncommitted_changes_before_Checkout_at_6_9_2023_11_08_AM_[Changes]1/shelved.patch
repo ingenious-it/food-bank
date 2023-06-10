@@ -1,0 +1,17 @@
+Index: server/src/main/java/com/example/server/controllers/VictimController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/src/main/java/com/example/server/controllers/VictimController.java b/server/src/main/java/com/example/server/controllers/VictimController.java
+--- a/server/src/main/java/com/example/server/controllers/VictimController.java	
++++ b/server/src/main/java/com/example/server/controllers/VictimController.java	
+@@ -16,7 +16,7 @@
+ import java.util.Optional;
+ 
+ @RestController
+-@CrossOrigin(origins = {"http://localhost:3000","http://localhost:3000"})
++@CrossOrigin(origins = {"http://localhost:3000","http://localhost:3001"})
+ @RequestMapping("/Victim")
+ 
+ public class VictimController {

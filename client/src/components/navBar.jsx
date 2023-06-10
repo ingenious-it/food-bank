@@ -1,12 +1,8 @@
 import React from "react";
-import './hovers.css';
-import { Link,useNavigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-
+import "./hovers.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
-
-   const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   const navigate=useNavigate();
   const gotoNext= () => {
@@ -23,7 +19,12 @@ const Nav = () => {
             <div class="container-fluid">
               <Link class="navbar-brand" to={'/'}>
                 logo
-                              </Link>
+              </Link>
+
+              <div className="divimg">
+              <Link class="navbar-brand" to={'/'}>
+              <img src="logo1.png" height={80} width={100} alt="" />
+              </Link>
             </div>
             <button
               className="navbar-toggler"
@@ -38,10 +39,7 @@ const Nav = () => {
             </button>
           </div>
 
-          <div
-            className="D-flex w-50"
-            id="navbarSupportedContent"
-          >
+          <div className="D-flex w-50" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
             <li className="nav-item">
                 <Link className="nav-link text-white raise" to={'/'}>
@@ -103,26 +101,25 @@ const Nav = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" onClick={loginWithRedirect}>
+                    {/* <Link className="dropdown-item" onClick={loginWithRedirect}>
                       Login
+                    </Link> */}
+                  <Link className="dropdown-item" to={'/login'}>
+                      Login{" "}
                     </Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link className="dropdown-item" to={'/signup'}>
                       Sign up{" "}
                     </Link>
-                  </li> */}
-                  {isAuthenticated && (
-                    <li>
-                      <Link className="dropdown-item" onClick={() => logout({ returnTo: window.location.origin })}>
-                        Logout
-                      </Link>
-                    </li>
-                  )}
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <button className="btn nav-link text-white btncolor raise" onClick={gotoNext}>
+                <button
+                  className="btn btn-outline-warning nav-link text-white btncolor raise"
+                  onClick={gotoNext}
+                >
                   Donate
                 </button>
               </li>
