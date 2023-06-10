@@ -5,12 +5,8 @@ const DonatePrompt = () => {
   return (
     <React.Fragment>
 
-        <section className="vh-100 d-flex justify-content-around  dGrid">
-        <div className="tGrid">
-        How much would you like to donate? As a contributor to
-                        Sight For All we make sure your donation goes directly
-                        to supporting our cause. Thank you for your generosity!
-        </div> 
+<section className=" d-flex justify-content-around  dGrid">
+
           {/* <div className="py-1 h-100 mGrid"> */}
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div>
@@ -101,7 +97,7 @@ const DonatePrompt = () => {
                           </button>
                         </div>
                         <button className="btn btn-outline-warning btn-lg p-2 m-3 btn-warning text-black rounded-pill">
-                          <b className="m-3">Continue-> </b>
+                        <b className="m-3">Continue &gt; </b>
                         </button>
                       </div>
                     </div>

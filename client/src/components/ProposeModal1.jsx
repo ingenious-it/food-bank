@@ -3,7 +3,6 @@ import './Donate.css';
 import { useState,useEffect} from 'react';
 import { BsCheckCircle } from "react-icons/bs";
 import axios from 'axios';
-import VictimService from './services/VictimService'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -52,16 +51,11 @@ const ProposeModal1 = (props) => {
             setFormSubmitted(true);
             // Display a success message to the user
             toast.success("Form submitted successfully!");
-          } 
-          catch (error) {
+          } catch (error) {
             console.error(error);
             // Display an error message to the user
             toast.error("An error occurred while submitting the form. Please try again later.");
           }
-
-
-    
-
            //  event.target.reset();
            setfirstName('');
            setlastName('');
@@ -146,7 +140,7 @@ const ProposeModal1 = (props) => {
     return ( 
 
         <React.Fragment>
-          <ToastContainer
+               <ToastContainer
       position="bottom-right"
       autoClose={5000}
       hideProgressBar={true}
@@ -168,7 +162,7 @@ const ProposeModal1 = (props) => {
 
                             <p> You can provide information about victims of food crisis.As a contributor for the sight, All we make sure your provided 
                                 information will not be disclose to any external party.</p>
-                        <div className='text-justify'> 
+                        <div>
                             <p>Who are suitable to get this donation?</p>
                                 <ul>
                                 <li>Orphans</li>

@@ -37,7 +37,7 @@
   }
   
   .hr{
-    background-color: rgb(215, 202, 56);
+    background-color: #2fc4b2;
     height: 1px;
     width: 100%;
   }
@@ -70,7 +70,7 @@
   }
   
   .second{
-    color: gold;
+    color: #2fc4b2;
   }
 
   .para a {

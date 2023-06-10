@@ -50,10 +50,6 @@
   color: #000;
 }
 
-/* .bg-color{
-  background-color:#fecf50;
-} */
-
 .bg-color{
   background-color:#8de5d8;
 }
@@ -68,6 +64,10 @@
 
 .bg-image-propose{
   background-image: url('../images/image161.png');
+}
+.bg-image-donate{
+  background-image: url('../images/image312.png');
+
 }
 .error{
   color: #2fc4b2;

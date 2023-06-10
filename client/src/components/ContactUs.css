@@ -74,7 +74,7 @@
 
 
 .maincontainer .contactInfo .box .text h3{
-    color: #ff9900;
+    color: #2fc4b2;
     font-weight: 500;
 }
 
@@ -132,14 +132,14 @@
 .contactForm .inputBox input:valid ~span,
 .contactForm .inputBox textarea:focus ~span,
 .contactForm .inputBox textarea:valid ~span{
-    color: #ff9900;
+    color: #2fc4b2;
     font-size: 12px;
     transform: translateY(-20px);
 }
 
 .contactForm .inputBox input[type="submit"]{
     width: 100px;
-    background: #ff9900;
+    background:#2fc4b2;
     color: #fff;
     border: none;
     cursor: pointer;

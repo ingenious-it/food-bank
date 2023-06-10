@@ -31,7 +31,7 @@ const DFooter = () => {
           </p>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5 ms-5">
-          <h4 class="mb-4 font-weight-bold text-warning">About</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">About</h4>
           <div>
             
 
@@ -53,7 +53,7 @@ const DFooter = () => {
           </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
-          <h4 class="mb-4 font-weight-bold text-warning">Our Impact</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">Our Impact</h4>
           <div>
             <p class="para">
               <a href="/Mission">Mission</a>
@@ -68,7 +68,7 @@ const DFooter = () => {
         </div>
 
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
-          <h4 class="mb-4 font-weight-bold text-warning">Take Action</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">Take Action</h4>
           <div>
            
 
@@ -88,7 +88,7 @@ const DFooter = () => {
         </div>
 
         <div class="col-lg-2 col-md-3 col-sm-6 mt-5">
-          <h4 class="mb-4 font-weight-bold text-warning">Contact Us</h4>
+          <h4 class="mb-4 font-weight-bold themecolor">Contact Us</h4>
           <p class="para">
             <FaHome class="icon" />
             NewYork,NY2333,USA

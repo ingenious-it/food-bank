@@ -31,7 +31,9 @@ const ImageComp = () => {
                   Together, we can make a better tomorrow a reality
                 </p>
               </b>
-              <button className="btn text-white btncolor raise w-75 mb-2">
+              <button className="btn text-white btncolor raise w-75 mb-2"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
                 Donate  
               </button>
             </div>
