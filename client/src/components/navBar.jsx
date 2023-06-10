@@ -150,7 +150,6 @@ const Nav = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <button className="btn nav-link text-white btncolor raise" onClick={gotoNext}>
                 <button
                   className="btn btn-outline-warning nav-link text-white btncolor raise"
                   onClick={gotoNext}
