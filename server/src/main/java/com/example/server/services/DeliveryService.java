@@ -24,6 +24,9 @@ public DeliveryService(DeliveryRepository deliveryRepository) {
     public List<Delivery> getAllDelivery() {
         return deliveryRepository.findAll();
     }
+    public int getPendingDeliveryCount() {
+        return deliveryRepository.countByIsCompletedFalse();
+    }
 
 }
 

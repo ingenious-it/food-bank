@@ -18,4 +18,5 @@ public interface VictimRepository extends JpaRepository<Victim ,Long> {
     List<Victim> findByIsVerifiedTrueAndIsAcceptedFalse();
     long countByIsVerifiedTrue();
 
+    long countByIsVerifiedFalse();
 }

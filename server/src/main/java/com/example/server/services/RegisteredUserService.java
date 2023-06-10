@@ -7,13 +7,12 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class RegisteredUserService {  // access entity through repo
@@ -93,5 +92,13 @@ public class RegisteredUserService {  // access entity through repo
     public List<RegisteredUser> getUsersWithRoles() {
         List<String> roles = Arrays.asList("Both", "DataSupplier");
         return registeredUserRepository.findByRoleIn(roles);
+    }
+    public List<Map<String, Object>> getTopDataSuppliers() {
+        Pageable pageable = PageRequest.of(0, 5); // Limiting to top 5 data suppliers
+        return registeredUserRepository.findTopDataSuppliers(pageable);
+    }
+    public List<Map<String, Object>> getTopDonors() {
+        Pageable pageable = PageRequest.of(0, 5); // Limiting to top 5 donors
+        return registeredUserRepository.findTopDonors(pageable);
     }
 }

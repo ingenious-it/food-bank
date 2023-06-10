@@ -71,6 +71,7 @@ public class VictimService {
     {
         return victimRepository.findByIsVerifiedTrueAndIsAcceptedTrue();
     }
+
     public List<Victim> getRejectedVictims()
 
     {
@@ -97,6 +98,10 @@ public class VictimService {
     public long getVerifiedVictimCount() {
         return victimRepository.countByIsVerifiedTrue();
     }
+    public long getPendingVictimCount() {
+        return victimRepository.countByIsVerifiedFalse();
+    }
+
 
 
     public List<Victim> getAllVictimDetails() {

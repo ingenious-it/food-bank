@@ -9,9 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3002")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/RegisteredUser")
 public class RegisteredUserController {
     @Autowired
@@ -56,5 +57,13 @@ public class RegisteredUserController {
     public List<RegisteredUser> getDetails()
     {
         return registeredUserService.getUsersWithRoles();
+    }
+    @GetMapping("/top-data-suppliers")
+    public List<Map<String, Object>> getTopDataSuppliers() {
+        return registeredUserService.getTopDataSuppliers(); // Change the limit as per your requirement
+    }
+    @GetMapping("/top-donaters")
+    public List<Map<String, Object>> getTopDonors() {
+        return registeredUserService.getTopDonors();
     }
 }

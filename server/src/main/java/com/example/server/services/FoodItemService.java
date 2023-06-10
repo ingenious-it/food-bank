@@ -19,6 +19,11 @@ public class FoodItemService {
     {
         return foodItemRepository.save(foodItem);
     }
+    public int getTotalQuantity() {
+        return foodItemRepository.findAll().stream()
+                .mapToInt(FoodItem::getQuantity)
+                .sum();
+    }
 
 
 }
