@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="added foreign key" />
+    <list default="true" id="ac44af65-f4b2-4585-82e9-24f5eef8019b" name="Changes" comment="added foreign key" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,19 +111,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="food-bank" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="food-bank" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.server.ServerApplication" />
@@ -144,7 +131,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="" />
+      <changelist id="ac44af65-f4b2-4585-82e9-24f5eef8019b" name="Changes" comment="" />
       <created>1681418512224</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -168,6 +155,7 @@
       <workItem from="1686201060202" duration="768000" />
       <workItem from="1686207157894" duration="1232000" />
       <workItem from="1686384961931" duration="57000" />
+      <workItem from="1686388202219" duration="5604000" />
     </task>
     <task id="LOCAL-00001" summary="Commented fooditemdonation entity and repo">
       <created>1683182325536</created>
@@ -176,7 +164,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683182325536</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merged with main">
+      <created>1686389820630</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686389820630</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed merged conflicts">
+      <created>1686390366464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686390366464</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added foreign key">
+      <created>1686393752213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686393752213</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +204,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commented fooditemdonation entity and repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented fooditemdonation entity and repo" />
+    <MESSAGE value="Merged with main" />
+    <MESSAGE value="fixed merged conflicts" />
+    <MESSAGE value="added foreign key" />
+    <option name="LAST_COMMIT_MESSAGE" value="added foreign key" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
