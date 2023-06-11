@@ -4,6 +4,7 @@ import "./CardsHome.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
+import ProposeModal1 from './ProposeModal1';
 import FoodModal1 from "./FoodModal1";
 import ProposeModal1 from "./ProposeModal1";
 
