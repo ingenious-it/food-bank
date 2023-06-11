@@ -21,6 +21,8 @@ public class FoodDonation {
     private String NearestLocation;
     private String SelectedOption;
 
-    private boolean isCollected;
-    private boolean isNotAvailable;
+    private Boolean isCollected;
+    private Boolean isNotAvailable;
+
+
 }
