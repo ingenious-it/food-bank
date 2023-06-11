@@ -23,12 +23,7 @@ const Projects = () => {
           </div>
         </div>
         <div className='textcontain d-flex ms-5 me-5 text-justify flex-direction-column'>
-                <h5 className='mt-5'>Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer 
-                took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic 
-                typesetting.</h5>
+                <h5 className='mt-5'>We are dedicated to making a positive impact in our community by providing essential food resources and implementing initiatives that address food insecurity. Through our various programs and projects, we strive to alleviate hunger and improve the overall well-being of individuals and families in need. Join us in our mission to create a hunger-free community and help us build a brighter future for all.</h5>
                 
             </div>
             <hr className='hr1 d-flex ms-5 me-5 mb-5' />
@@ -45,7 +40,7 @@ const Projects = () => {
                                  but the majority have suffered alteration in some form, by injected humour, 
                                  or randomised words which don't look even slightly believable</p>
                                                 {/* <!-- Button trigger modal --> */}
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
+                                <button type="button" class="btn btncolor" data-bs-toggle="modal" data-bs-target="#projectmodal1">
                                 See More...
                                 </button>
                             </div>
@@ -58,7 +53,7 @@ const Projects = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Project Title 2</h5>
                                 <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
+                                <button type="button" class="btn btncolor" data-bs-toggle="modal" data-bs-target="#projectmodal1">
                                 See More...
                                 </button>
                             </div>
@@ -71,7 +66,7 @@ const Projects = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Project Title 3</h5>
                                 <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
+                                <button type="button" class="btn btncolor" data-bs-toggle="modal" data-bs-target="#projectmodal1">
                                 See More...
                                 </button>
                             </div>
@@ -84,7 +79,7 @@ const Projects = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Project Title 4</h5>
                                 <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectmodal1">
+                                <button type="button" class="btn btncolor" data-bs-toggle="modal" data-bs-target="#projectmodal1">
                                 See More...
                                 </button>
                             </div>

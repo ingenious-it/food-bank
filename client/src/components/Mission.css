@@ -1,26 +1,16 @@
-.bg-img-mission{
-    
-    background-position: center center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-}
 
-.bg-img-mission{
-    background-image: url('../images/img4.jpg');
 
-}
+
 
 .imgmission{
     background-image: url('../images/img7.png');
     width: 700px;
     height: 400px;
     border-radius: 5px;
-    width:50%;
-    height:auto;
+    /* width:50%;
+    height:auto; */
     background-repeat: no-repeat;
-} */
+} 
 
 .imgmission2{
     background-image: url('../images/img2.jpg');
@@ -32,13 +22,14 @@
  .bg-blue{
     background: rgb(144,140,140);
 background: radial-gradient(circle, rgba(144,140,140,1) 39%, rgba(105,149,142,1) 100%);
+min-height: 70vh;
  }
 
   
   
   
 
-.img-overlay1{
+.img-overlay{
  
     backdrop-filter: blur(2px);
     color:#fff;
