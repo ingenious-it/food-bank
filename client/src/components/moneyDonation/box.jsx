@@ -41,28 +41,28 @@ const DonatePrompt = () => {
                           <button
                             style={{ fontSize: "15px" }}
 
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn btncolor btn-sm p-2 m-1  text-black rounded-pill"
                             type="submit"
                           >
                             <b>RS 100</b>
                           </button>
                           <button
                             style={{ fontSize: "15px" }}
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn  btn-sm p-2 m-1 btncolor text-black rounded-pill"
                             type="submit"
                           >
                             <b>RS 200</b>
                           </button>
                           <button
                             style={{ fontSize: "15px" }}
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn  btn-sm p-2 m-1 btncolor text-black rounded-pill"
                             type="submit"
                           >
                             <b>RS 500</b>
                           </button>
                           <button
                             style={{ fontSize: "15px" }}
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn  btn-sm p-2 m-1 btncolor text-black rounded-pill"
                             type="submit"
                           >
                             <b>RS 1000</b>
@@ -71,34 +71,34 @@ const DonatePrompt = () => {
                         <div className="d-flex btn-group justify-content-evenly align-content-center my-2">
                           <button
                             style={{ fontSize: "15px" }}
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn  btn-sm p-2 m-1 btncolor text-black rounded-pill"
                             type="submit"
                           >
                             <b>RS 2000</b>
                           </button>
                           <button
                             style={{ fontSize: "15px" }}
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn  btn-sm p-2 m-1 btncolor text-black rounded-pill"
                             type="submit"
                           >
                             <b>RS 5000</b>
                           </button>
                           <button
                             style={{ fontSize: "15px" }}
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn  btn-sm p-2 m-1 btncolor text-black rounded-pill"
                             type="submit"
                           >
                             <b>RS 10000</b>
                           </button>
                           <button
                             style={{ fontSize: "15px" }}
-                            className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
+                            className="btn  btn-sm p-2 m-1 btncolor text-black rounded-pill"
                             type="submit"
                           >
                             <b>Custom Amount</b>
                           </button>
                         </div>
-                        <button className="btn btn-outline-warning btn-lg p-2 m-3 btn-warning text-black rounded-pill">
+                        <button className="btn  btn-lg p-2 m-3 btncolor text-black rounded-pill">
                         <b className="m-3">Continue &gt; </b>
                         </button>
                       </div>
