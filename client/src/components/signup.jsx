@@ -49,6 +49,8 @@ const SignUp = () => {
             .then((response) => {
               console.log(response);
               toast.success("Form submitted successfully");
+              window.location.href = "/";
+
             })
             .catch((error) => {
               console.log(error);

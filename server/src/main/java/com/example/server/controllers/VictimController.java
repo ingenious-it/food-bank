@@ -5,17 +5,13 @@ import com.example.server.entities.Victim;
 import com.example.server.repositories.RegisteredUserRepository;
 import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.server.repositories.VictimRepository;
 
 
-import javax.swing.event.ListDataEvent;
-import java.security.PublicKey;
-import java.sql.ClientInfoStatus;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = {"http://localhost:3001","http://localhost:3000","http://localhost:54194" })
@@ -110,6 +106,11 @@ public class VictimController {
         List<Victim> AcceptedVictims = victimService.getAcceptedVictims();
         return AcceptedVictims;
     }
+    @GetMapping("/pending-count")
+    public ResponseEntity<Long> getPendingVictimCount() {
+        long count = victimService.getPendingVictimCount();
+        return new ResponseEntity<>(count, HttpStatus.OK);
+    }
     @PutMapping("/selectReject/{id}")
     public Victim updateVictimRejected(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
     Boolean isVerified = requestBody.get("isVerified");
@@ -121,6 +122,8 @@ public class VictimController {
         }
         registeredUserRepository.save(donater);
     return victimService.updateVictimRejected(id, isVerified,isAccepted);
+
+
 }
 
 

@@ -59,7 +59,7 @@ const Propose = () => {
 
                     <div className='d-flex justify-content-center mt-4 mb-5'>
                     
-                    <button className="btn text-white btncolor mb-2 ps-5 pe-5" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>{
+                    <button className="btn text-white btncolor mb-2 ps-5 pe-5" data-bs-toggle="modal" data-bs-target="#exampleModal3" onClick={()=>{
                         setOpenProposeModal(true);
                     }}>
                     Propose Victim </button>

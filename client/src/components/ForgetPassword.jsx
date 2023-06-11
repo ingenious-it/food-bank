@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./ForgetPassword.css";
 import Nav from "./navBar";
 import { motion } from "framer-motion";
-import axios from "axios"
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -30,7 +32,8 @@ const ForgetPassword = () => {
       );
   
       console.log(response.data);
-      alert("Password reset link sent successfully");
+      alert("Password reset link sent successfully,check your mail");
+      //toast.ersuccessror("Password reset link sent successfully,check your mail");
     } catch (error) {
       console.log(error);
       // Handle network or request error
@@ -41,6 +44,19 @@ const ForgetPassword = () => {
 
   return (
     <React.Fragment>
+                          <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={true}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+/>
+      
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: "100vw" }}
@@ -53,7 +69,7 @@ const ForgetPassword = () => {
               <div class="form-value">
                 <form action="">
                   <h2>Forget password?</h2>
-                  <p>We will send you reset instructions</p>
+                  <p className="p1">We will send you reset instructions</p>
                   <div class="inputbox">
                     {/* <ion-icon name="mail-outline"></ion-icon> */}
                     <input

@@ -54,19 +54,26 @@ const Donate = () => {
                     <p>In our efforts to alleviate hunger and improve food security, every contribution counts. By making a donation, no matter the amount, you can directly impact the lives of individuals and communities facing food insecurity. Together, we can work towards reducing hunger and ensuring that everyone has access to nutritious meals.</p>
 
                     </div>
-
-                    <div className='btgroup d-flex justify-content-between mt-4 mb-5'>
-                    <button className="btn text-white btncolor mb-2 ps-5 pe-5">
+                    <div className='d-flex w- justify-content-center align-items-center' >
+                    <div className='btgroup  d-flex justify-content-between mt-4 mb-5'>
+                    <button 
+                    className="btn btn-outline-light text-white btncolor mb-2 ps-5 pe-5 me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
                     Donate Once </button>
-                    <button className="btn text-white btncolor mb-2 ps-5 pe-5">
-                    Donate Monthly </button>
-                    <button className="btn text-white btncolor mb-2 ps-5 pe-5" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>{
+                    {/* <button className="btn text-white btncolor mb-2 ps-5 pe-5">
+                    Donate Monthly </button> */}
+                    <button className="btn text-white btncolor mb-2 ps-5 pe-5 ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>{
                         setOpenFoodModal(true);
                     }}>
                     Donate Food </button>
                     </div>
 
                     {openFoodModal && <FoodModal1/>}
+
+                    </div>
+
+  
 
             </div>
          </div>

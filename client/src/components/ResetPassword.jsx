@@ -43,6 +43,12 @@ const ResetPassword = () => {
 
 const handleResetpassword = async (e) => {
   e.preventDefault();
+
+  if (password !== confirmPassword) {
+    toast.error("Passwords do not match");
+    return;
+  }
+  
   const url = window.location.href;
   const token = url.substring(url.lastIndexOf('=')+1);
   try{
@@ -80,7 +86,7 @@ const handleResetpassword = async (e) => {
               <div class="form-value">
                 <form action="">
                   <h2>Reset password?</h2>
-                  <p>Type here New Password</p>
+                  <p className="p1">Type here New Password</p>
                   <div class="inputbox">
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     <label>New Password</label>

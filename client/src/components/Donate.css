@@ -66,7 +66,13 @@
   background-image: url('../images/image161.png');
 }
 .bg-image-donate{
-  background-image: url('../images/image312.png');
+  background-image: url('../images/image307.png');
+  
+  background-position: center center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-block-size: 70vh;
 
 }
 .error{

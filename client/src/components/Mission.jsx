@@ -51,7 +51,7 @@ const Mission = () => {
         <section>
           <div className="container-fluid">
             <div className="row">
-              <div className="col-6 p-4">
+              <div className="col-6 ">
                 <h1>FOOD BANK Is Changing Lives</h1>
                 <h4>Our Mission</h4>
                 <p>
@@ -69,15 +69,15 @@ const Mission = () => {
                   and well-being.
                 </p>
 
-                <h4>Why FGHC?</h4>
+                <h4>Why FoodBank?</h4>
                 <p>
-                  Feed God’s Hungry Children is proud to be rated so highly by
+                  Food Bank is proud to be rated so highly by
                   esteemed watchdog organizations like Guidestar and Charity
                   Navigator
                 </p>
               </div>
-              <div className="col-6 p-4">
-                <div className="imgmission2 rounded"></div>
+              <div className="col-6 ">
+                <div className="imgmission2 rounded mb-3 ms-3"></div>
               </div>
 
               <div className="img12 bg-dark">
