@@ -1,15 +1,18 @@
 package com.example.server.services;
 
 import com.example.server.entities.RegisteredUser;
-import com.example.server.loginconfig.LoginResponse;
+import com.example.server.loginconfigDonation.LoginResponseDonation;
 import com.example.server.repositories.RegisteredUserRepository;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.*;
 import java.util.*;
 
 @Service
@@ -75,16 +78,16 @@ public class RegisteredUserService {  // access entity through repo
         return token;
     }
 
-    public LoginResponse performLogin(String username, String password) {
+    public LoginResponseDonation performLogin(String username, String password) {
         // Perform login authentication
         boolean isValidCredentials = validateCredentials(username, password);
         System.out.println(isValidCredentials);
         if (isValidCredentials) {
             String token = generateToken(username);
             System.out.println(token);
-            return new LoginResponse("Login successful", token);
+            return new LoginResponseDonation("Login successful", token);
         } else {
-            return new LoginResponse("Invalid username or password", null);
+            return new LoginResponseDonation("Invalid username or password", null);
         }
     }
     public List<RegisteredUser> getUsersWithRoles() {
@@ -113,5 +116,13 @@ public class RegisteredUserService {  // access entity through repo
         String encodePassword = passwordEncoder.encode(newPassword);
         registeredUser.setPassword(encodePassword);
         registeredUserRepository.save(registeredUser);
+    }
+    public List<Map<String, Object>> getTopDataSuppliers() {
+        Pageable pageable = PageRequest.of(0, 5); // Limiting to top 5 data suppliers
+        return registeredUserRepository.findTopDataSuppliers(pageable);
+    }
+    public List<Map<String, Object>> getTopDonors() {
+        Pageable pageable = PageRequest.of(0, 5); // Limiting to top 5 donors
+        return registeredUserRepository.findTopDonors(pageable);
     }
 }

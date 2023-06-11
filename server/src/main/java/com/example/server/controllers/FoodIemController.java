@@ -48,5 +48,9 @@ public class FoodIemController {
 
         return ResponseEntity.ok("Input values updated successfully");
     }
+    @GetMapping("/total-quantity")
+    public int getTotalQuantity() {
+        return foodItemService.getTotalQuantity();
+    }
 
 }
