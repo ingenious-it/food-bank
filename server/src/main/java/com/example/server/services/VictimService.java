@@ -94,9 +94,6 @@ public class VictimService {
         victim.setIsDeliverySelected(status);
         return victimRepository.save(victim);
     }
-    public long getVerifiedVictimCount() {
-        return victimRepository.countByIsVerifiedTrue();
-    }
 
 
     public List<Victim> getAllVictimDetails() {

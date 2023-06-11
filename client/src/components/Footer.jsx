@@ -16,7 +16,7 @@ const DFooter = () => {
         <div class="col-lg-3 col-md-6 col-sm-12 ms-5 mt-5 ">
           <div class=" d-flex">
             <div className="divimg">
-              <img src="logo1.png" height={80} width={100} alt="" />
+              <img src="logo2.png" height={80} width={100} alt="" />
             </div>
             <div class="text">
               <h3>FOOD BANK</h3>
@@ -111,8 +111,8 @@ const DFooter = () => {
           <div class="info">
             <span class="full">
               <span class="first">
-                Copyright @2023 Allright reserved | This is made by{" "}
-                <span class="second text-warning">Ingenious</span>
+                Copyright @2023 Allright reserved |by{" "}
+                <span class="second  themecolor">Ingenious</span>
               </span>
             </span>
           </div>

@@ -11,8 +11,8 @@ import java.util.Date;
 @Table(name = "money_donation")
 public class MoneyDonation {
     @Id
-   private String donationID;
-   private long donationAmount;
+    private String donationID;
+    private long donationAmount;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private RegisteredUser user;

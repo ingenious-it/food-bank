@@ -19,7 +19,7 @@ import ResetPassword from './ResetPassword';
 const AnimatedRoutes = () => {
     const location=useLocation();
 
-    return (
+    return ( 
         <React.Fragment>
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
@@ -37,6 +37,7 @@ const AnimatedRoutes = () => {
               <Route path='/checkout'  element={<PayPalPrompt/>} />
               <Route path='/reset_password' element = {<ResetPassword/>} />
 
+
               <Route path="/money-donate" element={<DonatePrompt />} />
 
             </Routes>
@@ -44,5 +45,5 @@ const AnimatedRoutes = () => {
         </React.Fragment>
      );
 }
-
+ 
 export default AnimatedRoutes;
