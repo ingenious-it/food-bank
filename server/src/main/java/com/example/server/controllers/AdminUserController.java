@@ -18,21 +18,21 @@ public class AdminUserController {
     @Autowired
     private  AdminUserService adminUserService;
 
-@PostMapping("/saveAdminUser")
+    @PostMapping("/saveAdminUser")
     public AdminUser saveAdminUser(@RequestBody AdminUser adminUser)
-{
-    return adminUserService.saveAdminUser(adminUser);
-}
-@PostMapping("/login")
+    {
+        return adminUserService.saveAdminUser(adminUser);
+    }
+    @PostMapping("/login")
     public ResponseEntity<LoginResponseAdmin> login(@RequestBody AdminUser adminUser)
-{
-    String userName=adminUser.getUserName();
-    String password=adminUser.getPassword();
-    System.out.println(adminUser);
-    LoginResponseAdmin loginResponseAdmin =adminUserService.performlogin(userName,password);
-    return ResponseEntity.ok(loginResponseAdmin);
+    {
+        String userName=adminUser.getUserName();
+        String password=adminUser.getPassword();
+        System.out.println(adminUser);
+        LoginResponseAdmin loginResponseAdmin =adminUserService.performlogin(userName,password);
+        return ResponseEntity.ok(loginResponseAdmin);
 
-}
+    }
 
     @GetMapping("/viewUserDetails")
     public List<AdminUser> getAllAdminUser() {
@@ -49,7 +49,7 @@ public class AdminUserController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-    }
+}
 
 
 

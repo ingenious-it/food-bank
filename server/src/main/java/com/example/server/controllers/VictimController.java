@@ -5,6 +5,7 @@ import com.example.server.entities.Victim;
 import com.example.server.repositories.RegisteredUserRepository;
 import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

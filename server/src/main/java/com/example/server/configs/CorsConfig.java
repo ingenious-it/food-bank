@@ -1,7 +1,9 @@
 package com.example.server.configs;
 
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -18,6 +20,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
                     .allowedHeaders("*") // Allow all headers
                     .allowCredentials(true); // Allow sending of credentials (e.g., cookies, authorization headers)
         }
+    @Bean
+    
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
     }
 
 
