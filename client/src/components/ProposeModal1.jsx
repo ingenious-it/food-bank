@@ -184,7 +184,7 @@ const ProposeModal1 = (props) => {
       pauseOnHover
       theme="colored"
 />
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                  <div class="modal-dialog modal-dialog-centered modal-xl d-flex">
                      <div class="modal-content bg-dark text-white" id='content1'>
    

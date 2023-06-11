@@ -79,10 +79,10 @@ const DCards = () => {
             <button
               className="btn btn-outline-success mb-2 ps-5 pe-5"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              // onClick={() => {
-              //   setOpenProposeModal(true);
-              // }}
+              data-bs-target="#exampleModal3"
+              onClick={() => {
+                setOpenProposeModal(true);
+              }}
             >
               Propose Victim{" "}
             </button>

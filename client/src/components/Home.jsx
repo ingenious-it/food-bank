@@ -180,7 +180,6 @@ const Home = () => {
             <br></br>
             <h3>- Winston Churchil</h3>
           </section>
-<hr></hr>
           {/* <Hearts></Hearts> */}
 
 
