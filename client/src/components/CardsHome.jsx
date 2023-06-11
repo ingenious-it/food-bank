@@ -72,8 +72,7 @@ const DCards = () => {
             <p>
               We invite you to submit the details of individuals or families
               affected by food crisis who are in need of assistance. Through the
-              generous donations from compassionate individuals, we are
-              determined to uncover their circumstances and provide them with
+              generous donations from compassionate individuals, we provide them with
               the necessary aid
             </p>
 
@@ -81,9 +80,9 @@ const DCards = () => {
               className="btn btn-outline-success mb-2 ps-5 pe-5"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
-              onClick={() => {
-                setOpenProposeModal(true);
-              }}
+              // onClick={() => {
+              //   setOpenProposeModal(true);
+              // }}
             >
               Propose Victim{" "}
             </button>

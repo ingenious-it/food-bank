@@ -21,7 +21,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
                     .allowCredentials(true); // Allow sending of credentials (e.g., cookies, authorization headers)
         }
     @Bean
-    
+
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }

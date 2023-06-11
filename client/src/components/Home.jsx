@@ -59,9 +59,9 @@ const Home = () => {
             </div>
           </div>
 
-          <section className="m-3 text-center">
+          <section className="m-3 ">
             <br></br>
-            <h6>
+            <p >
               The Food Bank is a concept where people can donate money and food
               to help those who are impacted by the food crisis. People can
               donate food or money through this app, as well as identify those
@@ -69,8 +69,14 @@ const Home = () => {
               make food donations more effective and efficient while also
               developing a user-friendly platform to donate. In that regard, the
               system aids in persuading individuals to perform these social
-              tasksssss.
-            </h6>
+              tasksssss. In the modern world, these donation processes are intertwined with the IT industry, which 
+              makes those processes more convenient and efficient. There are many platforms that 
+              provide this service for people. As a result of numerous donation software systems donators 
+              can donate easily and anyone living anywhere in the world can contribute to it. Through these 
+              online platforms, people can get clear information about the ongoing process after the donation, 
+              and they can donate money through online payment gateways. The positive outcome of this is 
+              people are more interacting with donating compared to the past.
+            </p>
             <br></br>
           </section>
 
@@ -175,7 +181,7 @@ const Home = () => {
             <h3>- Winston Churchil</h3>
           </section>
 <hr></hr>
-          <Hearts></Hearts>
+          {/* <Hearts></Hearts> */}
 
 
 

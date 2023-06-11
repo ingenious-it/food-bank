@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./hovers.css";
 import { Link, useNavigate } from "react-router-dom";
+import jwtDecode from "jwt-decode";
 
 const Nav = () => {
 
@@ -9,12 +10,33 @@ const Nav = () => {
     navigate('/donate');
       
   }
+  const token = localStorage.getItem("token");
+  const decodedToken = jwtDecode(token);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        
+        if (decodedToken && decodedToken.exp > Date.now() / 1000) {
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        setIsLoggedIn(false);
+      }
+    }
+  }, []);
   return (
+    
   
     <React.Fragment>
       
       <nav className="navbar navbar-expand-lg  p-2 ">
-        <div className="container-fluid ">
+        <div className="container-fluid  ">
           <div>
             <div class="container-fluid">
               <Link class="navbar-brand" to={'/'}>
@@ -105,9 +127,11 @@ const Nav = () => {
                     {/* <Link className="dropdown-item" onClick={loginWithRedirect}>
                       Login
                     </Link> */}
-                  <Link className="dropdown-item" to={'/login'}>
-                      Login{" "}
-                    </Link>
+                       {!isLoggedIn && (
+        <Link className="dropdown-item" to="/login">
+          Login
+        </Link>
+      )}
                   </li>
                   <li>
                     <Link className="dropdown-item" to={'/signup'}>
@@ -118,7 +142,7 @@ const Nav = () => {
               </li>
               <li className="nav-item">
                 <button
-                  className="btn btn-outline-warning nav-link text-white btncolor raise"
+                  className="btn  nav-link text-white btncolor raise"
                   onClick={gotoNext}
                 >
                   Donate

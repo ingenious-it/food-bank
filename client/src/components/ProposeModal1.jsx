@@ -5,9 +5,34 @@ import { BsCheckCircle } from "react-icons/bs";
 import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import jwtDecode from "jwt-decode";
+
+const token = localStorage.getItem("token");
+
+
+
 
 
 const ProposeModal1 = (props) => {
+
+  const token = localStorage.getItem("token");
+  const decodedToken = jwtDecode(token);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+  
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        
+        if (decodedToken && decodedToken.exp > Date.now() / 1000) {
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        setIsLoggedIn(false);
+      }
+    }
+  }, []);
        // validation
        const [firstName, setfirstName] = useState('');
        const [lastName, setlastName] = useState('');
@@ -40,17 +65,22 @@ const ProposeModal1 = (props) => {
        const [formSubmitted, setFormSubmitted] = useState(false);
 
      
-       async function handleSubmit(event){
-         event.preventDefault();
-         const newErrors = validateInputs();
-         if (Object.keys(newErrors).length === 0) {
-          
-          const victimData = { firstName, lastName, nic, no, street, city, phoneNumber,isVerified,description,isAccepted,isDeliverySelected,PackageType };
-          //saveVictim(e)
-            console.log(victimData);
-           
-
-           try {
+       async function handleSubmit(event) {
+        event.preventDefault();
+        const newErrors = validateInputs();
+      
+        if (Object.keys(newErrors).length === 0) {
+          //const token = localStorage.getItem("token");
+      
+          if (!isLoggedIn) {
+            // User is not logged in, display an error message
+            toast.error("You must be logged in to submit the form.");
+            return;
+          }
+      
+          const victimData = { firstName, lastName, nic, no, street, city, phoneNumber, isVerified, description, isAccepted, isDeliverySelected, PackageType };
+      
+          try {
             const response = await axios.post("http://localhost:8080/Victim/saveVictimDetails", victimData);
             console.log(response.data);
             setFormSubmitted(true);
@@ -61,26 +91,23 @@ const ProposeModal1 = (props) => {
             // Display an error message to the user
             toast.error("An error occurred while submitting the form. Please try again later.");
           }
-           //  event.target.reset();
-           setfirstName('');
-           setlastName('');
-           setNIC("");
-           setNo('');
-           setStreet('');
-           setCity('');
-           setphoneNumber('');
-           setDescriotion("")
-           setFormSubmitted(true);
-           setErrors('');
-           console.log('Form submitted successfully!');
-
-           
-         } else {
-           setErrors(newErrors);
-         }
-
-        
-       }
+      
+          setfirstName('');
+          setlastName('');
+          setNIC("");
+          setNo('');
+          setStreet('');
+          setCity('');
+          setphoneNumber('');
+          setDescriotion("");
+          setFormSubmitted(true);
+          setErrors('');
+          console.log('Form submitted successfully!');
+        } else {
+          setErrors(newErrors);
+        }
+      }
+      
 
       //  const saveVictim = (e) =>{
       //   VictimService.saveVictim(victim).then(res =>{

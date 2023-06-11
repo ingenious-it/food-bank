@@ -6,6 +6,8 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import useAuthToken from "./services/UseAuthToken";
 import jwtDecode from "jwt-decode";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const [loginData, setLoginData] = useState({
     username: "",
@@ -28,6 +30,7 @@ const Login = () => {
       );
 
       if (response.status === 200 ) {
+        
         if(response.data.token != null)
         {
           const untoken = response.data.token;
@@ -35,12 +38,14 @@ const Login = () => {
         const token = localStorage.getItem("token");
         const decodedToken = jwtDecode(token);
         console.log(decodedToken);
+        window.location.href = "/";
         //right 
         }
         else{
         // Login failed
         // Handle error, display error message, etc.
           console.log("lOGIN vfd")
+          toast.error("Invalid username or password");
         }
        
       } else {
@@ -55,6 +60,18 @@ const Login = () => {
 
   return (
     <React.Fragment>
+                    <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={true}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+/>
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: "100vw" }}
