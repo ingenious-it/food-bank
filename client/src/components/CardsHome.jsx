@@ -5,9 +5,14 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
 import FoodModal1 from "./FoodModal1";
+import ProposeModal1 from './ProposeModal1';
+
+
 
 const DCards = () => {
   const [openFoodModal, setOpenFoodModal] = useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
+  const [openProposeModal,setOpenProposeModal]=useState(false);
   return (
     <div className="major w-100">
       <div className="maincontainer d-flex justify-content-center align-items-center flex-column text-center">
@@ -51,9 +56,18 @@ const DCards = () => {
               towards providing essential food supplies to those in need, giving
               them a chance to lead a healthy and fulfilling life
             </p>
-            <button type="button" class="btn btn-outline-light">
-              DONATE MONEY
-            </button>
+          
+
+            
+
+              <button className="btn btn-outline-light"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+                Donate  
+              </button>
+
+
+
           </div>
         </div>
 
@@ -68,12 +82,20 @@ const DCards = () => {
               determined to uncover their circumstances and provide them with
               the necessary aid
             </p>
-            <button type="button" class="btn btn-outline-success">
-              PROPOSE VICTIMS
-            </button>
+            
+
+            <button className="btn btn-outline-success mb-2 ps-5 pe-5" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>{
+                        setOpenProposeModal(true);
+                    }}>
+                    Propose Victim </button>
+                    </div>
+
+                    {openProposeModal && <ProposeModal1/>}
+
+
           </div>
         </div>
-      </div>
+      
     </div>
   );
 };

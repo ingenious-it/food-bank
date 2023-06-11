@@ -23,7 +23,7 @@ const Nav = () => {
 
               <div className="divimg">
               <Link class="navbar-brand" to={'/'}>
-              <img src="logo1.png" height={80} width={100} alt="" />
+              <img src="logo2.png" height={80} width={100} alt="" />
               </Link>
             </div>
             </div>

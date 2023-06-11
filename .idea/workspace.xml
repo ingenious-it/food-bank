@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="added foreign key">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="Added points to the data supplier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controllers/VictimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controllers/VictimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/entities/RegisteredUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/entities/RegisteredUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CardsHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CardsHome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/introbody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/introbody.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/moneyDonation/box.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/moneyDonation/box.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/dataBase/foodbank/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/dataBase/foodbank/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +180,7 @@
       <workItem from="1686207157894" duration="1232000" />
       <workItem from="1686384961931" duration="57000" />
       <workItem from="1686399521991" duration="4719000" />
-      <workItem from="1686408784168" duration="6251000" />
+      <workItem from="1686408784168" duration="7671000" />
     </task>
     <task id="LOCAL-00001" summary="Commented fooditemdonation entity and repo">
       <created>1683182325536</created>
@@ -185,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683182325536</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added points to the data supplier">
+      <created>1686415616152</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686415616152</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +215,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commented fooditemdonation entity and repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented fooditemdonation entity and repo" />
+    <MESSAGE value="Added points to the data supplier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added points to the data supplier" />
   </component>
 </project>

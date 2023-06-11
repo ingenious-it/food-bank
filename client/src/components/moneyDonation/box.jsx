@@ -37,8 +37,10 @@ const DonatePrompt = () => {
                       </div>
                       <div>
                         <div className="d-flex btn-group justify-content-evenly align-content-center my-2">
+                          
                           <button
                             style={{ fontSize: "15px" }}
+
                             className="btn btn-outline-warning btn-sm p-2 m-1 btn-warning text-black rounded-pill"
                             type="submit"
                           >
