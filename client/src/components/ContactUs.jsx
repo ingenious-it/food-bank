@@ -23,6 +23,7 @@ const ContactUs = () => {
     
               e.target.reset();
           };
+        // useRef allow to get a reference to a DOM element or a React component instance and access its properties and methods.
           
     return (
       <React.Fragment>
@@ -43,26 +44,24 @@ const ContactUs = () => {
           </div>
 
           <div className='textcontain d-flex ms-5 me-5 text-justify flex-direction-column'>
-                <h5 className='mt-5'>Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer 
-                took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic 
-                typesetting.</h5>
+                <h5 className='mt-5'>We value your feedback and are always looking for ways to 
+                improve our products and services. If you have any suggestions or comments, 
+                please don't hesitate to let us know. For business inquiries, please include information 
+                about your company and the nature of your inquiry. We're always looking for new partnerships 
+                and opportunities to collaborate.
+                </h5>
                 
             </div>
             <hr className='hr1 d-flex ms-5 me-5 mb-5' />
             </motion.div>
+
             <div>
                 <section className='contact d-flex justify-content-center align-items-center flex-column'>
                     <div className='content text-center'>
                         <h2>Contact Us</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer 
-                took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic 
-                typesetting</p>
+                        <p>Thank you for your interest in contacting us! Please use the form below to send us 
+                            a message, and we will get back to you as soon as possible.
+                        </p>
 
                     </div>
                     <div className='maincontainer d-flex justify-content-center align-items-center mt-4 w-100'>

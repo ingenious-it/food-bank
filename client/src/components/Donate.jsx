@@ -16,7 +16,7 @@ const Donate = () => {
                      animate={{width:"100vw"}}
                      exit={{x:window.innerWidth, transition:{duration:0.1}}}
         >
-        <div className="bg-image-contact">
+        <div className="bg-image-donate">
           
         <Nav/>
 
@@ -31,16 +31,16 @@ const Donate = () => {
 
           <div className='d-flex justify-content-center'>
           <div className='lcontainer d-flex justify-content-around mt-5 w-75 '>
-            <div className='scontainer p-3'>
+            <div className='scontainer p-3 text-justify'>
                 <h1>YOU CAN MAKE A DIFFERENCE</h1>
                 <hr className='w-25'/>
-                <p><b>Help us continue our vital work and change the lives of families and communities through the transformative power of education.</b></p>
-                <p>Much of the blindness experienced in developing countries is easily prevented or treated with the right resources and education.</p>
+                <p><b>Join us in our mission to make a lasting impact on families and communities by harnessing the transformative potential of education.</b></p>
+                <p>With the appropriate resources and education, a significant portion of preventable and treatable blindness in developing nations can be mitigated.</p>
             </div>
             <div className='scontainer2 bg-dark text-white p-3 '>
                 <h2>Your tax deductible donation is needed more than ever.</h2>
                 <hr className='w-25 '/>
-                <p>All donations of $2 or more are tax deductible – please ensure you provide us with your name and address so we can post a receipt to you.</p>
+                <p>As a registered nonprofit organization, all donations meeting the necessary requirements are eligible for tax deductions. To ensure that you receive the appropriate documentation, kindly provide us with your name and address</p>
             </div>
 
 
@@ -50,8 +50,8 @@ const Donate = () => {
           <div className='d-flex justify-content-center mt-5'>
             <div className='d-flex justify-content-center w-75 flex-column'>
                     <div className='text-center'>
-                    <h1>How would you like to donate?</h1>
-                    <p>By making a greater contribution of $100, $250 or $1,000, much more can be achieved through the education of eye care professionals and the upgrading of eye centres to sustainably address preventable blindness. Our donation portal is safe and secure.</p>
+                    <h1>How would you like to Donate?</h1>
+                    <p>In our efforts to alleviate hunger and improve food security, every contribution counts. By making a donation, no matter the amount, you can directly impact the lives of individuals and communities facing food insecurity. Together, we can work towards reducing hunger and ensuring that everyone has access to nutritious meals.</p>
 
                     </div>
 

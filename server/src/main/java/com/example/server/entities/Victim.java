@@ -22,9 +22,15 @@ public class Victim {
     private String Street;
     private String City;
     private String Description;
-    private Boolean isVerified ;
-    private Boolean isRejected;
-    private Boolean isDelivered;
+    private String PackageType;
+    private Boolean isVerified;
+    private Boolean isAccepted;
+    private Boolean isDeliverySelected;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "donaterId")
+    private RegisteredUser user;
+
+
 
 
 }

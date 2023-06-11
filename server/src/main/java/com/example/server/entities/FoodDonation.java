@@ -9,11 +9,7 @@ import java.util.Date;
 
 @Entity
 @Table(name="food_donation")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class FoodDonation {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int DonationID;

@@ -18,45 +18,18 @@ public class VictimService {
 
         return victimRepository.save(victim);
     }
-   public List<Victim> getAllVictimDetails() {
-        return victimRepository.findAll();
-    }
-
-    public Victim getVictimById(Long id) {
-        return victimRepository.findById(id).orElse(null);
-    }
-
-    public List<Victim> getAllVictims() {
-        return victimRepository.findAll();
-    }
-    public List<Victim> getAllVerifiedVictims() {
-      return victimRepository.findByIsVerifiedTrueAndIsDeliveredFalse();
-  }
-  public List<Victim> showAllVerifiedVictim(){ //View Verified Victims only Don't care about Delivery
-        return victimRepository.findByIsVerifiedTrue();
-  }
-  public List<Victim> showAllUnverifiedVictim() //View UnVerified Victims only Don't care about Delivery
-  {
-      return victimRepository.findByIsVerifiedFalse();
-  }
 
     public Victim updateVictim(Long id, Victim updatedVictim) {
         Optional<Victim> optionalVictim = victimRepository.findById(id);
         if (optionalVictim.isPresent()) {
             Victim victim = optionalVictim.get();
-            victim.setIsDelivered(updatedVictim.getIsDelivered());
+            victim.setIsDeliverySelected(updatedVictim.getIsDeliverySelected());
             return victimRepository.save(victim);
         } else {
             return null;
         }
     }
-    public List<Victim> getAllToDeliveyVictims() {
-        return victimRepository.findByIsVerifiedTrueAndIsDeliveredTrue();
-    }
-    public List<Victim> getRejectedVictims()
-    {
-        return victimRepository.findByIsVerifiedTrueAndIsRejectedTrue();
-    }
+
 
 //    public Victim updateVerifyVictim(Long id, Victim updatedVictim) {
 //        Optional<Victim> optionalVictim = victimRepository.findById(id);
@@ -68,9 +41,57 @@ public class VictimService {
 //            return null;
 //        }
 //    }
-    public Victim updateTheVictim(Long id, Boolean isVerified) {
+//    public Victim updateTheVictim(Long id, Boolean isVerified) {
+//        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+//        victim.setIsVerified(isVerified);
+//        return victimRepository.save(victim);
+//    }
+//    public Victim updateTheRejectedVictim(Long id, Boolean isRejected) {
+//        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+//        victim.setIsRejected(isRejected);
+//        return victimRepository.save(victim);
+//    }
+
+
+    public List<Victim> getAllUnverifiedVictims() //All the Unverified Victims
+    {
+       return victimRepository.findByIsVerifiedFalse();
+
+    }
+
+    public List<Victim> getAcceptedandNeedtobeSelectDeliveryVictim() //nuska
+    {
+        return victimRepository.findByIsAcceptedTrueAndIsDeliverySelectedFalse();
+    }
+    public List<Victim> getAcceptedAndSelectedtoDelivery()//nuska
+    {
+        return victimRepository.findByIsAcceptedTrueAndIsDeliverySelectedTrue();
+    }
+    public List<Victim> getAcceptedVictims()
+    {
+        return victimRepository.findByIsVerifiedTrueAndIsAcceptedTrue();
+    }
+    public List<Victim> getRejectedVictims()
+
+    {
+        return victimRepository.findByIsVerifiedTrueAndIsAcceptedFalse();
+    }
+    public Victim updateAcceptanceStatus(Long id, Boolean Victimstatus,Boolean AcceptenceStatus) {
         Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
-        victim.setIsVerified(isVerified);
+        victim.setIsVerified(Victimstatus);
+        victim.setIsAccepted(AcceptenceStatus);
+        return victimRepository.save(victim);
+    }
+    public Victim updateVictimRejected(Long id, Boolean Victimstatus,Boolean AcceptenceStatus) {
+        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        victim.setIsVerified(Victimstatus);
+        victim.setIsAccepted(AcceptenceStatus);
+        return victimRepository.save(victim);
+    }
+
+    public Victim updateTobeDeliverStatusStatus(Long id, Boolean status) { //nuska
+        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        victim.setIsDeliverySelected(status);
         return victimRepository.save(victim);
     }
     public long getVerifiedVictimCount() {
@@ -78,5 +99,7 @@ public class VictimService {
     }
 
 
-
+    public List<Victim> getAllVictimDetails() {
+        return victimRepository.findAll();
+    }
 }

@@ -11,13 +11,11 @@ import java.util.List;
 
 @Repository
 public interface VictimRepository extends JpaRepository<Victim ,Long> {
-    List<Victim> findByIsVerifiedFalse();
-    List<Victim> findByIsVerifiedTrue();
-    List<Victim> findByIsVerifiedTrueAndIsDeliveredFalse();
-    List<Victim> findByIsVerifiedTrueAndIsDeliveredTrue();
-    List<Victim> findByIsVerifiedTrueAndIsRejectedTrue();
+    List<Victim> findByIsVerifiedFalse(); //All Unverified Victims
+    List<Victim> findByIsAcceptedTrueAndIsDeliverySelectedFalse();
+    List<Victim> findByIsAcceptedTrueAndIsDeliverySelectedTrue();
+    List<Victim> findByIsVerifiedTrueAndIsAcceptedTrue();
+    List<Victim> findByIsVerifiedTrueAndIsAcceptedFalse();
     long countByIsVerifiedTrue();
-
-
 
 }
