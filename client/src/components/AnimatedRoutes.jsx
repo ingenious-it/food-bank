@@ -13,7 +13,7 @@ import Donate from './Donate';
 import Team from './ourteam';
 import ForgetPassword from './ForgetPassword';
 import DonatePrompt from "./moneyDonation/box";
-import PayPalPrompt from "./moneyDonation/payPalIntegration";
+//import PayPalPrompt from "./moneyDonation/payPalIntegration";
 import ResetPassword from './ResetPassword';
 
 const AnimatedRoutes = () => {
@@ -34,7 +34,7 @@ const AnimatedRoutes = () => {
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/forgetpassword' element={<ForgetPassword/>}/>
             <Route path='/donate' element={<Donate/>}/>
-              <Route path='/checkout'  element={<PayPalPrompt/>} />
+              {/* <Route path='/checkout'  element={<PayPalPrompt/>} /> */}
               <Route path='/reset_password' element = {<ResetPassword/>} />
 
 
