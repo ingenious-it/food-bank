@@ -2,6 +2,7 @@ package com.example.server.controllers;
 
 import com.example.server.entities.RegisteredUser;
 import com.example.server.loginconfig.LoginResponse;
+import com.example.server.repositories.RegisteredUserRepository;
 import com.example.server.services.EmailSender;
 import com.example.server.services.RegisteredUserService;
 import jakarta.mail.MessagingException;
@@ -12,6 +13,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -96,6 +98,17 @@ public class RegisteredUserController {
 
         return "you have changed the password";
 
+    }
+    @GetMapping("/getDataSupplier/{id}")
+    public ResponseEntity<RegisteredUser> getDataSupplierById(@PathVariable int id) {
+        RegisteredUser dataSupplier = registeredUserService.getDataSupplierById(id);
+        return new ResponseEntity<>(dataSupplier, HttpStatus.OK);
+    }
+
+    @GetMapping("/data-suppliers/count")
+    public int getCountOfDataSuppliers() {
+        List<String> roles = Arrays.asList("both", "Datasupplier");
+        return registeredUserService.getCountOfDataSuppliers(roles);
     }
 
 }

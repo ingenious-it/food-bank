@@ -114,4 +114,11 @@ public class RegisteredUserService {  // access entity through repo
         registeredUser.setPassword(encodePassword);
         registeredUserRepository.save(registeredUser);
     }
+    public RegisteredUser getDataSupplierById(int id) {
+        return registeredUserRepository.findById(id);
+    }
+
+    public int getCountOfDataSuppliers(List<String> roles) {
+        return registeredUserRepository.countByRoleIn(roles);
+    }
 }

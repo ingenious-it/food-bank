@@ -84,8 +84,6 @@ public class VictimController {
         RegisteredUser donater = victim.getUser();
         if (isAccepted) {
             donater.setDataSupplierPoints(donater.getDataSupplierPoints() + 1);
-        } else {
-            donater.setDataSupplierPoints(donater.getDataSupplierPoints() - 1);
         }
         // Save the updated RegisteredUser entity
         registeredUserRepository.save(donater);
@@ -116,6 +114,12 @@ public class VictimController {
     public Victim updateVictimRejected(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
     Boolean isVerified = requestBody.get("isVerified");
     Boolean isAccepted= requestBody.get("isAccepted");
+        Victim victim = victimService.updateAcceptanceStatus(id, isVerified, isAccepted);
+        RegisteredUser donater = victim.getUser();
+        if (!isAccepted) {
+            donater.setDataSupplierPoints(donater.getDataSupplierPoints() -1);
+        }
+        registeredUserRepository.save(donater);
     return victimService.updateVictimRejected(id, isVerified,isAccepted);
 }
 
