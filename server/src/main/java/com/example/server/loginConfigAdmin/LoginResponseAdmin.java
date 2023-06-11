@@ -1,10 +1,10 @@
-package com.example.server.loginConfig;
+package com.example.server.loginConfigAdmin;
 
-public class LoginResponse {
+public class LoginResponseAdmin {
     private String message;
     private boolean isLoginSuccess;
     private String token;
-    public LoginResponse(String message, boolean isLoginSuccess,String token) {
+    public LoginResponseAdmin(String message, boolean isLoginSuccess, String token) {
         this.token=token;
         this.message = message;
         this.isLoginSuccess = isLoginSuccess;

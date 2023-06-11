@@ -1,7 +1,7 @@
 package com.example.server.controllers;
 
 import com.example.server.entities.AdminUser;
-import com.example.server.loginConfig.LoginResponse;
+import com.example.server.loginConfigAdmin.LoginResponseAdmin;
 import com.example.server.services.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,13 +23,13 @@ public class AdminUserController {
     return adminUserService.saveAdminUser(adminUser);
 }
 @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody AdminUser adminUser)
+    public ResponseEntity<LoginResponseAdmin> login(@RequestBody AdminUser adminUser)
 {
     String userName=adminUser.getUserName();
     String password=adminUser.getPassword();
     System.out.println(adminUser);
-    LoginResponse loginResponse=adminUserService.performlogin(userName,password);
-    return ResponseEntity.ok(loginResponse);
+    LoginResponseAdmin loginResponseAdmin =adminUserService.performlogin(userName,password);
+    return ResponseEntity.ok(loginResponseAdmin);
 
 }
 

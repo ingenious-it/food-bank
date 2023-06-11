@@ -1,4 +1,4 @@
-package com.example.server.loginConfig;
+package com.example.server.loginConfigAdmin;
 
 import com.example.server.entities.AdminUser;
 import com.example.server.repositories.AdminUserRepository;
@@ -12,7 +12,7 @@ import java.util.Base64;
 import java.util.Date;
 
 @Service
-public class JWTAuthentication {
+public class JWTAuthenticationAdmin {
     @Autowired
     AdminUserRepository adminUserRepository;
 

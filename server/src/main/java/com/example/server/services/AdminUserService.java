@@ -1,8 +1,8 @@
 package com.example.server.services;
 
 import com.example.server.entities.AdminUser;
-import com.example.server.loginConfig.JWTAuthentication;
-import com.example.server.loginConfig.LoginResponse;
+import com.example.server.loginConfigAdmin.JWTAuthenticationAdmin;
+import com.example.server.loginConfigAdmin.LoginResponseAdmin;
 import com.example.server.repositories.AdminUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,13 +14,13 @@ import java.util.List;
 public class AdminUserService {
     private final AdminUserRepository adminUserRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-    private final JWTAuthentication jwtAuthentication;
+    private final JWTAuthenticationAdmin jwtAuthenticationAdmin;
     @Autowired
 
-    public AdminUserService(AdminUserRepository adminUserRepository , BCryptPasswordEncoder passwordEncoder, JWTAuthentication jwtAuthentication) {
+    public AdminUserService(AdminUserRepository adminUserRepository , BCryptPasswordEncoder passwordEncoder, JWTAuthenticationAdmin jwtAuthenticationAdmin) {
         this.adminUserRepository = adminUserRepository;
         this.passwordEncoder = passwordEncoder;
-        this.jwtAuthentication = jwtAuthentication;
+        this.jwtAuthenticationAdmin = jwtAuthenticationAdmin;
     }
     public AdminUser saveAdminUser(AdminUser adminUser) {
         String encryptedPassword = passwordEncoder.encode(adminUser.getPassword());
@@ -36,19 +36,19 @@ public class AdminUserService {
 
 
 
-    public LoginResponse performlogin(String userName, String password) {
+    public LoginResponseAdmin performlogin(String userName, String password) {
         AdminUser adminUser = adminUserRepository.findById(userName).orElse(null);
         System.out.println(adminUser);
         if (adminUser == null) {
-            return new LoginResponse("User not found", false,null);
+            return new LoginResponseAdmin("User not found", false,null);
         } else {
             boolean isPasswordMatched = passwordEncoder.matches(password, adminUser.getPassword());
             if (isPasswordMatched) {
-                String token= jwtAuthentication.generateToken(userName);
+                String token= jwtAuthenticationAdmin.generateToken(userName);
                 System.out.println(token);
-                return new LoginResponse("Login Successful", true,token);
+                return new LoginResponseAdmin("Login Successful", true,token);
             } else {
-                return new LoginResponse("Incorrect Password", false,null);
+                return new LoginResponseAdmin("Incorrect Password", false,null);
             }
         }
     }
