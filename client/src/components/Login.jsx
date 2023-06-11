@@ -93,8 +93,8 @@ const Login = () => {
                   </div>
                   <div class="forget d-flex justify-content-between mt-1">
                     <label for="">
-                      <input type="checkbox" />
-                      Remember Me
+                      {/* <input type="checkbox"  /> */}
+                      
                     </label>
                     <p>
                       <a className="text-white" href="/forgetpassword">

@@ -13,6 +13,8 @@ import Donate from './Donate';
 import Team from './ourteam';
 import ForgetPassword from './ForgetPassword';
 import DonatePrompt from "./moneyDonation/box";
+//import PayPalPrompt from "./moneyDonation/payPalIntegration";
+import ResetPassword from './ResetPassword';
 
 const AnimatedRoutes = () => {
     const location=useLocation();
@@ -32,7 +34,11 @@ const AnimatedRoutes = () => {
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/forgetpassword' element={<ForgetPassword/>}/>
             <Route path='/donate' element={<Donate/>}/>
-                <Route path="/money-donate" element={<DonatePrompt />} />
+              {/* <Route path='/checkout'  element={<PayPalPrompt/>} /> */}
+              <Route path='/reset_password' element = {<ResetPassword/>} />
+
+
+              <Route path="/money-donate" element={<DonatePrompt />} />
 
             </Routes>
         </AnimatePresence>

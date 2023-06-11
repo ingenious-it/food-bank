@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ForgetPassword.css";
 import Nav from "./navBar";
 import { motion } from "framer-motion";
+import axios from "axios"
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -15,6 +16,28 @@ const ForgetPassword = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     setIsEmailValid(emailRegex.test(value));
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent form submission
+  
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/RegisteredUser/forgotpassword",
+        { email },
+        {
+          headers: { "content-type": "application/json" }
+        }
+      );
+  
+      console.log(response.data);
+      alert("Password reset link sent successfully");
+    } catch (error) {
+      console.log(error);
+      // Handle network or request error
+    }
+  };
+  
+
 
   return (
     <React.Fragment>
@@ -43,7 +66,9 @@ const ForgetPassword = () => {
                     <label for="">Email Address</label>
                   </div>
 
-                  <button className="button1" disabled={!isEmailValid}>
+                  <button className="button1" disabled={!isEmailValid}
+                  onClick={handleSubmit}
+                  >
                     Reset Password
                   </button>
                 </form>

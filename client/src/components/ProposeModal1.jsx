@@ -18,6 +18,11 @@ const ProposeModal1 = (props) => {
        const [phoneNumber, setphoneNumber] = useState('');
        const [description,setDescriotion]=useState('');
        const [isVerified,setIsVerified]=useState(false);
+       const [isAccepted,setIsAccepted]=useState(false);
+       const [isDeliverySelected,setIsDeliverySelected]=useState(false);
+       const [PackageType, setPackageType] = useState("");
+
+      
 
       //  const [victim,setVictim] = useState({
       //   firstName : "",
@@ -40,7 +45,7 @@ const ProposeModal1 = (props) => {
          const newErrors = validateInputs();
          if (Object.keys(newErrors).length === 0) {
           
-          const victimData = { firstName, lastName, nic, no, street, city, phoneNumber,isVerified,description };
+          const victimData = { firstName, lastName, nic, no, street, city, phoneNumber,isVerified,description,isAccepted,isDeliverySelected,PackageType };
           //saveVictim(e)
             console.log(victimData);
            

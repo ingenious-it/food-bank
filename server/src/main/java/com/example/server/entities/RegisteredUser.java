@@ -27,6 +27,7 @@ public class RegisteredUser {
     private String password;
     private String role;
     private double donaterPoints;
+    private String resetPasswordToken;
     private  double dataSupplierPoints;
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Victim> supplyData = new HashSet<>();
