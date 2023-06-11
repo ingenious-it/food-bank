@@ -2,20 +2,31 @@ package com.example.server.controllers;
 
 import com.example.server.entities.RegisteredUser;
 import com.example.server.loginconfig.LoginResponse;
+import com.example.server.services.EmailSender;
 import com.example.server.services.RegisteredUserService;
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3002")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/RegisteredUser")
 public class RegisteredUserController {
     @Autowired
     private RegisteredUserService registeredUserService;
+    private final JavaMailSender mailSender;
+
+    public RegisteredUserController(JavaMailSender mailSender) {
+        this.mailSender = mailSender;
+    }
 
     @PostMapping("/saveUser")
     public RegisteredUser saveUserDetails(@RequestBody RegisteredUser registeredUser)
@@ -57,4 +68,34 @@ public class RegisteredUserController {
     {
         return registeredUserService.getUsersWithRoles();
     }
+
+    @PostMapping("/forgotpassword")
+    public String processForgotPassword(@RequestBody Map<String, String> request) throws MessagingException, UnsupportedEncodingException {
+        String email = request.get("email");
+        UUID randomUUID = UUID.randomUUID();
+        String token = randomUUID.toString().replaceAll("_", "");
+
+        registeredUserService.updateResetPasswordToken(token, email);
+
+        EmailSender emailSender = new EmailSender(mailSender);
+        String resetPasswordLink = "http://localhost:3000/reset_password?token=" + token;
+        String subject = "Here is your link to reset your password";
+        String content = "<p>Hello,</p>" + "<p>You have requested to reset your password</p>" + "<p>Click the link below to reset your password:</p>" + "<p><b><a href=\"" + resetPasswordLink + "\">Change my Password</a></b></p>" + "<p>If you didn't request this, please ignore this email.</p>";
+
+        emailSender.sendEmail(email, subject, content);
+
+        return "Email sent successfully.";
+    }
+    @PostMapping("/resetpassword")
+    public String resetPassword(@RequestBody Map<String, String> request) {
+        String token = request.get("token");
+        String password = request.get("password");
+        RegisteredUser registeredUser = registeredUserService.getByResetPasswordToken(token);
+
+        registeredUserService.updatePassword(password, registeredUser);
+
+        return "you have changed the password";
+
+    }
+
 }

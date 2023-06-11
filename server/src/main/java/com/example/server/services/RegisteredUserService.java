@@ -10,10 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class RegisteredUserService {  // access entity through repo
@@ -93,5 +90,28 @@ public class RegisteredUserService {  // access entity through repo
     public List<RegisteredUser> getUsersWithRoles() {
         List<String> roles = Arrays.asList("Both", "DataSupplier");
         return registeredUserRepository.findByRoleIn(roles);
+    }
+
+    public String updateResetPasswordToken(String token, String email) {
+
+        Optional<RegisteredUser> OptRegisteredUser = registeredUserRepository.findByEmail(email);
+
+            RegisteredUser registeredUser = OptRegisteredUser.get();
+            registeredUser.setResetPasswordToken(token);
+            registeredUserRepository.save(registeredUser);
+            return "password token updated";
+
+    }
+
+
+    public RegisteredUser getByResetPasswordToken(String resetPasswordToken){
+        return registeredUserRepository.findByResetPasswordToken(resetPasswordToken).get();
+    }
+
+    public void updatePassword(String newPassword, RegisteredUser registeredUser){
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodePassword = passwordEncoder.encode(newPassword);
+        registeredUser.setPassword(encodePassword);
+        registeredUserRepository.save(registeredUser);
     }
 }
