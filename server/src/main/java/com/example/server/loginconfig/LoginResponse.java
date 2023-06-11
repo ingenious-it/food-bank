@@ -1,4 +1,4 @@
-package com.example.server.loginConfig;
+package com.example.server.loginconfig;
 
 public class LoginResponse {
     private String message;
