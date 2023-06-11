@@ -1,7 +1,7 @@
 package com.example.server.controllers;
 
 import com.example.server.entities.RegisteredUser;
-import com.example.server.loginconfig.LoginResponse;
+import com.example.server.loginconfigDonation.LoginResponseDonation;
 import com.example.server.services.RegisteredUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,11 +36,11 @@ public class RegisteredUserController {
         return ResponseEntity.ok(exists);
     }
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody RegisteredUser loginRequest) {
+    public ResponseEntity<LoginResponseDonation> login(@RequestBody RegisteredUser loginRequest) {
         String username = loginRequest.getUsername();
         String password = loginRequest.getPassword() ;
         System.out.println(loginRequest);
-        LoginResponse loginResponse = registeredUserService.performLogin(username, password);
+        LoginResponseDonation loginResponse = registeredUserService.performLogin(username, password);
 
         if (loginResponse.getToken() != null) {
             System.out.println(loginResponse.getToken());

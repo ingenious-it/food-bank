@@ -1,11 +1,11 @@
-package com.example.server.loginconfig;
+package com.example.server.loginconfigDonation;
 
-public class LoginResponse {
+public class LoginResponseDonation {
         private String message;
         private String token;
 
 
-    public LoginResponse(String message, String token) {
+    public LoginResponseDonation(String message, String token) {
         this.message=message;
         this.token=token;
 
