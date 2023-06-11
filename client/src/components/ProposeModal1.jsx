@@ -5,7 +5,6 @@ import { BsCheckCircle } from "react-icons/bs";
 import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import jwtDecode from "jwt-decode";
 
 
 const ProposeModal1 = (props) => {
@@ -19,10 +18,6 @@ const ProposeModal1 = (props) => {
        const [phoneNumber, setphoneNumber] = useState('');
        const [description,setDescriotion]=useState('');
        const [isVerified,setIsVerified]=useState(false);
-
-       const token = localStorage.getItem("token");
-       const decodedToken = jwtDecode(token);
-       console.log(decodedToken);
 
       //  const [victim,setVictim] = useState({
       //   firstName : "",
