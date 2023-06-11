@@ -16,9 +16,9 @@ public class DeliveryPerson {
 
     private int DeliveryPersonId;
     private String DeliveryPersonName;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "did", referencedColumnName = "DId")
-    private Delivery delivery;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "did", referencedColumnName = "DId")
+//    private Delivery delivery;
 
 
 }
