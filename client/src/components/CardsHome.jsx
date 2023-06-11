@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
 import ProposeModal1 from './ProposeModal1';
+import { useState } from 'react';
 
 const DCards = () => {
     const [openProposeModal,setOpenProposeModal]=useState(false);
