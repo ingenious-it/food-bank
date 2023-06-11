@@ -4,6 +4,7 @@ import com.example.server.entities.AdminUser;
 import com.example.server.loginConfigAdmin.LoginResponseAdmin;
 import com.example.server.services.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +37,18 @@ public class AdminUserController {
     @GetMapping("/viewUserDetails")
     public List<AdminUser> getAllAdminUser() {
         return adminUserService.getAllAdminUser();
+    }
+    @PutMapping("/update")
+    public ResponseEntity<AdminUser> updateAdminUser(@RequestBody AdminUser adminUser) {
+        AdminUser existingAdminUser = adminUserService.getAdminUserById(adminUser.getUserName());
+        if (existingAdminUser != null) {
+            existingAdminUser.setPassword(adminUser.getPassword());
+            existingAdminUser.setUserRole(adminUser.getUserRole());
+            AdminUser updatedAdminUser = adminUserService.saveAdminUser(existingAdminUser);
+            return new ResponseEntity<>(updatedAdminUser, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
 
