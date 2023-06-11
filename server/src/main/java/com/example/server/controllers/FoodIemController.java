@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000","http://localhost:3001"})
+@CrossOrigin(origins = {"http://localhost:3000","http://localhost:3004"})
 @RequestMapping("/ItemDetails")
 public class FoodIemController {
     @Autowired
@@ -48,5 +48,17 @@ public class FoodIemController {
 
         return ResponseEntity.ok("Input values updated successfully");
     }
+
+    @PutMapping("/{id}/quantity")
+    public ResponseEntity<String>  updateQuantity(@PathVariable int id, @RequestParam int newQuantity) {
+         foodItemService.updateQuantityById(id, newQuantity);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/{id}/quantity")
+    public int getQuantityById(@PathVariable int id) {
+        return foodItemService.getQuantityById(id);
+    }
+
 
 }

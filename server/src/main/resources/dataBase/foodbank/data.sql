@@ -388,7 +388,7 @@ CREATE TABLE `food_item` (
 
 LOCK TABLES `food_item` WRITE;
 /*!40000 ALTER TABLE `food_item` DISABLE KEYS */;
-INSERT INTO `food_item` VALUES (1,'Item1',23),(2,'Item2',12),(3,'Item3',20),(4,'Item4',4),(5,'Item5',3),(6,'Item6',6),(7,'Item7',76),(8,'Item8',30);
+INSERT INTO `food_item` VALUES (1,'Rice',23),(2,'Dhal',12),(3,'Cooking Oil',20),(4,'Dry Foods',4),(5,'Sugar',3),(6,'Flour',6),(7,'Milk Powder',76),(8,'Biscuits',30);
 /*!40000 ALTER TABLE `food_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -466,7 +466,7 @@ CREATE TABLE `issued_food_package` (
 
 LOCK TABLES `issued_food_package` WRITE;
 /*!40000 ALTER TABLE `issued_food_package` DISABLE KEYS */;
-INSERT INTO `issued_food_package` VALUES (1,'2023-06-09 05:30:00.000000',6,'Type 1',101),(2,'2023-06-09 05:30:00.000000',7,'Type 2',102),(3,'2023-06-09 05:30:00.000000',16,'Type 3',103),(4,'2023-06-10 05:30:00.000000',4,'Type 1',101),(5,'2023-06-10 05:30:00.000000',5,'Type 2',102),(6,'2023-06-10 05:30:00.000000',17,'Type 3',103);
+INSERT INTO `issued_food_package` VALUES (1,'2023-06-09 05:30:00.000000',6,'Type 1',101),(2,'2023-06-09 05:30:00.000000',7,'Type 2',102),(3,'2023-06-09 05:30:00.000000',16,'Type 3',103),(4,'2023-06-10 05:30:00.000000',4,'Type 1',101),(5,'2023-06-10 05:30:00.000000',5,'Type 2',102),(6,'2023-06-10 05:30:00.000000',17,'Type 3',103),(52,'2023-06-11 05:30:00.000000',6,'Type 1',101),(53,'2023-06-11 05:30:00.000000',7,'Type 2',102),(54,'2023-06-11 05:30:00.000000',19,'Type 3',103),(55,'2023-06-16 05:30:00.000000',6,'Type 1',101),(56,'2023-06-16 05:30:00.000000',7,'Type 2',102),(57,'2023-06-16 05:30:00.000000',2,'Type 3',103);
 /*!40000 ALTER TABLE `issued_food_package` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -488,7 +488,7 @@ CREATE TABLE `issued_food_package_seq` (
 
 LOCK TABLES `issued_food_package_seq` WRITE;
 /*!40000 ALTER TABLE `issued_food_package_seq` DISABLE KEYS */;
-INSERT INTO `issued_food_package_seq` VALUES (101);
+INSERT INTO `issued_food_package_seq` VALUES (151);
 /*!40000 ALTER TABLE `issued_food_package_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -538,7 +538,7 @@ CREATE TABLE `package_type` (
 
 LOCK TABLES `package_type` WRITE;
 /*!40000 ALTER TABLE `package_type` DISABLE KEYS */;
-INSERT INTO `package_type` VALUES (101,60,'Type 1'),(102,10,'Type 2'),(103,11,'Type 3');
+INSERT INTO `package_type` VALUES (101,55,'Type 1'),(102,2,'Type 2'),(103,1,'Type 3');
 /*!40000 ALTER TABLE `package_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -635,7 +635,7 @@ CREATE TABLE `packed_food_package` (
 
 LOCK TABLES `packed_food_package` WRITE;
 /*!40000 ALTER TABLE `packed_food_package` DISABLE KEYS */;
-INSERT INTO `packed_food_package` VALUES (52,'Type 1','2023-06-10 05:30:00.000000',5,101),(53,'Type 2','2023-06-10 05:30:00.000000',3,102),(54,'Type 3','2023-06-10 05:30:00.000000',1,103),(55,'Type 1','2023-06-16 05:30:00.000000',1,101),(56,'Type 2','2023-06-16 05:30:00.000000',1,102),(57,'Type 3','2023-06-16 05:30:00.000000',1,103),(102,'Type 1','2023-06-10 05:30:00.000000',3,101),(103,'Type 2','2023-06-10 05:30:00.000000',2,102),(104,'Type 3','2023-06-10 05:30:00.000000',3,103),(152,'Type 1','2023-06-10 05:30:00.000000',4,101),(153,'Type 2','2023-06-10 05:30:00.000000',3,102),(154,'Type 3','2023-06-10 05:30:00.000000',3,103),(155,'Type 1','2023-06-10 05:30:00.000000',3,101),(156,'Type 2','2023-06-10 05:30:00.000000',2,102),(157,'Type 3','2023-06-10 05:30:00.000000',3,103),(158,'Type 1','2023-06-17 05:30:00.000000',3,101),(159,'Type 2','2023-06-17 05:30:00.000000',2,102),(160,'Type 3','2023-06-17 05:30:00.000000',1,103);
+INSERT INTO `packed_food_package` VALUES (52,'Type 1','2023-06-10 05:30:00.000000',5,101),(53,'Type 2','2023-06-10 05:30:00.000000',3,102),(54,'Type 3','2023-06-10 05:30:00.000000',1,103),(55,'Type 1','2023-06-16 05:30:00.000000',1,101),(56,'Type 2','2023-06-16 05:30:00.000000',1,102),(57,'Type 3','2023-06-16 05:30:00.000000',1,103),(102,'Type 1','2023-06-10 05:30:00.000000',3,101),(103,'Type 2','2023-06-10 05:30:00.000000',2,102),(104,'Type 3','2023-06-10 05:30:00.000000',3,103),(152,'Type 1','2023-06-10 05:30:00.000000',4,101),(153,'Type 2','2023-06-10 05:30:00.000000',3,102),(154,'Type 3','2023-06-10 05:30:00.000000',3,103),(155,'Type 1','2023-06-10 05:30:00.000000',3,101),(156,'Type 2','2023-06-10 05:30:00.000000',2,102),(157,'Type 3','2023-06-10 05:30:00.000000',3,103),(158,'Type 1','2023-06-17 05:30:00.000000',3,101),(159,'Type 2','2023-06-17 05:30:00.000000',2,102),(160,'Type 3','2023-06-17 05:30:00.000000',1,103),(202,'Type 1','2023-06-10 05:30:00.000000',3,101),(203,'Type 2','2023-06-10 05:30:00.000000',2,102),(204,'Type 3','2023-06-10 05:30:00.000000',2,103),(205,'Type 1','2023-06-15 05:30:00.000000',4,101),(206,'Type 2','2023-06-15 05:30:00.000000',4,102),(207,'Type 3','2023-06-15 05:30:00.000000',9,103);
 /*!40000 ALTER TABLE `packed_food_package` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -657,7 +657,7 @@ CREATE TABLE `packed_food_package_seq` (
 
 LOCK TABLES `packed_food_package_seq` WRITE;
 /*!40000 ALTER TABLE `packed_food_package_seq` DISABLE KEYS */;
-INSERT INTO `packed_food_package_seq` VALUES (251);
+INSERT INTO `packed_food_package_seq` VALUES (301);
 /*!40000 ALTER TABLE `packed_food_package_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -691,7 +691,7 @@ CREATE TABLE `registered_user` (
 
 LOCK TABLES `registered_user` WRITE;
 /*!40000 ALTER TABLE `registered_user` DISABLE KEYS */;
-INSERT INTO `registered_user` VALUES (1,1234567890,'johndoe@example.com','John','Doe','password123','johndoe',NULL,NULL,0,0,NULL),(8,782343256,'amalshalinda1999@gmail.com','Amal','Shalinda','Amal123','Amal99',NULL,NULL,0,0,NULL),(10,711727355,'milanka01@gmail.com','milanka','tharangana','321','mila00',NULL,NULL,0,0,NULL),(12,912635664,'kjskjsxb@gmail.com','gvx','ihxhj','1234','User',NULL,NULL,0,0,NULL),(102,786756432,'USer@gmail.com','User1','User2','123','Testuser',NULL,NULL,0,0,NULL),(502,1234567890,'johndoe@example.com','John','Doe','password123','johndoe',NULL,NULL,0,0,NULL),(503,1234567890,'johndoe@example.com','John','Doe','password123','johndoe',NULL,NULL,0,0,NULL),(504,1234567890,'johndoe@example.com','Nishoban','Doe','password123','johndoe',NULL,NULL,3,0,NULL),(505,786756432,'Tharee@gmail.com','Thareejan','Pakiyaraj','111','Tharee',NULL,NULL,4,0,NULL),(506,766666666,'pavi@wso2.com','Pavitharan','varun','password','pavi',NULL,NULL,2,0,NULL),(552,785645342,'wert@gmail.com','Amal','Dissanayake','1234','test',NULL,NULL,0,0,NULL),(553,786756432,'User@gmail.com','Testuser','Testuser2','112','User1',NULL,NULL,0,0,NULL),(602,757283480,'thareejan@gmail.com','Thareejan','Pakkiyarajah','zxc','thareejan',NULL,NULL,0,0,'/Both'),(652,763737373,'nuska@gmail.com','Nuska','Fayik','$2a$10$IvsB/cDLBT4k/a1sDuZjVuOaCpz5eZ3.eEO7TY/HtScG0uHjeLDOy','nuskaf',NULL,NULL,1,0,'Both'),(702,782222222,'kiru@gmail.com','Kirushanthan','Ravichandran','$2a$10$onD6jz8OuxJyq0AuAeWFve.txfdubuZCKR9vIIDHjqsN61o57iBTy','kiru22',NULL,NULL,1,0,'Donator'),(752,23,'gyufufr@gmail.com','vdsfv','hguyhfu','$2a$10$1MkaT2Wk3Aa0pELT2qxIQ.W68cL11HcFqwvqUj3OEaBJIt80Gp9de','kiru22s',NULL,NULL,0,0,'Donator');
+INSERT INTO `registered_user` VALUES (1,1234567890,'johndoe@example.com','John','Doe','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','johndoe',NULL,NULL,0,0,NULL),(8,782343256,'amalshalinda1999@gmail.com','Amal','Shalinda','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','Amal99',NULL,NULL,0,0,NULL),(10,711727355,'milanka01@gmail.com','milanka','tharangana','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','mila00',NULL,NULL,0,0,NULL),(12,912635664,'kjskjsxb@gmail.com','gvx','ihxhj','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','User',NULL,NULL,0,0,NULL),(102,786756432,'USer@gmail.com','User1','User2','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','Testuser',NULL,NULL,0,0,NULL),(502,1234567890,'johndoe@example.com','John','Doe','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','johndoe',NULL,NULL,0,0,NULL),(503,1234567890,'johndoe@example.com','John','Doe','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','johndoe',NULL,NULL,0,0,NULL),(504,1234567890,'johndoe@example.com','Nishoban','Doe','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','johndoe',NULL,NULL,3,0,NULL),(505,786756432,'Tharee@gmail.com','Thareejan','Pakiyaraj','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','Tharee',NULL,NULL,4,0,NULL),(506,766666666,'pavi@wso2.com','Pavitharan','varun','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','pavi',NULL,NULL,2,0,NULL),(552,785645342,'wert@gmail.com','Amal','Dissanayake','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','test',NULL,NULL,0,0,NULL),(553,786756432,'User@gmail.com','Testuser','Testuser2','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','User1',NULL,NULL,0,0,NULL),(602,757283480,'thareejan@gmail.com','Thareejan','Pakkiyarajah','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','thareejan',NULL,NULL,0,0,'/Both'),(652,763737373,'nuska@gmail.com','Nuska','Fayik','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','nuskaf',NULL,NULL,1,0,'Both'),(702,782222222,'kiru@gmail.com','Kirushanthan','Ravichandran','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','kiru22',NULL,NULL,1,0,'Donator'),(752,23,'gyufufr@gmail.com','vdsfv','hguyhfu','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','kiru22s',NULL,NULL,0,0,'Donator'),(802,765645333,'ttpd@gmail.com','Tharushni','Thathya','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','username',NULL,NULL,0,0,'Both'),(809,786655444,'abcd@gmail.com','kamal','perera','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','username2',NULL,NULL,0,0,'Both'),(812,912623344,'abcdd@gmail.com','Malkanthi','soyza','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','username3',NULL,NULL,0,0,'Both'),(815,765644333,'asde@gmail.com','upeksha','chamalka','$2a$10$XFGED6b6ZeGufgwdd2vxkex3dawtjxiV40oBVqpFTaj80c7UJ9bIW','username4',NULL,NULL,0,0,'Both'),(852,141256355,'af@gmail.com','milanka','thra','$2a$10$stFAKsAuN53RgVdeZXOVXeOksb2UpH.twKneWX1j2I9g.PU0tyCzC','fdzxgvhbjln',NULL,NULL,0,0,'');
 /*!40000 ALTER TABLE `registered_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -713,7 +713,7 @@ CREATE TABLE `registered_user_seq` (
 
 LOCK TABLES `registered_user_seq` WRITE;
 /*!40000 ALTER TABLE `registered_user_seq` DISABLE KEYS */;
-INSERT INTO `registered_user_seq` VALUES (851);
+INSERT INTO `registered_user_seq` VALUES (951);
 /*!40000 ALTER TABLE `registered_user_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 

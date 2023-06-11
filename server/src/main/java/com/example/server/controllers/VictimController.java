@@ -5,6 +5,7 @@ import com.example.server.entities.Victim;
 import com.example.server.repositories.RegisteredUserRepository;
 import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.server.repositories.VictimRepository;
@@ -104,6 +105,11 @@ public class VictimController {
     {
         List<Victim> rejectedVictims = victimService.getRejectedVictims();
         return rejectedVictims;
+    }
+    @GetMapping("/verified-count")
+    public ResponseEntity<Long> getVerifiedVictimCount() {
+        long count = victimService.getVerifiedVictimCount();
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
     @GetMapping("/viewAcceptedVictims")
