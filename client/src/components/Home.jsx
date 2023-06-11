@@ -3,13 +3,16 @@ import ImageComp from "./imageComponent";
 import BodyIntro from "./introbody";
 import "./Home.css";
 import DCards from "./CardsHome";
+import Hearts from "./heartcomponent";
 import { motion } from "framer-motion";
 import DonatePrompt from "./moneyDonation/box";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 //allows to detect when an element is in view, and then trigger an animation.
 
 const Home = () => {
   const { ref, inView } = useInView();
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   const variants = {
     visible: { x: 0 },
@@ -42,21 +45,31 @@ const Home = () => {
                 One can provide support by making a monetary contribution,
                 donating food items, or offering suggestions for aiding victims
               </p>
-              <button type="button" class="btn btn-outline-light mb-3 mt-3">
+
+              <button
+                type="button"
+                className="btn btn-outline-light mb-3 mt-3"
+                onClick={() => {
+                  setButtonClicked(true);
+                  window.location.href = "/Projects";
+                }}
+              >
                 View Our Programs
               </button>
             </div>
           </div>
 
-         
           <section className="m-3 text-center">
             <br></br>
             <h6>
-            The Food Bank is a concept where people can donate money and food to help those who are 
-            impacted by the food crisis. People can donate food or money through this app, as well as 
-            identify those who are affected by the food crisis. The system's objective is to make food 
-            donations more effective and efficient while also developing a user-friendly platform to donate. 
-            In that regard, the system aids in persuading individuals to perform these social tasksssss.
+              The Food Bank is a concept where people can donate money and food
+              to help those who are impacted by the food crisis. People can
+              donate food or money through this app, as well as identify those
+              who are affected by the food crisis. The system's objective is to
+              make food donations more effective and efficient while also
+              developing a user-friendly platform to donate. In that regard, the
+              system aids in persuading individuals to perform these social
+              tasksssss.
             </h6>
             <br></br>
           </section>
@@ -78,9 +91,22 @@ const Home = () => {
                   of those who are struggling to put food on the table.
                 </p>
                 <br></br>
-                <button type="button" class="btn btn-primary">
-                  LEARN WHY
-                </button>
+                
+
+                <button
+                type="button"
+                className="btn btncolor"
+                onClick={() => {
+                  setButtonClicked(true);
+                  window.location.href = "/whyFoodBank";
+                }}
+              >
+                LEARN WHY
+              </button>
+
+
+
+
               </div>
               {/* <div className='m-2'>
                         <motion.div animate={{x:[300,-50]}}>  
@@ -103,6 +129,15 @@ const Home = () => {
             </div>
           </section>
 
+
+
+
+        
+
+
+
+
+
           <div className="img12 bg-dark">
             <div class="img-overlay">
               <h1>
@@ -113,26 +148,46 @@ const Home = () => {
                 We're on a mission to #Stop Hunger! Join our network of heroes
                 and begin changing lives today.
               </p>
-              <button type="button" class="btn btn-outline-light mb-3 mt-3">
-                Sign Up Now
+              
+
+              <button
+                type="button"
+                className="btn btn-outline-light mb-3 mt-3"
+                onClick={() => {
+                  setButtonClicked(true);
+                  window.location.href = "/signup";
+                }}
+              >
+                 Sign Up Now
               </button>
+
+
             </div>
           </div>
 
           <DCards />
-          <section className=" ms-5 text-center" >
+          <section className=" ms-5 text-center">
             <h2 className="text-dark mt-2">
-            "We make a living by what we get,but we make a life by what we give."</h2>
-            <br></br> 
+              "We make a living by what we get,but we make a life by what we
+              give."
+            </h2>
+            <br></br>
             <h3>- Winston Churchil</h3>
-            
           </section>
+<hr></hr>
+          {/* <Hearts></Hearts> */}
+
+
+
+
           <br></br>
           <hr></hr>
         </div>
       </motion.div>
       <section>
-        <h2 className="text-center text-dark fw-bold mb-3">Frequently Asked Questions</h2>
+        <h2 className="text-center text-dark fw-bold mb-3">
+          Frequently Asked Questions
+        </h2>
         <div className="d-flex justify-content-center">
           <div class="accordion  mb-3 " id="accordionPanelsStayOpenExample">
             <div class="accordion-item mb-1 ">
@@ -243,14 +298,14 @@ const Home = () => {
                 aria-labelledby="panelsStayOpen-headingThree"
               >
                 <div class="accordion-body">
-                  You can donate food whether you are registered users or
-                  not. you have the option of donating food in your name by
-                  including your information or anonymously. Once a you are
-                  granted access to give, you can browse the food products that
-                  can be donated as well as the locations of the warehouses. The
-                  donor must next input the donation dates and choose a specific
-                  warehouse. Additionally, a donor has the choice of donating on
-                  their own or having an organization pick it up. 
+                  You can donate food whether you are registered users or not.
+                  you have the option of donating food in your name by including
+                  your information or anonymously. Once a you are granted access
+                  to give, you can browse the food products that can be donated
+                  as well as the locations of the warehouses. The donor must
+                  next input the donation dates and choose a specific warehouse.
+                  Additionally, a donor has the choice of donating on their own
+                  or having an organization pick it up.
                 </div>
               </div>
             </div>

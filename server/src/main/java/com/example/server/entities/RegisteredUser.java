@@ -4,15 +4,15 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.jdbc.core.SqlReturnType;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Data
-@NoArgsConstructor
+
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name="registered_user")
 
 public class RegisteredUser {
@@ -30,8 +30,9 @@ public class RegisteredUser {
     private  double dataSupplierPoints;
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Victim> supplyData = new HashSet<>();
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<MoneyDonation> donations = new HashSet<>();
+
+
+
     public int getId() {
         return id;
     }
