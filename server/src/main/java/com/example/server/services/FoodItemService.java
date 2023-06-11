@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FoodItemService {
@@ -23,6 +24,10 @@ public class FoodItemService {
         return foodItemRepository.findAll().stream()
                 .mapToInt(FoodItem::getQuantity)
                 .sum();
+    }
+    public int getQuantityById(int id) {
+        Optional<FoodItem> optionalFoodItem = foodItemRepository.findById(id);
+        return optionalFoodItem.map(FoodItem::getQuantity).orElse(0);
     }
 
 

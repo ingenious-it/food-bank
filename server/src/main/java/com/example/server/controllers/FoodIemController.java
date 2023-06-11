@@ -53,4 +53,10 @@ public class FoodIemController {
         return foodItemService.getTotalQuantity();
     }
 
+    @GetMapping("/quantity/{id}")
+    public ResponseEntity<Integer> getQuantityById(@PathVariable int id) {
+        int quantity = foodItemService.getQuantityById(id);
+        return ResponseEntity.ok(quantity);
+    }
+
 }
