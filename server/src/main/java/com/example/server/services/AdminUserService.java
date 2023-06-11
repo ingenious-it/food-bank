@@ -1,8 +1,8 @@
 package com.example.server.services;
 
 import com.example.server.entities.AdminUser;
-import com.example.server.loginConfig.JWTAuthentication;
-import com.example.server.loginConfig.LoginResponse;
+import com.example.server.loginconfig.JWTAuthentication;
+import com.example.server.loginconfig.LoginResponse;
 import com.example.server.repositories.AdminUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

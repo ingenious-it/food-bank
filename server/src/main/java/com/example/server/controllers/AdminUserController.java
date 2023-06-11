@@ -1,7 +1,7 @@
 package com.example.server.controllers;
 
 import com.example.server.entities.AdminUser;
-import com.example.server.loginConfig.LoginResponse;
+import com.example.server.loginconfig.LoginResponse;
 import com.example.server.services.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
