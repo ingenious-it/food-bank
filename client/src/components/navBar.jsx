@@ -21,11 +21,11 @@ const Nav = () => {
               
               </Link>
 
-              <div className="divimg">
+              {/* <div className="divimg">
               <Link class="navbar-brand" to={'/'}>
-              <img src="logo2.png" height={80} width={100} alt="" />
+              <img src="logo2.png" height={10} width={100} alt="" />
               </Link>
-            </div>
+            </div> */}
             </div>
             <button
               className="navbar-toggler"

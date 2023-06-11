@@ -3,6 +3,7 @@ import ImageComp from "./imageComponent";
 import BodyIntro from "./introbody";
 import "./Home.css";
 import DCards from "./CardsHome";
+import Hearts from "./heartcomponent";
 import { motion } from "framer-motion";
 import DonatePrompt from "./moneyDonation/box";
 import { useInView } from "react-intersection-observer";
@@ -128,6 +129,15 @@ const Home = () => {
             </div>
           </section>
 
+
+
+
+        
+
+
+
+
+
           <div className="img12 bg-dark">
             <div class="img-overlay">
               <h1>
@@ -164,6 +174,12 @@ const Home = () => {
             <br></br>
             <h3>- Winston Churchil</h3>
           </section>
+<hr></hr>
+          {/* <Hearts></Hearts> */}
+
+
+
+
           <br></br>
           <hr></hr>
         </div>

@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head{
+    text-align: center;
+}
+
+.head1{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+ul{
+    display: flex;
+    margin-top: 50px;
+}
+
+ul li{
+    width: 155px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+ul li .icon{
+    font-size: 35px;
+    margin: 0 60px;
+}
+
+ul li .text{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+ul li .progress{
+    width: 30px;
+    height: 30px;
+    margin: 14px 0;
+    display: grid;
+    position: relative;
+    border-radius: 50%;
+    background-color: blueviolet;
+    place-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.progress::after{
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 5px;
+    background-color: blueviolet;
+    right: 30px;
+}
+
+ul li .progress .uil{
+    display: none;
+}
+
+
+.one::after{
+    width: 0;
+    height: o;
+} 
+
+
+/* Active CSS*/
+
+ul li .active{
+    background-color: deeppink;
+}
+
+ul li .active p{
+    display: none;
+}
+
+ul li .active .uil{
+    display: flex;
+}
+
+
+.speechb{
+    text-align: center;
+    margin-top: 20%;
+    width: max-content;
+    height: max-content;
+    background: pink;
+    position: relative;
+    -moz-border-radius:12px;
+    -webkit-border-radius:12px;
+    border-radius: 12px;
+    border: 1px solid;
+    display: flex;
+    padding: 5%;
+}
+
+
+.c {
+    height: 250px;
+    display: none;
+    position: relative;
+    
+
+}
+.imgHeart {
+    cursor: pointer;
+  }
+  
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/heart.png');
+    background-size: cover;
+    animation: pulse 2s ease infinite;
+    
+  }
+  
+  /* @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+      
+    }
+  } */
+
+
+
+ /* for messages */
+ .message-container {
+    position: relative;
+  }
+  .message {
+    display: none;
+    position: absolute;
+    top: 0;
+ 
+  }
+  .active + .message {
+    display: block;
+  }
+
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s ease-out;
+  }
+  
+  /* .animated-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s ease-out;
+  } */
+
+ 

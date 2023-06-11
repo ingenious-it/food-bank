@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ac64549a-1376-4ca6-9c07-2add43138d0b" name="Changes" comment="Added points to the data supplier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/CardsHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CardsHome.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/introbody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/introbody.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/moneyDonation/box.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/moneyDonation/box.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Mission.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Mission.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/dataBase/foodbank/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/dataBase/foodbank/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/img10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/images/img10.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +175,7 @@
       <workItem from="1686207157894" duration="1232000" />
       <workItem from="1686384961931" duration="57000" />
       <workItem from="1686399521991" duration="4719000" />
-      <workItem from="1686408784168" duration="7671000" />
+      <workItem from="1686408784168" duration="12255000" />
     </task>
     <task id="LOCAL-00001" summary="Commented fooditemdonation entity and repo">
       <created>1683182325536</created>
