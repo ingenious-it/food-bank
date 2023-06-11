@@ -16,7 +16,7 @@ const DFooter = () => {
         <div class="col-lg-3 col-md-6 col-sm-12 ms-5 mt-5 ">
           <div class=" d-flex">
             <div className="divimg">
-              <img src="logo4.png" height={80} width={100} alt="" />
+              <img src="logo2.png" height={80} width={100} alt="" />
             </div>
             <div class="text">
               <h3>FOOD BANK</h3>

@@ -173,7 +173,7 @@ const Home = () => {
 
           <DCards />
           <section className=" ms-5 text-center">
-            <h2 className="text-dark mt-2">
+            <h2 className="text-dark mt-2 text-center">
               "We make a living by what we get,but we make a life by what we
               give."
             </h2>
