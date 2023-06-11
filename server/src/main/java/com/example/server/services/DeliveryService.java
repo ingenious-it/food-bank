@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.awt.*;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DeliveryService {
@@ -24,6 +25,21 @@ public DeliveryService(DeliveryRepository deliveryRepository) {
     public List<Delivery> getAllDelivery() {
         return deliveryRepository.findAll();
     }
+
+    public List<Delivery> getIncompleteDeliveries() {
+        return deliveryRepository.findByIsCompletedFalse();
+    }
+
+    public Delivery updateDeliveryCompletionStatus(int did, boolean isCompleted) {
+        Optional<Delivery> optionalDelivery = deliveryRepository.findById(did);
+        if (optionalDelivery.isPresent()) {
+            Delivery delivery = optionalDelivery.get();
+            delivery.setIsCompleted(isCompleted);
+            return deliveryRepository.save(delivery);
+        }
+        throw new IllegalArgumentException("Delivery not found with ID: " + did);
+    }
+
 
 }
 

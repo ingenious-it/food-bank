@@ -3,6 +3,8 @@ package com.example.server.controllers;
 import com.example.server.entities.Delivery;
 import com.example.server.services.DeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,5 +28,19 @@ public class DeliveryController {
     @PostMapping("/saveDelivery")
     public Delivery saveDelivery(@RequestBody Delivery delivery) {
         return deliveryService.saveDelivery(delivery);
+    }
+
+    @GetMapping("/getIncompleteDeliveries")
+    public ResponseEntity<List<Delivery>> getIncompleteDeliveries() {
+        List<Delivery> incompleteDeliveries = deliveryService.getIncompleteDeliveries();
+        return new ResponseEntity<>(incompleteDeliveries, HttpStatus.OK);
+    }
+    @PutMapping("/updateDeliveryStatus/{did}")
+    public ResponseEntity<Delivery> updateDeliveryStatus(
+            @PathVariable int did,
+            @RequestParam boolean isCompleted
+    ) {
+        Delivery updatedDelivery = deliveryService.updateDeliveryCompletionStatus(did, isCompleted);
+        return new ResponseEntity<>(updatedDelivery, HttpStatus.OK);
     }
 }

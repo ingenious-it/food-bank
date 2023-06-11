@@ -12,6 +12,8 @@ const FoodModal1 = () => {
   const [nearestLocation, setNearestLocation] = useState("");
   const [locationOptions, setLocationOptions] = useState([]);
   const [selectedOption, setSelectedOption] = useState("");
+  const [isCollected, setIsCollected] = useState("");
+  const [isNotAvailable, setIsNotAvailable] = useState("");
   const [errors, setErrors] = useState({});
   // change the content
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -29,7 +31,7 @@ const FoodModal1 = () => {
     const newErrors = validateInputs();
     if (Object.keys(newErrors).length === 0) {
       // submit form
-      const foodDonate = { donationAddress, donationDate, nearestLocation, selectedOption };
+      const foodDonate = { donationAddress, donationDate, nearestLocation, selectedOption,isCollected,isNotAvailable};
       try {
         const response = await axios.post(
           "http://localhost:8080/FoodDonate/saveDonation",

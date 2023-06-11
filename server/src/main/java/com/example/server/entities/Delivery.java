@@ -20,8 +20,13 @@ public class Delivery {
     private int DId ;
     private String VictimNic;
     private Date DeliveryDate;
+    private String DeliveryNo;
+    private String DeliveryStreet;
+    private String DeliveryCity;
+    private String DeliveryPerson;
     private Boolean isCompleted ;
-    @OneToMany(mappedBy = "delivery", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<DeliveryPerson> deliveryPersons = new ArrayList<>();
+
+//    @OneToMany(mappedBy = "delivery", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<DeliveryPerson> deliveryPersons = new ArrayList<>();
 
 }
