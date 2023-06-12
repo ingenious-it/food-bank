@@ -65,7 +65,7 @@ public class VictimService {
     }
     public List<Victim> getAcceptedAndSelectedtoDelivery()//nuska
     {
-        return victimRepository.findByIsAcceptedTrueAndIsDeliverySelectedTrue();
+        return victimRepository.findByIsAcceptedTrueAndIsDeliverySelectedTrueAndIsDeliveryPersonSelectFalse();
     }
     public List<Victim> getAcceptedVictims()
     {
@@ -94,9 +94,19 @@ public class VictimService {
         victim.setIsDeliverySelected(status);
         return victimRepository.save(victim);
     }
+    public Victim updateIsDeliveryPersonSelect(Long id, Boolean Victimstatus,Boolean idDeliveryselectStatus) {
+        Victim victim = victimRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        victim.setIsVerified(Victimstatus);
+        victim.setIsDeliveryPersonSelect(idDeliveryselectStatus);
+        return victimRepository.save(victim);
+    }
 
 
     public List<Victim> getAllVictimDetails() {
         return victimRepository.findAll();
+    }
+
+    public Victim getVictimById(Long id) {
+        return victimRepository.findById(id).orElse(null);
     }
 }

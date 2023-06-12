@@ -26,6 +26,9 @@ public class Victim {
     private Boolean isVerified;
     private Boolean isAccepted;
     private Boolean isDeliverySelected;
+
+
+    private Boolean isDeliveryPersonSelect = false; // Set default value to false
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "donaterId")
     private RegisteredUser user;

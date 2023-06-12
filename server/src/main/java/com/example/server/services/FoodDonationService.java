@@ -1,5 +1,6 @@
 package com.example.server.services;
 
+import com.example.server.entities.Delivery;
 import com.example.server.entities.FoodDonation;
 import com.example.server.repositories.FoodDonationRepsoitory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,21 +24,8 @@ public class FoodDonationService {  // access entity through repo
 
         return foodDonationRepsoitory.findAll();
     }
-    public void updateIsCollected(int donationId, boolean isCollected) {
-        Optional<FoodDonation> foodDonationOptional = foodDonationRepsoitory.findById(donationId);
-        foodDonationOptional.ifPresent(foodDonation -> {
-            foodDonation.setIsCollected(isCollected);
-            foodDonationRepsoitory.save(foodDonation);
-        });
-    }
 
-    public void updateIsNotAvailable(int donationId, boolean isNotAvailable) {
-        Optional<FoodDonation> foodDonationOptional = foodDonationRepsoitory.findById(donationId);
-        foodDonationOptional.ifPresent(foodDonation -> {
-            foodDonation.setIsNotAvailable(isNotAvailable);
-            foodDonationRepsoitory.save(foodDonation);
-        });
-    }
+
     public List<FoodDonation> getPendingDonations() {
         return foodDonationRepsoitory.findByIsCollectedFalseAndIsNotAvailableFalse();
     }
@@ -45,6 +33,27 @@ public class FoodDonationService {  // access entity through repo
     public List<FoodDonation> getPCollectedDonations() {
         return foodDonationRepsoitory.findByIsCollectedTrueAndIsNotAvailableFalse();
     }
+
+    // Method to update isCollected
+    public boolean updateIsCollected(int foodDonationId) {
+        FoodDonation foodDonation = foodDonationRepsoitory.findByDonationId(foodDonationId);
+        if (foodDonation != null) {
+            foodDonation.setIsCollected(true);
+            foodDonationRepsoitory.save(foodDonation);
+            return true;
+        }
+        return false;
+    }
+    public boolean updateIsNotAvailable(int foodDonationId) {
+        FoodDonation foodDonation = foodDonationRepsoitory.findByDonationId(foodDonationId);
+        if (foodDonation != null) {
+            foodDonation.setIsNotAvailable(true);
+            foodDonationRepsoitory.save(foodDonation);
+            return true;
+        }
+        return false;
+    }
+
 
 
 }

@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("Delivery")
@@ -35,12 +37,14 @@ public class DeliveryController {
         List<Delivery> incompleteDeliveries = deliveryService.getIncompleteDeliveries();
         return new ResponseEntity<>(incompleteDeliveries, HttpStatus.OK);
     }
-    @PutMapping("/updateDeliveryStatus/{did}")
-    public ResponseEntity<Delivery> updateDeliveryStatus(
-            @PathVariable int did,
-            @RequestParam boolean isCompleted
-    ) {
-        Delivery updatedDelivery = deliveryService.updateDeliveryCompletionStatus(did, isCompleted);
-        return new ResponseEntity<>(updatedDelivery, HttpStatus.OK);
+    @PutMapping("/updateDeliveryStatus/{id}")
+    public ResponseEntity<String> updateDeliveryStatus(@PathVariable("id") int deliveryId) {
+        boolean updated = deliveryService.updateDeliveryStatus(deliveryId);
+        if (updated) {
+            return ResponseEntity.ok("Delivery status updated successfully.");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Delivery not found.");
+        }
     }
+
 }

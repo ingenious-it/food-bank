@@ -5,6 +5,7 @@ import com.example.server.entities.Victim;
 import com.example.server.repositories.RegisteredUserRepository;
 import com.example.server.services.VictimService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.server.repositories.VictimRepository;
@@ -116,11 +117,28 @@ public class VictimController {
     public Victim updateVictimRejected(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
     Boolean isVerified = requestBody.get("isVerified");
     Boolean isAccepted= requestBody.get("isAccepted");
-    return victimService.updateVictimRejected(id, isVerified,isAccepted);
+    return victimService.updateVictimRejected(id, isVerified,isAccepted);}
+
+    @PutMapping("/updateIsDeliveryPersonSelect/{id}")
+        public Victim updateIsDeliveryPersonSelect(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody)
+        {
+            Boolean isVerified = requestBody.get("isVerified");
+            Boolean isDeliveryPersonSelect=requestBody.get("isDeliveryPersonSelect");
+            return victimService.updateIsDeliveryPersonSelect(id,isVerified,isDeliveryPersonSelect);
+        }
+    @GetMapping("/{id}")
+    public ResponseEntity<Victim> getVictimById(@PathVariable("id") Long id) {
+        Victim victim = victimService.getVictimById(id);
+        if (victim != null) {
+            return new ResponseEntity<>(victim, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
 
 
 
 
 
-}
+
