@@ -15,8 +15,7 @@ import java.util.Date;
 public class FoodDonation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int DonationId;
-
+    private int donationId;
     private String DonationAddress;
     private Date DonationDate;
     private String NearestLocation;

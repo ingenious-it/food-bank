@@ -8,10 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.example.server.repositories.VictimRepository;
 
 
+import javax.swing.event.ListDataEvent;
+import java.security.PublicKey;
+import java.sql.ClientInfoStatus;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = {"http://localhost:3001","http://localhost:3000","http://localhost:54194" })
@@ -130,4 +135,20 @@ public class VictimController {
 
 
 
+    @PutMapping("/updateIsDeliveryPersonSelect/{id}")
+    public Victim updateIsDeliveryPersonSelect(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody)
+    {
+        Boolean isVerified = requestBody.get("isVerified");
+        Boolean isDeliveryPersonSelect=requestBody.get("isDeliveryPersonSelect");
+        return victimService.updateIsDeliveryPersonSelect(id,isVerified,isDeliveryPersonSelect);
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<Victim> getVictimById(@PathVariable("id") Long id) {
+        Victim victim = victimService.getVictimById(id);
+        if (victim != null) {
+            return new ResponseEntity<>(victim, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }

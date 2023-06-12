@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface DeliveryRepository extends JpaRepository<Delivery, Integer> {
     List<Delivery> findByIsCompletedFalse();
+    Delivery findById(int deliveryId);
+
 
     int countByIsCompletedFalse();
 }

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3002","http://localhost:3000" })
+@CrossOrigin(origins = {"http://localhost:3001","http://localhost:3000" })
 @RequestMapping("/FoodDonate")
 public class FoodDonationController {
     @Autowired
@@ -40,23 +40,34 @@ public class FoodDonationController {
         return new ResponseEntity<>(collectedDonations, HttpStatus.OK);
     }
 
-    @PutMapping("/{donationId}/is-collected")
-    public ResponseEntity<String> updateIsCollected(
-            @PathVariable int donationId,
-            @RequestParam boolean isCollected
-    ) {
-        foodDonationService.updateIsCollected(donationId, isCollected);
-        return new ResponseEntity<>("isCollected updated successfully", HttpStatus.OK);
+    // Endpoint to update isCollected
+
+
+    // Endpoint to update isNotAvailable
+    @PutMapping("/collected/{id}")
+    public ResponseEntity<String> updateIsCollected(@PathVariable("id") int donationId) {
+        boolean updated = foodDonationService.updateIsCollected(donationId);
+        if (updated) {
+            return ResponseEntity.ok("Donation status updated successfully.");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(" not found.");
+        }
+    }
+    @PutMapping("/pending/{id}")
+    public ResponseEntity<String> updateIsNotAvailable(@PathVariable("id") int donationId) {
+        boolean updated = foodDonationService.updateIsNotAvailable(donationId);
+        if (updated) {
+            return ResponseEntity.ok("Donation status updated successfully.");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(" not found.");
+        }
     }
 
-    @PutMapping("/{donationId}/is-not-available")
-    public ResponseEntity<String> updateIsNotAvailable(
-            @PathVariable int donationId,
-            @RequestParam boolean isNotAvailable
-    ) {
-        foodDonationService.updateIsNotAvailable(donationId, isNotAvailable);
-        return new ResponseEntity<>("isNotAvailable updated successfully", HttpStatus.OK);
-    }
+
+
+
+
+
 
 
 }
