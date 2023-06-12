@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 
 const Nav = () => {
+  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const navigate=useNavigate();
   const gotoNext= () => {
@@ -13,7 +15,6 @@ const Nav = () => {
   const token = localStorage.getItem("token");
   const decodedToken = jwtDecode(token);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -127,7 +128,7 @@ const Nav = () => {
                     {/* <Link className="dropdown-item" onClick={loginWithRedirect}>
                       Login
                     </Link> */}
-                       {!isLoggedIn && (
+                       {isLoggedIn && (
         <Link className="dropdown-item" to="/login">
           Login
         </Link>
