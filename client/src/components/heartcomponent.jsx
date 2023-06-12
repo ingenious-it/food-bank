@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import heartIco from '../images/heart.png';
 import './heartcomponent.css';
 
+
 const Hearts = () => {
   const speechbRef = useRef(null);
   const [activeStep, setActiveStep] = useState(1);

@@ -10,4 +10,5 @@ public interface DeliveryRepository extends JpaRepository<Delivery, Integer> {
     Delivery findById(int deliveryId);
 
 
+    int countByIsCompletedFalse();
 }

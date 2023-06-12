@@ -85,8 +85,6 @@ public class VictimController {
         RegisteredUser donater = victim.getUser();
         if (isAccepted) {
             donater.setDataSupplierPoints(donater.getDataSupplierPoints() + 1);
-        } else {
-            donater.setDataSupplierPoints(donater.getDataSupplierPoints() - 1);
         }
         // Save the updated RegisteredUser entity
         registeredUserRepository.save(donater);
@@ -113,19 +111,37 @@ public class VictimController {
         List<Victim> AcceptedVictims = victimService.getAcceptedVictims();
         return AcceptedVictims;
     }
+    @GetMapping("/pending-count")
+    public ResponseEntity<Long> getPendingVictimCount() {
+        long count = victimService.getPendingVictimCount();
+        return new ResponseEntity<>(count, HttpStatus.OK);
+    }
     @PutMapping("/selectReject/{id}")
     public Victim updateVictimRejected(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody) {
     Boolean isVerified = requestBody.get("isVerified");
     Boolean isAccepted= requestBody.get("isAccepted");
-    return victimService.updateVictimRejected(id, isVerified,isAccepted);}
+        Victim victim = victimService.updateAcceptanceStatus(id, isVerified, isAccepted);
+        RegisteredUser donater = victim.getUser();
+        if (!isAccepted) {
+            donater.setDataSupplierPoints(donater.getDataSupplierPoints() -1);
+        }
+        registeredUserRepository.save(donater);
+    return victimService.updateVictimRejected(id, isVerified,isAccepted);
+
+
+}
+
+
+
+
 
     @PutMapping("/updateIsDeliveryPersonSelect/{id}")
-        public Victim updateIsDeliveryPersonSelect(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody)
-        {
-            Boolean isVerified = requestBody.get("isVerified");
-            Boolean isDeliveryPersonSelect=requestBody.get("isDeliveryPersonSelect");
-            return victimService.updateIsDeliveryPersonSelect(id,isVerified,isDeliveryPersonSelect);
-        }
+    public Victim updateIsDeliveryPersonSelect(@PathVariable Long id, @RequestBody Map<String, Boolean> requestBody)
+    {
+        Boolean isVerified = requestBody.get("isVerified");
+        Boolean isDeliveryPersonSelect=requestBody.get("isDeliveryPersonSelect");
+        return victimService.updateIsDeliveryPersonSelect(id,isVerified,isDeliveryPersonSelect);
+    }
     @GetMapping("/{id}")
     public ResponseEntity<Victim> getVictimById(@PathVariable("id") Long id) {
         Victim victim = victimService.getVictimById(id);
@@ -136,9 +152,3 @@ public class VictimController {
         }
     }
 }
-
-
-
-
-
-

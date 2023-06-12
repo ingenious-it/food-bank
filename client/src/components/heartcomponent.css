@@ -1,4 +1,4 @@
-.main12 {
+/* .main12 {
   padding: 2%;
 }
 
@@ -144,18 +144,18 @@ ul li .active .uil {
   }
   50% {
     transform: scale(1);
-    opacity: 0.4; /* Decreased transparency */
+    opacity: 0.4; 
   }
   100% {
     transform: scale(1.5);
-    opacity: 0; /* Fully transparent */
+    opacity: 0; 
   }
-}
+} */
 
-
+/* 
 .heart {
   position: absolute;
 ;
   transform: translate(-50%, -50%);
   animation: pulse 2s ease-out;
-}
+} */

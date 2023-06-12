@@ -405,7 +405,7 @@ CREATE TABLE `food_item_donation` (
   `donationid` int NOT NULL,
   PRIMARY KEY (`donationid`,`id`),
   KEY `FKtko9cronjvicfd89x1x8tgxe9` (`id`),
-  CONSTRAINT `FKp5ado370lg1nvbqn81aljbpqr` FOREIGN KEY (`donationid`) REFERENCES `food_donation` (`donationid`),
+  CONSTRAINT `FKp5ado370lg1nvbqn81aljbpqr` FOREIGN KEY (`donationid`) REFERENCES `food_donation` (donation_id),
   CONSTRAINT `FKtko9cronjvicfd89x1x8tgxe9` FOREIGN KEY (`id`) REFERENCES `food_item` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

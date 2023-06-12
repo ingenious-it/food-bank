@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class PackageTypeService {
@@ -40,6 +42,18 @@ public class PackageTypeService {
         } else {
             throw new IllegalArgumentException("Invalid typeID: " + typeID);
         }
+    }
+    public List<Map<String, Object>> getPackageTypeQuantities() {
+        List<PackageType> packageTypes = packageTypeRepository.findAll();
+        return packageTypes.stream()
+                .map(packageType -> {
+                    Map<String, Object> map = Map.of(
+                            "name", packageType.getTypeName(),
+                            "value", packageType.getQuantity()
+                    );
+                    return map;
+                })
+                .collect(Collectors.toList());
     }
 
 

@@ -100,6 +100,10 @@ public class VictimService {
         victim.setIsDeliveryPersonSelect(idDeliveryselectStatus);
         return victimRepository.save(victim);
     }
+    public long getPendingVictimCount() {
+        return victimRepository.countByIsVerifiedFalse();
+    }
+
 
 
     public List<Victim> getAllVictimDetails() {

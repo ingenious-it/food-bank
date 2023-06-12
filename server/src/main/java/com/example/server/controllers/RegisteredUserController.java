@@ -1,7 +1,7 @@
 package com.example.server.controllers;
 
 import com.example.server.entities.RegisteredUser;
-import com.example.server.loginconfig.LoginResponse;
+import com.example.server.loginconfigDonation.LoginResponseDonation;
 import com.example.server.services.EmailSender;
 import com.example.server.services.RegisteredUserService;
 import jakarta.mail.MessagingException;
@@ -12,9 +12,11 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -46,11 +48,11 @@ public class RegisteredUserController {
         return ResponseEntity.ok(exists);
     }
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody RegisteredUser loginRequest) {
+    public ResponseEntity<LoginResponseDonation> login(@RequestBody RegisteredUser loginRequest) {
         String username = loginRequest.getUsername();
         String password = loginRequest.getPassword() ;
         System.out.println(loginRequest);
-        LoginResponse loginResponse = registeredUserService.performLogin(username, password);
+        LoginResponseDonation loginResponse = registeredUserService.performLogin(username, password);
 
         if (loginResponse.getToken() != null) {
             System.out.println(loginResponse.getToken());
@@ -97,5 +99,24 @@ public class RegisteredUserController {
         return "you have changed the password";
 
     }
+    @GetMapping("/getDataSupplier/{id}")
+    public ResponseEntity<RegisteredUser> getDataSupplierById(@PathVariable int id) {
+        RegisteredUser dataSupplier = registeredUserService.getDataSupplierById(id);
+        return new ResponseEntity<>(dataSupplier, HttpStatus.OK);
+    }
 
+    @GetMapping("/data-suppliers/count")
+    public int getCountOfDataSuppliers() {
+        List<String> roles = Arrays.asList("both", "Datasupplier");
+        return registeredUserService.getCountOfDataSuppliers(roles);
+    }
+
+    @GetMapping("/top-data-suppliers")
+    public List<Map<String, Object>> getTopDataSuppliers() {
+        return registeredUserService.getTopDataSuppliers(); // Change the limit as per your requirement
+    }
+    @GetMapping("/top-donaters")
+    public List<Map<String, Object>> getTopDonors() {
+        return registeredUserService.getTopDonors();
+    }
 }

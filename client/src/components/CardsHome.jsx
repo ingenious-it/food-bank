@@ -4,8 +4,8 @@ import "./CardsHome.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
+import ProposeModal1 from './ProposeModal1';
 import FoodModal1 from "./FoodModal1";
-import ProposeModal1 from "./ProposeModal1";
 
 const DCards = () => {
   const [openFoodModal, setOpenFoodModal] = useState(false);
@@ -72,15 +72,14 @@ const DCards = () => {
             <p>
               We invite you to submit the details of individuals or families
               affected by food crisis who are in need of assistance. Through the
-              generous donations from compassionate individuals, we are
-              determined to uncover their circumstances and provide them with
+              generous donations from compassionate individuals, we provide them with
               the necessary aid
             </p>
 
             <button
               className="btn btn-outline-success mb-2 ps-5 pe-5"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              data-bs-target="#exampleModal3"
               onClick={() => {
                 setOpenProposeModal(true);
               }}

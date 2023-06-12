@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -34,6 +35,10 @@ public class PackageTypeController {
     public ResponseEntity<String> updateQuantityByTypeID(@PathVariable int typeID, @RequestParam int newQuantity) {
         packageTypeService.updateQuantityByTypeID(typeID, newQuantity);
         return ResponseEntity.ok().build();
+    }
+    @GetMapping("/getPackageTypeQuantities")
+    public List<Map<String, Object>> getPackageTypeQuantities() {
+        return packageTypeService.getPackageTypeQuantities();
     }
 
 }

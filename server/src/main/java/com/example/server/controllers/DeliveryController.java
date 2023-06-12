@@ -31,6 +31,10 @@ public class DeliveryController {
     public Delivery saveDelivery(@RequestBody Delivery delivery) {
         return deliveryService.saveDelivery(delivery);
     }
+    @GetMapping("/pending-count")
+    public int getPendingDeliveryCount() {
+        return deliveryService.getPendingDeliveryCount();
+    }
 
     @GetMapping("/getIncompleteDeliveries")
     public ResponseEntity<List<Delivery>> getIncompleteDeliveries() {
