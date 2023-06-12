@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3001","http://localhost:3000","http://localhost:3002" })
 @RequestMapping("/packageTypes")
 public class PackageTypeController {
     @Autowired
