@@ -1,6 +1,7 @@
 package com.example.server.services;
 
 import com.example.server.entities.AdminUser;
+import com.example.server.entities.RegisteredUser;
 import com.example.server.loginConfigAdmin.JWTAuthenticationAdmin;
 import com.example.server.loginConfigAdmin.LoginResponseAdmin;
 import com.example.server.repositories.AdminUserRepository;
@@ -56,4 +57,8 @@ public class AdminUserService {
                 return new LoginResponseAdmin("Incorrect Password", false, null);
             }
         }}
+    public boolean checkUsernameExists(String username) {
+        AdminUser user = adminUserRepository.findByUserName(username);
+        return user != null;
+    }
 }

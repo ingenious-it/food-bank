@@ -18,6 +18,7 @@ public class AdminUserController {
     @Autowired
     private  AdminUserService adminUserService;
 
+
     @PostMapping("/saveAdminUser")
     public AdminUser saveAdminUser(@RequestBody AdminUser adminUser)
     {
@@ -50,9 +51,11 @@ public class AdminUserController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 }
-
-
-
+    @GetMapping("/exists/{username}")
+    public ResponseEntity<Boolean> checkUsernameExists(@PathVariable String username) {
+        boolean exists = adminUserService.checkUsernameExists(username);
+        return ResponseEntity.ok(exists);
+    }
 
 
 
