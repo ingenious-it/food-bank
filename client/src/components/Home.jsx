@@ -3,7 +3,7 @@ import ImageComp from "./imageComponent";
 import BodyIntro from "./introbody";
 import "./Home.css";
 import DCards from "./CardsHome";
-import Hearts from "./heartcomponent";
+//import Hearts from "./heartcomponent";
 import { motion } from "framer-motion";
 import DonatePrompt from "./moneyDonation/box";
 import { useInView } from "react-intersection-observer";

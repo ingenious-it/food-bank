@@ -98,6 +98,7 @@ public class RegisteredUserController {
 
         return "you have changed the password";
 
+
     }
     @GetMapping("/getDataSupplier/{id}")
     public ResponseEntity<RegisteredUser> getDataSupplierById(@PathVariable int id) {
